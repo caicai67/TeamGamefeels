@@ -50,6 +50,13 @@
      <Compile Include="Assets\Character\Camera\ProtectCameraFromWallClip.cs" />
      <Compile Include="Assets\Character\Camera\ShoulderCam.cs" />
      <Compile Include="Assets\Character\Controller\Keymapping.cs" />
+     <Compile Include="Assets\Character\Vanguard\Camera\FreeLookCam.cs" />
+     <Compile Include="Assets\Character\Vanguard\Scripts\MyKeymapping.cs" />
+     <Compile Include="Assets\Character\Vanguard\Scripts\MyThirdPersonCharacter.cs" />
+     <Compile Include="Assets\Character\Vanguard\Scripts\MyThirdPersonUserControl.cs" />
+     <Compile Include="Assets\Character\Vanguard\Scripts\VanguardController.cs" />
+     <Compile Include="Assets\Character\Vanguard\Scripts\VanguardMetrics.cs" />
+     <Compile Include="Assets\Utility\LevelManager.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
