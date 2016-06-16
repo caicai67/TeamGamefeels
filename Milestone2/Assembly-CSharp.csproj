@@ -50,6 +50,8 @@
      <Compile Include="Assets\Character\Camera\ProtectCameraFromWallClip.cs" />
      <Compile Include="Assets\Character\Camera\ShoulderCam.cs" />
      <Compile Include="Assets\Character\Controller\Keymapping.cs" />
+     <Compile Include="Assets\Character\Controller\PlayerController.cs" />
+     <Compile Include="Assets\Character\Controller\PlayerMetrics.cs" />
      <Compile Include="Assets\Character\Vanguard\Camera\FreeLookCam.cs" />
      <Compile Include="Assets\Character\Vanguard\Scripts\MyKeymapping.cs" />
      <Compile Include="Assets\Character\Vanguard\Scripts\MyThirdPersonCharacter.cs" />
