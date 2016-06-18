@@ -189,16 +189,16 @@ ModelImporter:
     - serializedVersion: 16
       name: RunForwardTurnRight_NtrlShort_1
       takeName: _32_a_U1_M_P_RunForwardTurnRight_NtrlShort__Fb_Dia1m_No_0_PJ_5
-      firstFrame: 0
-      lastFrame: 333
+      firstFrame: 75
+      lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
