@@ -57,6 +57,8 @@ public class PlayerMetrics : MonoBehaviour {
 	// ...angular_input
 	void UpdateInputs(){
 		this.input_magnitude = this.player_joystick.magnitude;
+		if (this.input_magnitude > 0.9f)
+			this.input_magnitude = 1.0f;
 		// Order sort of matters here: first, forward input.  Then, angular input. 
 		UpdateForwardInput();
 		UpdateAngularInput();
