@@ -26,16 +26,13 @@ public class Keymapping : MonoBehaviour {
 	}
 	public float Camera_HorizontalAxis(){
 		float ps4_input = Input.GetAxis ("PS4ControllerRightX");
-		//string keyboard_input = Input.GetAxis ("Camera_Vertical");
-		//return MaxInput(ps4_input,keyboard_input);
-		return ps4_input;
+		float keyboard_input = Input.GetAxis ("Cam_Horizontal");
+		return MaxInput(ps4_input,keyboard_input);
 	}
 	public float Camera_VerticalAxis(){
 		float ps4_input = Input.GetAxis ("PS4ControllerRightY");
-		//string keyboard_input = Input.GetAxis ("Camera_Vertical");
-		//return MaxInput(ps4_input,keyboard_input);
-		return ps4_input;
-
+		float keyboard_input = Input.GetAxis ("Cam_Vertical");
+		return MaxInput (ps4_input, keyboard_input);
 	}
 	public float Player_HorizontalAxis(){
 		float ps4_input = Input.GetAxis ("PS4ControllerLeftX");
