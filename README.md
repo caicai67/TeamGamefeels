@@ -22,4 +22,4 @@ Currently, WASD maps to camera and Arrows map to movement.
 
 ### Current Scene Scenarios for M2:
 
-- ...
+- Chris: Theme: undecided; Physics: swinging pendulums, small pursuit boids (spheres), roll ball to destination
