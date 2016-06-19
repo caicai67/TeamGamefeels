@@ -13,26 +13,35 @@ public class MyKeymapping : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	private float MaxInput(float inputA,float inputB){
+		if (Mathf.Abs (inputA) >= Mathf.Abs (inputB)) {
+			return inputA;
+		} 
+		return inputB;
+	}
 	public string Jump(){
 		string jump_key = "PS4ControllerCross";
 		return jump_key;
 	}
 	public float Camera_HorizontalAxis(){
-		string camera_h = "PS4ControllerRightX";
-		return CrossPlatformInputManager.GetAxis(camera_h);
+		float ps4_input = Input.GetAxis ("PS4ControllerRightX");
+		float keyboard_input = Input.GetAxis ("Cam_Horizontal");
+		return MaxInput(ps4_input,keyboard_input);
 	}
 	public float Camera_VerticalAxis(){
-		string camera_v = "PS4ControllerRightY";
-		return CrossPlatformInputManager.GetAxis(camera_v);
+		float ps4_input = Input.GetAxis ("PS4ControllerRightY");
+		float keyboard_input = Input.GetAxis ("Cam_Vertical");
+		return MaxInput (ps4_input, keyboard_input);
 	}
 	public float Player_HorizontalAxis(){
-		string player_h = "PS4ControllerLeftX";
-		return CrossPlatformInputManager.GetAxis (player_h);
+		float ps4_input = Input.GetAxis ("PS4ControllerLeftX");
+		float keyboard_input = Input.GetAxis ("Horizontal");
+		return MaxInput(ps4_input,keyboard_input);
 	}
 	public float Player_VerticalAxis(){
-		string player_v = "PS4ControllerLeftY";
-		return CrossPlatformInputManager.GetAxis (player_v);
+		float ps4_input = Input.GetAxis ("PS4ControllerLeftY");
+		float keyboard_input = Input.GetAxis ("Vertical");
+		return MaxInput(ps4_input,keyboard_input);
 	}
 	public bool RunSkill(){
 		string runSkill_button = "PS4ControllerL1";
