@@ -436,7 +436,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'incomplete: Sneak Mode?'
+  m_Name: Sneak Mode
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -466,7 +466,7 @@ AnimatorStateMachine:
     m_Position: {x: 372, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110266786}
-    m_Position: {x: 516, y: 264, z: 0}
+    m_Position: {x: 324, y: 264, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110220778}
     m_Position: {x: 516, y: 312, z: 0}
