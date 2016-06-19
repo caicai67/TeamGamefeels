@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour {
 
 		// Inputs
 
+		this.animator.SetBool ("sneak", Input.GetKey (KeyCode.X));
 		this.animator.SetFloat("ForwardInput",this.metrics.forward_input);
 		this.animator.SetFloat ("AngularInput", this.metrics.angular_input);
 		this.animator.SetFloat ("InputMagnitude", this.metrics.input_magnitude);
-		this.animator.SetBool ("sneak", Input.GetKey (KeyCode.X));
+
 
 
 		// Sections below: may not need them; leaving them for notes
