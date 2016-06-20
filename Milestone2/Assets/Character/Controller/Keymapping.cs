@@ -14,7 +14,7 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = button;
 		}
 	}
-	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.RightControl,"PS4ControllerL3");
+	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.Slash,"PS4ControllerL3");
 
 
 	private float MaxInput(float inputA,float inputB){
