@@ -3,16 +3,20 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Keymapping : MonoBehaviour {
+	
+	public struct MovementToggle1
+	{
+		public KeyCode keyboard;
+		public string ps4;
+		public MovementToggle1(KeyCode key,string button)
+		{
+			this.keyboard = key;
+			this.ps4 = button;
+		}
+	}
+	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.RightControl,"PS4ControllerL3");
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 	private float MaxInput(float inputA,float inputB){
 		if (Mathf.Abs (inputA) >= Mathf.Abs (inputB)) {
 			return inputA;
@@ -60,6 +64,7 @@ public class Keymapping : MonoBehaviour {
 		string rightThrottle = "PS4ControllerR2Throttle";
 		return CrossPlatformInputManager.GetAxis(rightThrottle);;
 	}
+
 	public bool Exit(){
 		if (Input.GetKey (KeyCode.Q) || Input.GetKey (KeyCode.Escape)) {
 			return true;
