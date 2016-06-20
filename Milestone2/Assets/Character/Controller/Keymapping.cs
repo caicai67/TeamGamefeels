@@ -14,8 +14,20 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = button;
 		}
 	}
-	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.RightControl,"PS4ControllerL3");
+	public struct RollAction
+	{
+		public KeyCode keyboard;
+		public string ps4;
+		public RollAction(KeyCode key, string ps4button){
+			this.keyboard = key;
+			this.ps4 = ps4button;
+		}
+	}
 
+
+
+	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.RightControl,"PS4ControllerL3");
+	public RollAction roll_action = new RollAction(KeyCode.Alpha0,"PS4ControllerCircle");
 
 	private float MaxInput(float inputA,float inputB){
 		if (Mathf.Abs (inputA) >= Mathf.Abs (inputB)) {
@@ -23,7 +35,7 @@ public class Keymapping : MonoBehaviour {
 		} 
 		return inputB;
 	}
-
+		
 	public string Jump(){
 		string jump_key = "PS4ControllerCross";
 		return jump_key;
@@ -51,10 +63,6 @@ public class Keymapping : MonoBehaviour {
 	public bool RunSkill(){
 		string runSkill_button = "PS4ControllerL1";
 		return CrossPlatformInputManager.GetButton (runSkill_button);
-	}
-	public bool RollAction(){
-		string rollAction_button = "PS4ControllerCircle";
-		return CrossPlatformInputManager.GetButton (rollAction_button);
 	}
 	public bool SecondarySkill(){
 		string secondarySkill_button = "PS4ControllerR1";

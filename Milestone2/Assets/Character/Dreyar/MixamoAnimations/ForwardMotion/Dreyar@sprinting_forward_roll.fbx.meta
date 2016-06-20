@@ -166,7 +166,7 @@ ModelImporter:
     - serializedVersion: 16
       name: sprinting_forward_roll
       takeName: mixamo.com
-      firstFrame: 0
+      firstFrame: 4
       lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0

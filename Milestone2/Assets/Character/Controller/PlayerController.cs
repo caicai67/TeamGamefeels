@@ -12,13 +12,13 @@ public class PlayerController : MonoBehaviour {
 	private PlayerMetrics metrics;
 
 	// In game variables
-	private bool sneaking;
+	private bool sneaking = false;
+	private bool rolling = false;
 
 	void Awake(){
 		this.rigid_body = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
-		this.sneaking = false;
 	}
 	// Use this for initialization
 	void Start () {
@@ -48,9 +48,32 @@ public class PlayerController : MonoBehaviour {
 
 		// Sections below: may not need them; leaving them for notes
 		// Movement Modes
+
+
+
+
+		// SNEAK MODE
+		// ...for some reason, the sneak mode is not "triggering;" so janky boolean local variable instead. 
+		// ...maybe it has something to do with the animation transitions
+
+		//if (!current_state.IsName ("Sneak Mode")) {
+			//this.animator.ResetTrigger ("sneakTrigger");
+		//}
 		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||Input.GetButtonDown(this.keymap.movement_toggle1.ps4)){
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
+			//this.animator.SetTrigger ("sneakTrigger");
+		}
+
+
+
+
+		// Button Controls
+		if (!current_state.IsName("Roll")){
+			this.animator.ResetTrigger ("roll");
+		}
+		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
+			this.animator.SetTrigger ("roll");
 		}
 		// Throttles
 
