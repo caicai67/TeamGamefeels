@@ -2,17 +2,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\Controller\Keymapping.cs">
     <Files>
-      <File FileName="Assets\Character\Controller\PlayerController.cs" Line="83" Column="3" />
+      <File FileName="Assets\Character\Controller\PlayerController.cs" Line="115" Column="5" />
       <File FileName="Assets\Character\Controller\Keymapping.cs" Line="66" Column="3" />
       <File FileName="Assets\Character\Controller\PlayerMetrics.cs" Line="1" Column="1" />
       <File FileName="Assets\Character\Camera\ShoulderCam.cs" Line="1" Column="1" />
-      <File FileName="Assets\Character\Vanguard\Scripts\MyKeymapping.cs" Line="50" Column="1" />
+      <File FileName="Assets\Character\Vanguard\Scripts\MyKeymapping.cs" Line="1" Column="1" />
+      <File FileName="Assets\Character\Camera\AbstractTargetFollower.cs" Line="30" Column="1" />
+      <File FileName="Assets\Character\Controller\AnimationManager.cs" Line="27" Column="32" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\chris\Documents\GitHub\TeamGamefeels\Milestone2\Assets\Character\Controller\PlayerController.cs" line="95" column="1" />
-      <Breakpoint file="C:\Users\chris\Documents\GitHub\TeamGamefeels\Milestone2\Assets\Character\Controller\PlayerController.cs" line="65" column="1" />
+      <Breakpoint file="C:\Users\chris\Documents\GitHub\TeamGamefeels\Milestone2\Assets\Character\Controller\PlayerController.cs" line="123" column="1" />
+      <Breakpoint file="C:\Users\chris\Documents\GitHub\TeamGamefeels\Milestone2\Assets\Character\Controller\PlayerController.cs" line="113" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

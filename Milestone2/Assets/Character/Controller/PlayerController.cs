@@ -4,12 +4,24 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
 	public Camera cam;
 	private Keymapping keymap = new Keymapping();
 	private Rigidbody rigid_body;
 	private Animator animator;
 	private PlayerMetrics metrics;
+	private CharacterController controller;
+	private CapsuleCollider collider;
+	private AnimationManager anim_manager;
+
+	// Collider/Controller Defaults
+	float controller_height = 1.7f;
+	float collider_height = 1.7f;
+	Vector3 controller_center = new Vector3 (0f, 0.85f, 0f);
+	Vector3 collider_center = new Vector3 (0f, 0.85f, 0f);
+
 
 	// In game variables
 	private bool sneaking = false;
@@ -19,6 +31,9 @@ public class PlayerController : MonoBehaviour {
 		this.rigid_body = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
+		this.controller = GetComponent<CharacterController> ();
+		this.collider = GetComponent<CapsuleCollider> ();
+		this.anim_manager = new AnimationManager ();
 	}
 	// Use this for initialization
 	void Start () {
@@ -73,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 			this.animator.ResetTrigger ("roll");
 		}
 		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
+			this.anim_manager.roll_timer = 0f;
 			this.animator.SetTrigger ("roll");
 		}
 		// Throttles
@@ -87,5 +103,17 @@ public class PlayerController : MonoBehaviour {
 		// Angular Input
 	}
 	void FixedUpdate(){
+		UpdateColliderController ();
+	}
+	void UpdateColliderController(){
+		if (animator.enabled){
+			if (animator.GetCurrentAnimatorStateInfo (0).IsName(anim_manager.roll.ac_name)) {
+				this.anim_manager.roll_timer += Time.deltaTime;
+				float c_height = this.anim_manager.roll.collider_height.Evaluate (this.anim_manager.roll_timer);
+				this.collider.height = c_height;
+				this.controller.height = c_height;
+
+			}
+		}
 	}
 }
