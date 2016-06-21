@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour {
 	private PlayerMetrics metrics;
 	private CharacterController controller;
 	private CapsuleCollider collider;
-	private AnimationManager anim_manager;
 
 	// Collider/Controller Defaults
 	float controller_height = 1.7f;
@@ -33,7 +32,6 @@ public class PlayerController : MonoBehaviour {
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
 		this.collider = GetComponent<CapsuleCollider> ();
-		this.anim_manager = new AnimationManager ();
 	}
 	// Use this for initialization
 	void Start () {
@@ -88,7 +86,6 @@ public class PlayerController : MonoBehaviour {
 			this.animator.ResetTrigger ("roll");
 		}
 		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
-			this.anim_manager.roll_timer = 0f;
 			this.animator.SetTrigger ("roll");
 		}
 		// Throttles
@@ -106,14 +103,14 @@ public class PlayerController : MonoBehaviour {
 		UpdateColliderController ();
 	}
 	void UpdateColliderController(){
-		if (animator.enabled){
-			if (animator.GetCurrentAnimatorStateInfo (0).IsName(anim_manager.roll.ac_name)) {
-				this.anim_manager.roll_timer += Time.deltaTime;
-				float c_height = this.anim_manager.roll.collider_height.Evaluate (this.anim_manager.roll_timer);
-				this.collider.height = c_height;
-				this.controller.height = c_height;
-
-			}
+		float ch = animator.GetFloat ("ColliderHeight");
+		float cy = animator.GetFloat ("ColliderY");
+		if (!(ch == 0f && cy == 0f)){
+			this.collider.height = ch;
+			this.controller.height = ch;
+			this.collider.center = new Vector3(0f,cy,0f);
+			this.controller.center = new Vector3 (0f, cy, 0f);
 		}
+			
 	}
 }

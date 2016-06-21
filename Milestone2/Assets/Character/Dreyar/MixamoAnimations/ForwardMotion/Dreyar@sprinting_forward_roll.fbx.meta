@@ -186,7 +186,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves:
-      - name: ControllerHeight
+      - name: ColliderHeight
         curve:
           serializedVersion: 2
           curve:
@@ -223,7 +223,7 @@ ModelImporter:
           preInfinity: 3
           postInfinity: 3
           rotationOrder: 0
-      - name: ControllerY
+      - name: ColliderY
         curve:
           serializedVersion: 2
           curve:
