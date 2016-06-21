@@ -105,11 +105,16 @@ public class PlayerController : MonoBehaviour {
 	void UpdateColliderController(){
 		float ch = animator.GetFloat ("ColliderHeight");
 		float cy = animator.GetFloat ("ColliderY");
-		if (!(ch == 0f && cy == 0f)){
+		if (!(ch == 0f && cy == 0f)) {
 			this.collider.height = ch;
-			this.controller.height = ch;
-			this.collider.center = new Vector3(0f,cy,0f);
-			this.controller.center = new Vector3 (0f, cy, 0f);
+			//this.controller.height = ch;
+			this.collider.center = new Vector3 (0f, cy, 0f);
+			//this.controller.center = new Vector3 (0f, cy, 0f);
+		} else {
+			this.collider.height = 1.7f;
+			//this.controller.height = 1.7f;
+			this.collider.center = new Vector3 (0f, 0.85f, 0f);
+			//this.controller.center = new Vector3 (0f, 0.85f, 0f);
 		}
 			
 	}
