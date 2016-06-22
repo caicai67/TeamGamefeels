@@ -387,32 +387,32 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 200fe7d94eda34d569cef38d2dc5e9b4, type: 3}
     m_Threshold: 0.2
-    m_Position: {x: 0, y: -1}
-    m_TimeScale: 1.2
+    m_Position: {x: 1, y: -1}
+    m_TimeScale: 1.5
     m_CycleOffset: 0
     m_DirectBlendParameter: AnimationSpeed
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 200fe7d94eda34d569cef38d2dc5e9b4, type: 3}
     m_Threshold: 0.4
-    m_Position: {x: 0, y: 1}
-    m_TimeScale: 1.2
+    m_Position: {x: 1, y: 0.5}
+    m_TimeScale: 1.5
     m_CycleOffset: 0.5
     m_DirectBlendParameter: AnimationSpeed
     m_Mirror: 1
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 70bffd16fc0e54584ba43a288264bfc6, type: 3}
     m_Threshold: 0.6
-    m_Position: {x: -0.5, y: 0}
-    m_TimeScale: 1
+    m_Position: {x: 1, y: -1}
+    m_TimeScale: 1.5
     m_CycleOffset: 0
     m_DirectBlendParameter: AnimationSpeed
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 70bffd16fc0e54584ba43a288264bfc6, type: 3}
     m_Threshold: 0.8
-    m_Position: {x: -0.75, y: 0}
-    m_TimeScale: 1
+    m_Position: {x: 1, y: 1}
+    m_TimeScale: 1.5
     m_CycleOffset: 0.5
     m_DirectBlendParameter: AnimationSpeed
     m_Mirror: 1
@@ -424,7 +424,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: AnimationSpeed
     m_Mirror: 0
-  m_BlendParameter: ForwardInput
+  m_BlendParameter: InputMagnitude
   m_BlendParameterY: AngularInput
   m_MinThreshold: 0
   m_MaxThreshold: 1
@@ -561,6 +561,29 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
+--- !u!1102 &110203124
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Enter Sneak Mode 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
 --- !u!1102 &110220778
 AnimatorState:
   serializedVersion: 5
@@ -580,6 +603,29 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 20685508}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+--- !u!1102 &110224568
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Enter Sneak Mode
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_Motion: {fileID: 0}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -670,7 +716,7 @@ AnimatorStateMachine:
     m_Position: {x: 240, y: 228, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110266786}
-    m_Position: {x: 336, y: 24, z: 0}
+    m_Position: {x: 336, y: -24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110220778}
     m_Position: {x: 516, y: 312, z: 0}
@@ -680,6 +726,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110295598}
     m_Position: {x: 504, y: 228, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110224568}
+    m_Position: {x: 464, y: 96, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110203124}
+    m_Position: {x: 264, y: 48, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
