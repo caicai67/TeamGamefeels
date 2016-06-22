@@ -23,11 +23,19 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = ps4button;
 		}
 	}
-
-
+	public struct Jump
+	{
+		public KeyCode keyboard;
+		public string ps4;
+		public Jump(KeyCode key, string ps4button){
+			this.keyboard = key;
+			this.ps4 = ps4button;
+		}
+	}
 
 	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.Slash,"PS4ControllerL3");
 	public RollAction roll_action = new RollAction(KeyCode.Alpha0,"PS4ControllerCircle");
+	public Jump jump = new Keymapping.Jump(KeyCode.Space,"PS4ControllerCross");
 
 	private float MaxInput(float inputA,float inputB){
 		if (Mathf.Abs (inputA) >= Mathf.Abs (inputB)) {
@@ -36,10 +44,6 @@ public class Keymapping : MonoBehaviour {
 		return inputB;
 	}
 		
-	public string Jump(){
-		string jump_key = "PS4ControllerCross";
-		return jump_key;
-	}
 	public float Camera_HorizontalAxis(){
 		float ps4_input = Input.GetAxis ("PS4ControllerRightX");
 		float keyboard_input = Input.GetAxis ("Cam_Horizontal");

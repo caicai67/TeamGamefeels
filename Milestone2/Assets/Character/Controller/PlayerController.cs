@@ -88,6 +88,13 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
 			this.animator.SetTrigger ("roll");
 		}
+
+		//Jumping Code
+		if (Input.GetKeyDown(this.keymap.jump.keyboard) || Input.GetButtonDown (this.keymap.jump.ps4)) {
+			this.animator.SetTrigger ("Jump");
+		}
+
+
 		// Throttles
 
 		// Input Magnitude
@@ -99,9 +106,11 @@ public class PlayerController : MonoBehaviour {
 
 		// Angular Input
 	}
+
 	void FixedUpdate(){
 		UpdateColliderController ();
 	}
+
 	void UpdateColliderController(){
 		float ch = animator.GetFloat ("ColliderHeight");
 		float cy = animator.GetFloat ("ColliderY");
