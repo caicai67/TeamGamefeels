@@ -26,7 +26,7 @@ public class Keymapping : MonoBehaviour {
 
 
 
-	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.RightControl,"PS4ControllerL3");
+	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.Slash,"PS4ControllerL3");
 	public RollAction roll_action = new RollAction(KeyCode.Alpha0,"PS4ControllerCircle");
 
 	private float MaxInput(float inputA,float inputB){
