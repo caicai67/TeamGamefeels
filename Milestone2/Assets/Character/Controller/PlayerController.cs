@@ -114,7 +114,13 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		UpdateColliderController ();
+
+		if (!animator.IsInTransition (0)) {
+
+			UpdateColliderController ();
+
+		}
+
 	}
 
 	void UpdateColliderController(){
@@ -125,7 +131,9 @@ public class PlayerController : MonoBehaviour {
 			//this.controller.height = ch;
 			this.collider.center = new Vector3 (0f, cy, 0f);
 			//this.controller.center = new Vector3 (0f, cy, 0f);
-		} else {
+		} 
+
+		else {
 			this.collider.height = 1.7f;
 			//this.controller.height = 1.7f;
 			this.collider.center = new Vector3 (0f, 0.85f, 0f);
