@@ -33,8 +33,11 @@ public class PlayerController : MonoBehaviour {
 		this.controller = GetComponent<CharacterController> ();
 		this.collider = GetComponent<CapsuleCollider> ();
 
+		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
+		//interact with Character Model's layer(aka Character) in the Physics settings
+
 		//make the ragdoll kinematic for now
-		makeRagdollKinematic(true);
+		//makeRagdollKinematic(true);
 	}
 	// Use this for initialization
 	void Start () {
