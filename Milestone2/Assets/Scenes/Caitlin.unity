@@ -1290,6 +1290,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1243142384}
   - 65: {fileID: 1243142386}
+  - 114: {fileID: 1243142385}
   m_Layer: 0
   m_Name: Stationary
   m_TagString: Untagged
@@ -1310,6 +1311,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1882122642}
   m_RootOrder: 0
+--- !u!114 &1243142385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243142383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca856c7b87a447ada6952569df7f0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1243142386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1828,6 +1840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pallet_Length: 0.25
   pallet_Count: 20
+  speed: 0
 --- !u!1 &1993878765
 GameObject:
   m_ObjectHideFlags: 0
