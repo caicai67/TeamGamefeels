@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(CapsuleCollider))]
+//[RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
 	public Camera cam;
@@ -13,13 +14,13 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private PlayerMetrics metrics;
 	private CharacterController controller;
-	private CapsuleCollider collider;
+	//private CapsuleCollider collider;
 
 	// Collider/Controller Defaults
 	float controller_height = 1.7f;
-	float collider_height = 1.7f;
+	//float collider_height = 1.7f;
 	Vector3 controller_center = new Vector3 (0f, 0.85f, 0f);
-	Vector3 collider_center = new Vector3 (0f, 0.85f, 0f);
+	//Vector3 collider_center = new Vector3 (0f, 0.85f, 0f);
 
 
 	// In game variables
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
-		this.collider = GetComponent<CapsuleCollider> ();
+		//this.collider = GetComponent<CapsuleCollider> ();
 
 		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
 		//interact with Character Model's layer(aka Character) in the Physics settings
@@ -117,27 +118,31 @@ public class PlayerController : MonoBehaviour {
 
 		if (!animator.IsInTransition (0)) {
 
-			UpdateColliderController ();
+			UpdateController ();
 
 		}
 
 	}
 
-	void UpdateColliderController(){
+	void UpdateController(){
 		float ch = animator.GetFloat ("ColliderHeight");
 		float cy = animator.GetFloat ("ColliderY");
 		if (!(ch == 0f && cy == 0f)) {
-			this.collider.height = ch;
-			//this.controller.height = ch;
-			this.collider.center = new Vector3 (0f, cy, 0f);
-			//this.controller.center = new Vector3 (0f, cy, 0f);
+			this.controller.height = ch;
+			this.controller.center = new Vector3 (0f, cy, 0f);
+
+			//this.collider.height = ch;
+			//this.collider.center = new Vector3 (0f, cy, 0f);
+
 		} 
 
 		else {
-			this.collider.height = 1.7f;
-			//this.controller.height = 1.7f;
-			this.collider.center = new Vector3 (0f, 0.85f, 0f);
-			//this.controller.center = new Vector3 (0f, 0.85f, 0f);
+			this.controller.height = 1.7f;
+			this.controller.center = new Vector3 (0f, 0.85f, 0f);
+
+			//this.collider.height = 1.7f;
+			//this.collider.center = new Vector3 (0f, 0.85f, 0f);
+
 		}
 			
 	}
