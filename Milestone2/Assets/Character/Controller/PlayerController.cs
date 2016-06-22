@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour {
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
 		this.collider = GetComponent<CapsuleCollider> ();
+
+		//make the ragdoll kinematic for now
+		makeRagdollKinematic(true);
 	}
 	// Use this for initialization
 	void Start () {
@@ -126,5 +129,18 @@ public class PlayerController : MonoBehaviour {
 			//this.controller.center = new Vector3 (0f, 0.85f, 0f);
 		}
 			
+	}
+
+	void makeRagdollKinematic(bool setKinematic) {
+
+		if (setKinematic) {
+			foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>()) {
+				rb.isKinematic = true;
+			}
+		} else {
+			foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>()) {
+				rb.isKinematic = false;
+			}
+		}
 	}
 }
