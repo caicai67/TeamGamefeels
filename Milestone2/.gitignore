@@ -37,8 +37,6 @@ ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.ini
 
-# Unity3D generated meta files - github
-*.pidb.meta	
 
 # Builds - github
 *.apk
