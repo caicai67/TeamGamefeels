@@ -1291,7 +1291,7 @@ GameObject:
   - 4: {fileID: 1243142384}
   - 65: {fileID: 1243142386}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Stationary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1838,7 @@ GameObject:
   - 4: {fileID: 1993878766}
   - 95: {fileID: 1993878767}
   m_Layer: 0
-  m_Name: Visual
+  m_Name: Moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
