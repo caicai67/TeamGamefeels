@@ -185,7 +185,61 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: ColliderHeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1.7
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.34475374
+            value: 1.7
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.66702354
+            value: 1.7
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1.7
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      - name: ColliderY
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.34475374
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.66702354
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
       events: []
       transformMask:
       - path: 

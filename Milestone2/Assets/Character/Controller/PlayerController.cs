@@ -130,17 +130,20 @@ public class PlayerController : MonoBehaviour {
 		}
 			
 	}
-
+		
 	void makeRagdollKinematic(bool setKinematic) {
 
 		if (setKinematic) {
 			foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>()) {
 				rb.isKinematic = true;
 			}
+
+			rigid_body.isKinematic = false;
 		} else {
 			foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>()) {
 				rb.isKinematic = false;
 			}
+			rigid_body.isKinematic = true;
 		}
 	}
 }
