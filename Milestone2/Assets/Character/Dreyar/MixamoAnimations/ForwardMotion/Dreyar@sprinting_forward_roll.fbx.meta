@@ -185,7 +185,98 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: ColliderHeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1.7021312
+            inSlope: 0.0088233985
+            outSlope: 0.0088233985
+            tangentMode: 0
+          - time: 0.16177589
+            value: 0.8021311
+            inSlope: -1.0305157
+            outSlope: -1.0305157
+            tangentMode: 0
+          - time: 0.3493693
+            value: 0.7
+            inSlope: 0.002767555
+            outSlope: 0.002767555
+            tangentMode: 0
+          - time: 0.75
+            value: 0.7
+            inSlope: 0.017802943
+            outSlope: 0.017802943
+            tangentMode: 0
+          - time: 0.847771
+            value: 0.8
+            inSlope: 3.3169985
+            outSlope: 3.3169985
+            tangentMode: 0
+          - time: 1.0669363
+            value: 1.7021312
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      - name: ColliderY
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0.85
+            inSlope: 0.0088233985
+            outSlope: 0.0088233985
+            tangentMode: 0
+          - time: 0.16177589
+            value: 0.401
+            inSlope: -1.0305157
+            outSlope: -1.0305157
+            tangentMode: 0
+          - time: 0.3493693
+            value: 0.35
+            inSlope: 0.002767555
+            outSlope: 0.002767555
+            tangentMode: 0
+          - time: 0.75
+            value: 0.35
+            inSlope: 0.017802943
+            outSlope: 0.017802943
+            tangentMode: 0
+          - time: 0.847771
+            value: 0.4
+            inSlope: 1.299454
+            outSlope: 1.299454
+            tangentMode: 0
+          - time: 1.0669363
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      - name: ColliderConfigured
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
       events: []
       transformMask:
       - path: 
