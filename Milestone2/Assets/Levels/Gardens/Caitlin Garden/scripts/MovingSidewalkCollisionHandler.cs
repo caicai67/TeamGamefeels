@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//A component of "MovingSidewalk"
+
+using UnityEngine;
 using System.Collections;
 
 public class MovingSidewalkCollisionHandler : MonoBehaviour {
@@ -16,10 +18,10 @@ public class MovingSidewalkCollisionHandler : MonoBehaviour {
 	void OnTriggerEnter (Collider captured) {
 		if (captured.CompareTag ("Player")) {
 			Transform wrapper = captured.transform.parent; //Dreyar_Character
-			wrapper.parent = this.transform.parent.Find("Moving");
+			wrapper.parent = this.transform.parent.Find("Moving").Find("CapturedObjs");
 			Debug.Log ("entered trigger");
 			Debug.Log ("captured object name is " + captured.name);
-			Debug.Log ("new parent is " + captured.gameObject.transform.parent.name);
+			Debug.Log ("new parent is " + wrapper.gameObject.transform.parent.name);
 		}
 
 	}
@@ -30,4 +32,5 @@ public class MovingSidewalkCollisionHandler : MonoBehaviour {
 			wrapper.transform.parent = null;
 		}
 	}
+
 }
