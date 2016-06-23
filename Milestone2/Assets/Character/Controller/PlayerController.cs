@@ -5,8 +5,8 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(CapsuleCollider))]
-//[RequireComponent(typeof(CharacterController))]
+//[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
 	public Camera cam;
 	private Keymapping keymap = new Keymapping();
@@ -14,25 +14,29 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private PlayerMetrics metrics;
 	private CharacterController controller;
-	private CapsuleCollider collider;
+	private CapsuleCollider collider_;
 
 	// Collider/Controller Defaults
-	float controller_height = 1.7f;
-	float collider_height = 1.7f;
-	Vector3 controller_center = new Vector3 (0f, 0.85f, 0f);
-	Vector3 collider_center = new Vector3 (0f, 0.85f, 0f);
+	float controller_height;
+	float collider_height;
+	Vector3 controller_center;
+	Vector3 collider_center;
 
 
 	// In game variables
 	private bool sneaking = false;
-	private bool rolling = false;
+	//private bool rolling = false;
 
 	void Awake(){
 		this.rigid_body = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
-		this.collider = GetComponent<CapsuleCollider> ();
+		this.collider_ = GetComponent<CapsuleCollider> ();
+		this.controller_height = this.controller.height;
+		this.collider_height = this.collider_.height;
+		this.controller_center = this.controller.center;
+		this.collider_center = this.collider_.center;
 
 		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
 		//interact with Character Model's layer(aka Character) in the Physics settings
@@ -43,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (this.keymap.Exit ()) {
@@ -77,7 +81,7 @@ public class PlayerController : MonoBehaviour {
 		// ...maybe it has something to do with the animation transitions
 
 		//if (!current_state.IsName ("Sneak Mode")) {
-			//this.animator.ResetTrigger ("sneakTrigger");
+		//this.animator.ResetTrigger ("sneakTrigger");
 		//}
 		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||Input.GetButtonDown(this.keymap.movement_toggle1.ps4)){
 			this.sneaking = !(this.sneaking);
@@ -118,35 +122,36 @@ public class PlayerController : MonoBehaviour {
 
 		if (!animator.IsInTransition (0)) {
 
-			UpdateColliderController ();
+			UpdateController ();
 
 		}
 
 	}
 
-	void UpdateColliderController(){
+	void UpdateController(){
 		float ch = animator.GetFloat ("ColliderHeight");
 		float cy = animator.GetFloat ("ColliderY");
 		if (!(ch == 0f && cy == 0f)) {
-			//this.controller.height = ch;
-			//this.controller.center = new Vector3 (0f, cy, 0f);
+			this.controller.height = ch;
+			this.controller.center = new Vector3 (0f, cy, 0f);
 
-			this.collider.height = ch;
-			this.collider.center = new Vector3 (0f, cy, 0f);
+			this.collider_.height = ch;
+			this.collider_.center = new Vector3 (0f, cy, 0f);
 
 		} 
 
 		else {
-			//this.controller.height = 1.7f;
-			//this.controller.center = new Vector3 (0f, 0.85f, 0f);
 
-			this.collider.height = 1.7f;
-			this.collider.center = new Vector3 (0f, 0.85f, 0f);
+
+			this.collider_.height = this.collider_height;
+			this.collider_.center = this.collider_center;
+			this.controller.height = this.controller_height;
+			this.controller.center = this.controller_center;
 
 		}
-			
+
 	}
-		
+
 	void makeRagdollKinematic(bool setKinematic) {
 
 		if (setKinematic) {
