@@ -13,11 +13,10 @@ public class GateBehavior : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnTriggerEnter() {
+	void OnTriggerEnter(Collider other) {
 		anim.SetBool ("open", true);
-		Debug.Log ("gate trigger entered");
 	}
-	void OnTriggerExit() {
+	void OnTriggerExit(Collider other) {
 		anim.SetBool ("open", false);
 	}
 }
