@@ -32,4 +32,9 @@ public class HangingInteraction : MonoBehaviour {
             PlayerController.canInteract = false;
         }
     }
+
+    int GetInteraction()
+    {
+        return 1;
+    }
 }
