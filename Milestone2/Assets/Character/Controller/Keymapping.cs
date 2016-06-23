@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -32,12 +32,23 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = ps4button;
 		}
 	}
+    public struct Interaction
+    {
+        public KeyCode keyboard;
+        public string ps4;
+        public Interaction(KeyCode key, string ps4button)
+        {
+            this.keyboard = key;
+            this.ps4 = ps4button;
+        }
+    }
 
-	public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.Slash,"PS4ControllerL3");
+    public MovementToggle1 movement_toggle1 = new MovementToggle1(KeyCode.Slash,"PS4ControllerL3");
 	public RollAction roll_action = new RollAction(KeyCode.Alpha0,"PS4ControllerCircle");
 	public Jump jump = new Keymapping.Jump(KeyCode.Space,"PS4ControllerCross");
+    public Interaction interaction = new Keymapping.Interaction(KeyCode.E, "PS4ControllerSquare");
 
-	private float MaxInput(float inputA,float inputB){
+    private float MaxInput(float inputA,float inputB){
 		if (Mathf.Abs (inputA) >= Mathf.Abs (inputB)) {
 			return inputA;
 		} 
