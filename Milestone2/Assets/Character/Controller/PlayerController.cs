@@ -8,7 +8,12 @@ using System.Collections;
 //[RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
-	public Camera cam;
+
+    public static Vector3 interactionPosition = new Vector3(0, 0, 0);
+    public static Vector3 interactionDirection = new Vector3(0, 0, 0);
+    public static bool canInteract = false;
+
+    public Camera cam;
 	private Keymapping keymap = new Keymapping();
 	private Rigidbody rigid_body;
 	private Animator animator;
@@ -26,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 	// In game variables
 	private bool sneaking = false;
     //private bool rolling = false;
-    private bool canInteract = false;
+    
 
 	void Awake(){
 		this.rigid_body = GetComponent<Rigidbody> ();
@@ -168,4 +173,9 @@ public class PlayerController : MonoBehaviour {
 			rigid_body.isKinematic = true;
 		}
 	}
+
+    void checkInteractions()
+    {
+
+    }
 }

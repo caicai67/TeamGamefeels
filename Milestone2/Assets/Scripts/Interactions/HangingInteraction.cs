@@ -17,9 +17,9 @@ public class HangingInteraction : MonoBehaviour {
     {
         if (other.gameObject == player)
         {
-            //PlayerMovement.interactionPosition = interactPosition.position;
-            //PlayerMovement.interactionDirection = interactDirection.position;
-            //PlayerMovement.canInteract = true;
+            PlayerController.interactionPosition = interactPosition.position;
+            PlayerController.interactionDirection = interactDirection.position;
+            PlayerController.canInteract = true;
         }
     }
 
@@ -27,9 +27,9 @@ public class HangingInteraction : MonoBehaviour {
     {
         if (other.gameObject == player)
         {
-            //PlayerMovement.interactionPosition = new Vector3(0, 0, 0);
-            //PlayerMovement.interactionDirection = new Vector3(0, 0, 0);
-            //PlayerMovement.canInteract = false;
+            PlayerController.interactionPosition = new Vector3(0, 0, 0);
+            PlayerController.interactionDirection = new Vector3(0, 0, 0);
+            PlayerController.canInteract = false;
         }
     }
 }
