@@ -14,13 +14,13 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private PlayerMetrics metrics;
 	private CharacterController controller;
-	//private CapsuleCollider collider;
+	private CapsuleCollider collider;
 
 	// Collider/Controller Defaults
-	float controller_height = 1.7f;
-	//float collider_height = 1.7f;
-	Vector3 controller_center = new Vector3 (0f, 0.85f, 0f);
-	//Vector3 collider_center = new Vector3 (0f, 0.85f, 0f);
+	float controller_height;
+	float collider_height;
+	Vector3 controller_center;
+	Vector3 collider_center;
 
 
 	// In game variables
@@ -32,7 +32,11 @@ public class PlayerController : MonoBehaviour {
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
-		//this.collider = GetComponent<CapsuleCollider> ();
+		this.collider = GetComponent<CapsuleCollider> ();
+		this.controller_height = this.controller.height;
+		this.collider_height = this.collider.height;
+		this.controller_center = this.controller.center;
+		this.collider_center = this.collider.center;
 
 		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
 		//interact with Character Model's layer(aka Character) in the Physics settings
@@ -131,17 +135,17 @@ public class PlayerController : MonoBehaviour {
 			this.controller.height = ch;
 			this.controller.center = new Vector3 (0f, cy, 0f);
 
-			//this.collider.height = ch;
-			//this.collider.center = new Vector3 (0f, cy, 0f);
+			this.collider.height = ch;
+			this.collider.center = new Vector3 (0f, cy, 0f);
 
 		} 
 
 		else {
-			this.controller.height = 1.7f;
-			this.controller.center = new Vector3 (0f, 0.85f, 0f);
+			this.controller.height = this.controller_height;
+			this.controller.center = this.controller_center;
 
-			//this.collider.height = 1.7f;
-			//this.collider.center = new Vector3 (0f, 0.85f, 0f);
+			this.collider.height = this.collider_height;
+			this.collider.center = this.collider_center;
 
 		}
 			
