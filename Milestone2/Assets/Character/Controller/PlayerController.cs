@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour {
 
 	// In game variables
 	private bool sneaking = false;
-	//private bool rolling = false;
+    //private bool rolling = false;
+    private bool canInteract = false;
 
 	void Awake(){
 		this.rigid_body = GetComponent<Rigidbody> ();

@@ -83,7 +83,12 @@ public class Keymapping : MonoBehaviour {
 		string secondarySkill_button = "PS4ControllerR1";
 		return CrossPlatformInputManager.GetButton (secondarySkill_button);
 	}
-	public float RightThrottle(){
+    public bool InteractionSkill()
+    {
+        string interactionSkill_button = "PS4ControllerSquare";
+        return CrossPlatformInputManager.GetButton(interactionSkill_button);
+    }
+    public float RightThrottle(){
 		string rightThrottle = "PS4ControllerR2Throttle";
 		return CrossPlatformInputManager.GetAxis(rightThrottle);;
 	}

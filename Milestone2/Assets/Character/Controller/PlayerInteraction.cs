@@ -3,13 +3,41 @@ using System.Collections;
 
 public class PlayerInteraction : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    private Keymapping keymap = new Keymapping();
+    private Rigidbody rigid_body;
+    private Animator animator;
+    private PlayerMetrics metrics;
+    private CharacterController controller;
+    private CapsuleCollider collider_;
+
+    // Collider/Controller Defaults
+    float controller_height;
+    float collider_height;
+    Vector3 controller_center;
+    Vector3 collider_center;
+
+    // Use this for initialization
+    void Awake()
+    {
+        this.rigid_body = GetComponent<Rigidbody>();
+        this.animator = GetComponent<Animator>();
+        this.metrics = GetComponent<PlayerMetrics>();
+        this.controller = GetComponent<CharacterController>();
+        this.collider_ = GetComponent<CapsuleCollider>();
+        this.controller_height = this.controller.height;
+        this.collider_height = this.collider_.height;
+        this.controller_center = this.controller.center;
+        this.collider_center = this.collider_.center;
+
+        //No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
+        //interact with Character Model's layer(aka Character) in the Physics settings
+
+        //make the ragdoll kinematic for now
+        //makeRagdollKinematic(true);
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }
