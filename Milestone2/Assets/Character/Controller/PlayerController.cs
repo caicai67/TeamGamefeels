@@ -143,6 +143,27 @@ public class PlayerController : MonoBehaviour {
 
 
         // Angular Input
+
+        //Level Switch
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Application.LoadLevel("Chris");
+        } else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Application.LoadLevel("KP");
+        } else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Application.LoadLevel("Caitlin");
+        } else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Application.LoadLevel("Ambrose");
+        } else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Application.LoadLevel("Charlie");
+        } else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            Application.LoadLevel("Justin");
+        }
     }
 
 
