@@ -273,7 +273,18 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 118382, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
   m_PrefabInternal: {fileID: 1763043308}
---- !u!82 &156774054
+--- !u!114 &156774062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156774053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4adea8fada90746815123deeefc29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &156774063
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -284,7 +295,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b0ee3bcea9d496e4eb900142eb3b7def, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -347,17 +358,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &156774062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156774053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4adea8fada90746815123deeefc29b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191000268
 GameObject:
   m_ObjectHideFlags: 0
