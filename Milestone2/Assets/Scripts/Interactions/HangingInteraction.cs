@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Team GameFeels
+//Chris Donlan, Karan Pratap, Caitlin Morris, Ambrose Cheung, Justin Thornburgh, Charles Jolman
+using UnityEngine;
 using System.Collections;
 
 public class HangingInteraction : MonoBehaviour {
