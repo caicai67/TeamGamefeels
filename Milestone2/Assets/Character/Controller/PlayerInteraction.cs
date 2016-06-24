@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviour {
     private PlayerMetrics metrics;
     private CharacterController controller;
     private CapsuleCollider collider_;
+    private AudioSource sfx;
 
     // Collider/Controller Defaults
     float controller_height;
@@ -28,6 +29,7 @@ public class PlayerInteraction : MonoBehaviour {
         this.collider_height = this.collider_.height;
         this.controller_center = this.controller.center;
         this.collider_center = this.collider_.center;
+        sfx = GetComponent<AudioSource>();
 
         //No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
         //interact with Character Model's layer(aka Character) in the Physics settings
@@ -38,6 +40,15 @@ public class PlayerInteraction : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-	
+	    if(this.animator.GetFloat("InputMagnitude") != 0)
+        {
+            if(sfx.isPlaying == false && this.animator.GetInteger("CurrentInteraction") == 0)
+            {
+                sfx.Play();
+            }
+        } else
+        {
+            sfx.Stop();
+        }
 	}
 }
