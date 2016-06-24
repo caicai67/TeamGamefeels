@@ -118,14 +118,16 @@ public class PlayerController : MonoBehaviour {
             if(this.animator.GetInteger("CurrentInteraction") == 0)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, interactionPosition.z);
-                transform.LookAt(new Vector3(interactionDirection.x, transform.position.y, interactionDirection.z));
+                transform.LookAt(new Vector3(transform.position.x, transform.position.y, interactionDirection.z));
                 this.animator.SetInteger("CurrentInteraction", 1);
                 this.rigid_body.useGravity = false;
+                canInteract = false;
             }
             else
             {
                 this.animator.SetInteger("CurrentInteraction", 0);
                 this.rigid_body.useGravity = true;
+                canInteract = false;
             }
         }
 
