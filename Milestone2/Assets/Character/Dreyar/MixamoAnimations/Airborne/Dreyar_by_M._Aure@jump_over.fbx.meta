@@ -166,7 +166,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_over
       takeName: mixamo.com
-      firstFrame: 0
+      firstFrame: 13
       lastFrame: 68
       wrapMode: 0
       orientationOffsetY: 0
@@ -185,7 +185,91 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: ColliderHeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1.6971843
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.067491196
+            value: 0.09668095
+            inSlope: -0.32089195
+            outSlope: -0.32089195
+            tangentMode: 0
+          - time: 0.40670517
+            value: 0.19820416
+            inSlope: 0.26707977
+            outSlope: 0.26707977
+            tangentMode: 0
+          - time: 0.6907869
+            value: 0.23825268
+            inSlope: 0.6167178
+            outSlope: 0.6167178
+            tangentMode: 0
+          - time: 0.7776608
+            value: 0.54346997
+            inSlope: 7.7634206
+            outSlope: 7.7634206
+            tangentMode: 0
+          - time: 0.84574
+            value: 1.5624902
+            inSlope: 3.5291152
+            outSlope: 3.5291152
+            tangentMode: 0
+          - time: 1
+            value: 1.6971843
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      - name: ColliderY
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.11603561
+            value: 2.276847
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 0.33801973
+            value: 1.8382952
+            inSlope: -6.388426
+            outSlope: -6.388426
+            tangentMode: 0
+          - time: 0.65387625
+            value: 0.34369287
+            inSlope: -1.2872989
+            outSlope: -1.2872989
+            tangentMode: 0
+          - time: 0.76439816
+            value: 0.3118687
+            inSlope: 0.3376943
+            outSlope: 0.3376943
+            tangentMode: 0
+          - time: 0.87036544
+            value: 0.7151371
+            inSlope: 3.3519049
+            outSlope: 3.3519049
+            tangentMode: 0
+          - time: 1
+            value: 0.85
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
       events: []
       transformMask:
       - path: 

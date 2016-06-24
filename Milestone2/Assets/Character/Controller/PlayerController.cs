@@ -21,20 +21,25 @@ public class PlayerController : MonoBehaviour {
 	private CharacterController controller;
 	private CapsuleCollider collider_;
 	private SphereCollider trigger;
+	public AudioSource audio;
+	public AudioClip die;
 	// Collider/Controller Defaults
 	float controller_height;
 	float collider_height;
 	Vector3 controller_center;
 	Vector3 collider_center;
-
+	private Vector3 player_origin;
 
 	// In game variables
 	private bool sneaking = false;
+	private bool player_dead = false;
+	public bool using_character_controller = false;
 	//private bool rolling = false;
     
 
 	void Awake(){
 		//this.rigid_body = GetComponent<Rigidbody> ();
+		this.player_origin = transform.position;
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
@@ -60,11 +65,18 @@ public class PlayerController : MonoBehaviour {
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
 		}
+		if (Input.GetKey (this.keymap.respawn.keyboard) || Input.GetButtonDown (this.keymap.respawn.ps4)) {
+			transform.position = this.player_origin;
+			animator.enabled = true;
+			if (this.using_character_controller) {
+				this.controller.enabled = true;
+			}
+		}
 		AnimatorStateInfo current_state = this.animator.GetCurrentAnimatorStateInfo (0);
 
-		// Environment Settings
+		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || Input.GetButton (this.keymap.run_skill.ps4)));
 		// Inputs
 
 
@@ -111,7 +123,6 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || Input.GetButtonDown (this.keymap.jump.ps4)) {
 			this.animator.SetTrigger ("Jump");
 		}
-
         //Hanging Code
         if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || Input.GetButtonDown(this.keymap.interaction.ps4)))
         //if (canInteract && Input.GetButtonDown("E"))
@@ -131,7 +142,7 @@ public class PlayerController : MonoBehaviour {
                 canInteract = false;
             }
         }
-
+	
 
         // Throttles
 
@@ -174,6 +185,13 @@ public class PlayerController : MonoBehaviour {
 			UpdateController ();
 
 		}
+		if (animator.GetCurrentAnimatorStateInfo (0).IsName ("jump_over") && this.using_character_controller) {
+			if (this.controller.enabled) {
+				this.controller.enabled = false;
+			}
+		} else if (this.using_character_controller && !this.player_dead) {
+			this.controller.enabled = true;
+		}
 
 	}
 
@@ -202,8 +220,16 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.layer == 12 && this.controller.enabled) {
+			if (!(this.audio == null) && !(this.die == null)) {
+				this.audio.clip = this.die;
+				this.audio.Play ();
+			}
+			this.player_dead = true;
 			this.controller.enabled = false;
 			this.animator.enabled = false;
+		}
+		if (other.gameObject.layer == 14 && this.using_character_controller) {
+			this.controller.enabled = false;
 		}
 	}
 	//void OnTriggerExit(Collider other){
