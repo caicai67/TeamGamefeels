@@ -3,18 +3,18 @@ using System.Collections;
 
 public class SoundPlayback : MonoBehaviour {
 
-	AudioSource barrelClang;
+	AudioSource audioClip;
 
 	void Awake() {
-		barrelClang = GetComponent<AudioSource> ();
+		audioClip = GetComponent<AudioSource> ();
 	}
 
 	void OnCollisionStay(Collision col) {
-		if(!barrelClang.isPlaying && col.relativeVelocity.magnitude >= 2) {
+		if(!audioClip.isPlaying && col.relativeVelocity.magnitude >= 2) {
 
-			barrelClang.volume = col.relativeVelocity.magnitude;
+			audioClip.volume = col.relativeVelocity.magnitude;
 			Debug.Log (col.relativeVelocity.magnitude);
-			barrelClang.Play();
+			audioClip.Play();
 		}
 	}
 		
