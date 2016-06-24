@@ -3,29 +3,50 @@ using System.Collections;
 
 public class TableBehavior : MonoBehaviour {
 	
-	public AudioClip slide;
+//	public AudioClip slide;
 	public AudioClip crash;
 
 	AudioSource audS;
-	Transform prevTransform;
+	Rigidbody cube;
 
 	void Start () {
 		audS = this.gameObject.AddComponent <AudioSource>();;
-		prevTransform = transform;
+
+		cube = GetComponent<Rigidbody> ();
 	}
-	void Update() {
-		if(Mathf.Abs (transform.position.y - prevTransform.position.y) > 0f) {
-			Debug.Log ("audio played");
+
+	void Update(){
+//		Debug.Log (cube.velocity);
+//		if (!audS.isPlaying && Mathf.Abs(cube.velocity.y) > 0.4f) {
+//			Debug.Log ("audio played");
+//			audS.clip = crash;
+//			audS.Play ();
+//		} else if (!audS.isPlaying && (Mathf.Abs(cube.velocity.x) > 0.4f
+//			|| Mathf.Abs(cube.velocity.z) > 0.4f)) {
+//			Debug.Log ("audio played");
+//			audS.clip = slide;
+//			audS.Play ();
+//		} else if (cube.velocity.magnitude < 0.4f){
+//			audS.Stop();
+//		}
+	}
+
+	void OnCollisionEnter(Collision other) {
+		if (!audS.isPlaying && !other.gameObject.CompareTag("Player")) {
 			audS.clip = crash;
-			audS.Play ();
-		} else if((Mathf.Abs (transform.position.x - prevTransform.position.x) > 0f 
-			|| Mathf.Abs (transform.position.z - prevTransform.position.z) > 0f )) 
-		{
-			Debug.Log ("audio played");
-			audS.clip = slide;
+			audS.volume = 0.5f;
 			audS.Play ();
 		}
-
-		prevTransform = transform;
+	}
+//	void OnCollisionStay(Collision other) {
+//		if (!other.gameObject.CompareTag("Player") && !audS.isPlaying && cube.velocity.magnitude > 0.2) {
+//			audS.clip = slide;
+//			audS.Play ();
+//		}
+//	}
+	void OnCollisionExit(Collision other) {
+		if (!other.gameObject.CompareTag ("Player")) {
+			audS.Stop ();
+		}
 	}
 }
