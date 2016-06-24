@@ -3,7 +3,14 @@ guid: 82fa7b7c287729a40add651099701bf7
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Barrel
+    100002: //RootNode
+    400000: Barrel
+    400002: //RootNode
+    2300000: Barrel
+    3300000: Barrel
     4300000: Barrel
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
