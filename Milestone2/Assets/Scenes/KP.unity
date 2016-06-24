@@ -565,7 +565,7 @@ GameObject:
   - 4: {fileID: 487578773}
   - 218: {fileID: 487578772}
   - 154: {fileID: 487578771}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,6 +1005,10 @@ Prefab:
     - target: {fileID: 8155848, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453682, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
