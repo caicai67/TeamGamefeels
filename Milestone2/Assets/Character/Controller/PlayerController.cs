@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CapsuleCollider))]
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	private PlayerMetrics metrics;
 	private CharacterController controller;
 	private CapsuleCollider collider_;
-
+	private SphereCollider trigger;
 	// Collider/Controller Defaults
 	float controller_height;
 	float collider_height;
@@ -30,14 +30,15 @@ public class PlayerController : MonoBehaviour {
 
 	// In game variables
 	private bool sneaking = false;
-    //private bool rolling = false;
+	//private bool rolling = false;
     
 
 	void Awake(){
-		this.rigid_body = GetComponent<Rigidbody> ();
+		//this.rigid_body = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
 		this.metrics = GetComponent<PlayerMetrics> ();
 		this.controller = GetComponent<CharacterController> ();
+		this.trigger = GetComponent<SphereCollider> ();
 		this.collider_ = GetComponent<CapsuleCollider> ();
 		this.controller_height = this.controller.height;
 		this.collider_height = this.collider_.height;
@@ -144,6 +145,7 @@ public class PlayerController : MonoBehaviour {
         // Angular Input
     }
 
+
 	void FixedUpdate(){
 
 		if (!animator.IsInTransition (0)) {
@@ -175,9 +177,19 @@ public class PlayerController : MonoBehaviour {
 			this.controller.center = this.controller_center;
 
 		}
-
 	}
 
+	void OnCollisionEnter(Collision other){
+		if (other.gameObject.layer == 12 && this.controller.enabled) {
+			this.controller.enabled = false;
+			this.animator.enabled = false;
+		}
+	}
+	//void OnTriggerExit(Collider other){
+	//	if (other.gameObject.layer == 12 && !this.controller.enabled) {
+	//		this.controller.enabled = true;
+	//	}
+	//}
 	void makeRagdollKinematic(bool setKinematic) {
 
 		if (setKinematic) {
