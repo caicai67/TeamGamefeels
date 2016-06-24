@@ -19,9 +19,6 @@ public class MovingSidewalkCollisionHandler : MonoBehaviour {
 		if (captured.CompareTag ("Player")) {
 			Transform wrapper = captured.transform.parent; //Dreyar_Character
 			wrapper.parent = this.transform.parent.Find("Moving").Find("CapturedObjs");
-			Debug.Log ("entered trigger");
-			Debug.Log ("captured object name is " + captured.name);
-			Debug.Log ("new parent is " + wrapper.gameObject.transform.parent.name);
 		}
 
 	}

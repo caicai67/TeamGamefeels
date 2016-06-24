@@ -5,7 +5,7 @@ using System.Collections;
 
 public class MovingSidewalkAnimCycle : MonoBehaviour {
 
-	ArrayList storeChildren;
+	ArrayList storeChildren = new ArrayList();
 
 	public void AnimationCycleEnd() {
 		Transform captured = this.transform.Find ("CapturedObjs");
