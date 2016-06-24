@@ -4,9 +4,9 @@ using System.Collections;
 public class SoundPlayback : MonoBehaviour {
 
 	void OnCollisionStay(Collision col) {
-		if() {
-			audio.volume = col.relativeVelocity.magnitude/20;
-			audio.Play();
+		if(true) {
+			//audio.volume = col.relativeVelocity.magnitude/20;
+			//audio.Play();
 		}
 	}
 }
