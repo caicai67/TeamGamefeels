@@ -12,10 +12,10 @@ ii. Requirements
 
 	Team Requirements:
 		
-		Basic Physics Interactions
-		Collider Animation
+		Basic Physics Interactions - Objects can be collided with through the use of a collider
+		Collider Animation - Player character collider changes when jumping and rolling to better fit the animation
 		Ragdoll Simulation
-		Game Feel
+		Game Feel - Realtime responsive control
 
 	Individual Requirements:
 
@@ -70,6 +70,14 @@ iii. Resources
 
 	Ambrose:
 		Used freesound.org for sounds and Unity Standard Asset textures
+
+	Chris:
+
+	KP:
+
+	Justin:
+
+	Charlie:
 
 iv. Special Install Instructions
 
