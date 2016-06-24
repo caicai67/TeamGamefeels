@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
 [RequireComponent(typeof(Animator))]
-//[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
 
