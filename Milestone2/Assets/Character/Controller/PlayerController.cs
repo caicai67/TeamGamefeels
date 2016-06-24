@@ -111,18 +111,34 @@ public class PlayerController : MonoBehaviour {
 			this.animator.SetTrigger ("Jump");
 		}
 
+        //Hanging Code
+        if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || Input.GetButtonDown(this.keymap.interaction.ps4)))
+        {
+            if(this.animator.GetInteger("CurrentInteraction") == 0)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, interactionPosition.z);
+                transform.LookAt(new Vector3(interactionDirection.x, transform.position.y, interactionDirection.z));
+                //climbParameter = 0f;
+                canInteract = false;
+            }
+            else
+            {
 
-		// Throttles
-
-		// Input Magnitude
-
-		// Forward Input
-
-		// Speeds
+            }
+        }
 
 
-		// Angular Input
-	}
+        // Throttles
+
+        // Input Magnitude
+
+        // Forward Input
+
+        // Speeds
+
+
+        // Angular Input
+    }
 
 	void FixedUpdate(){
 
