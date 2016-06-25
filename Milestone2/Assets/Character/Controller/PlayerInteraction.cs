@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
+// Team GameFeels
+// Ambrose, Chris, KP, Justin, Caitlin, Charlie
+
 public class PlayerInteraction : MonoBehaviour {
 
     private Keymapping keymap = new Keymapping();
