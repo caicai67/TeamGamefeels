@@ -2321,7 +2321,7 @@ GameObject:
   - 65: {fileID: 1752181857}
   - 23: {fileID: 1752181856}
   - 54: {fileID: 1752181860}
-  m_Layer: 15
+  m_Layer: 10
   m_Name: MetalPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
