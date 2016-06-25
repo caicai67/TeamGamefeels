@@ -48,7 +48,7 @@ ii. Requirements
 			
 			Theme: Futuristic enclosed space dimension
 			
-			Compound Objects and Joints: hinged restaurant doors and hinged ramp
+			Compound Objects and Joints: hinged restaurant doors and hinged ramp. Created stairs and their collider myself.
 			
 			Terrain: Multiple terrains and stairs and decks.
 		 
@@ -61,7 +61,7 @@ ii. Requirements
 		
 			Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
 
-			I got all resources and textures from the Unity Asset Store.
+			
 			
 
 
@@ -106,7 +106,11 @@ iii. Resources
 		Mixamo
 		Freesounds.org
 
-	KP:
+	KP:	Free footsteps sound effect from Unity Asset Store
+		Mocap and Standard Asset Animations
+		Mixamo
+		Freesounds.org
+
 
 	Justin:
 
