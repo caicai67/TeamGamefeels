@@ -4,7 +4,7 @@ i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
 	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
-	KP - kps@gatech.edu - ksingh75
+	Karan Pratap Singh - kps@gatech.edu - ksingh75
 	Justin
 	Charlie
 
