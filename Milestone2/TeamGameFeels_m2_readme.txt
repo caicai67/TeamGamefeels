@@ -5,7 +5,7 @@ i. Team Info
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
 	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
 	Karan Pratap Singh - kps@gatech.edu - ksingh75
-	Justin
+	Justin - jthornburgh3@gatech.edu - jthornburgh3
 	Charlie
 
 ii. Requirements
@@ -36,17 +36,19 @@ ii. Requirements
 			Bugs: Hanging animations clip through objects
 
 		Chris:
+			completed requirements;
 			Rigidbodies: Stack of boxes, Small spheres, giant spinning spheres, saddle box, spinning axes, pendulum axes
 			Compound Objects and Joints: Spinning axes, swinging axes
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
 			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
 			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
 			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
-			Terrain: Three areas (pendulums and giant sphere, olive trees and mountains, giant mountain in the way back)
 
 		KP:- 
 			I have completed all of the requirements.
 
+			I also animated the collider for regular jump animations and created the jump blend tree.
+			
 			Input: Press X on PS4 Controller and Space on keyboard to jump. Use direction and jump together to do a forward or backward running jump.
 			
 			Theme: Futuristic enclosed space dimension
@@ -65,11 +67,14 @@ ii. Requirements
 			Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
 
 			
-			
-
-
-		Justin:
-
+		
+		Justin: 
+			Rigidbodies: yellow ball, wire mesh cube, metal ball on concrete pillar, metal ball on mountain side, falling green cylinder
+			Compound components: breakable wall (made of 7 cubes with fixed joints)
+				small house (various rectangular prisms, hanging door)
+			Variable terrain: varied gound, concrete ramp
+			Sounds: different sounds for dirt metal and concrete
+			Game Feel: all 3D objects not embedded in the ground are interactable
 		Charlie:
 
 iii. Resources
@@ -117,6 +122,8 @@ iii. Resources
 
 
 	Justin:
+		Texture file from Stone Texture Pack from the Asset store
+		Some additional textures from the other imported assets
 
 	Charlie:
 
@@ -156,7 +163,17 @@ v. Game Testing Steps
 	KP's Scene ("2" Key):
 
 	Justin's Scene ("5" Key):
-
+		Stand still for 10 seconds, you can see the cylinder fall onto the house and sphere roll down the side of the mountain to eventually knock over some of the boxes. 
+		There is a ball and wire mesh cube to interact with on the spawn platform. 
+		The last ball can be reached by going up the concrete ramp to the top of the concrete pillar. 
+		The two compound objects are the breakable wall which can be broken by running through it, and 
+			the door on the house which can be opened by running through it. 
+		Three different footfall sounds occur in the following locations: 
+			Metal on spawn platform
+			Concrete on the ramp and pillar and inside the house
+			Dirt everywhere else. 
+		Gamefeel: many interactable objects. 
+		
 	Charlie's Scene: No work done
 
 vi. Main Scene File
