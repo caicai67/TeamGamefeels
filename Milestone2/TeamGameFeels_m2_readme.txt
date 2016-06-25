@@ -4,7 +4,7 @@ i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
 	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
-	KP - kps@gatech.edu - ksingh75
+	Karan Pratap Singh - kps@gatech.edu - ksingh75
 	Justin
 	Charlie
 
@@ -44,6 +44,8 @@ ii. Requirements
 			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 
 		KP:- 
+			I have completed all of the requirements.
+
 			Input: Press X on PS4 Controller and Space on keyboard to jump. Use direction and jump together to do a forward or backward running jump.
 			
 			Theme: Futuristic enclosed space dimension
