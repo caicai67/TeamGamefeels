@@ -179,7 +179,9 @@ public class PlayerController : MonoBehaviour {
 
 
 	void FixedUpdate(){
+	}
 
+	void LateUpdate(){
 		if (!animator.IsInTransition (0)) {
 
 			UpdateController ();
@@ -192,7 +194,6 @@ public class PlayerController : MonoBehaviour {
 		} else if (this.using_character_controller && !this.player_dead) {
 			this.controller.enabled = true;
 		}
-
 	}
 
 	void UpdateController(){
