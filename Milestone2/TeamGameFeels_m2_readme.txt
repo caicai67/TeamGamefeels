@@ -16,6 +16,7 @@ ii. Requirements
 		Collider Animation - Player character collider changes when jumping and rolling to better fit the animation
 		Ragdoll Simulation
 		Game Feel - Realtime responsive control
+		Collider Animation: Character's collider animates in various animations
 
 	Individual Requirements:
 
@@ -42,7 +43,20 @@ ii. Requirements
 			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
 			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 
-		KP:
+		KP:- Theme: Futuristic enclosed space dimension
+		Compound Objects hinged restaurant doors and hinged ramp
+		
+		Terrain: Multiple terrains and stairs and decks.
+		 
+		Physics: objects create different sound when they fall or roll, player can knock over all moveable objects, 
+		player can push hinged doors and go down a platform via a hinged ramp. 
+		
+		Game Feel: wind zone with decreasing sound dopplar effect and swaying palm trees for immersion, Everything is textured. 
+		
+		Sounds: different floors cause different footstep sounds.
+		
+		Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
+
 
 		Justin:
 
