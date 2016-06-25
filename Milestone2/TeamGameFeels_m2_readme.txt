@@ -36,7 +36,7 @@ ii. Requirements
 			Bugs: Hanging animations clip through objects
 
 		Chris:
-			Rigidbodies: Stack of boxes, saddle box, spinning axes, pendulum axes
+			Rigidbodies: Stack of boxes, Small spheres, giant spinning spheres, saddle box, spinning axes, pendulum axes
 			Compound Objects and Joints: Spinning axes, swinging axes
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
 			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal

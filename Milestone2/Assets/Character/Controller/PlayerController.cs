@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 //[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerMetrics))]
@@ -66,11 +66,7 @@ public class PlayerController : MonoBehaviour {
 			Application.Quit ();
 		}
 		if (Input.GetKey (this.keymap.respawn.keyboard) || Input.GetButtonDown (this.keymap.respawn.ps4)) {
-			transform.position = this.player_origin;
-			animator.enabled = true;
-			if (this.using_character_controller) {
-				this.controller.enabled = true;
-			}
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		}
 		AnimatorStateInfo current_state = this.animator.GetCurrentAnimatorStateInfo (0);
 
