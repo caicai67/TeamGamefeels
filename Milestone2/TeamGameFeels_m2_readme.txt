@@ -36,15 +36,16 @@ ii. Requirements
 			Bugs: Hanging animations clip through objects
 
 		Chris:
-			Rigidbodies: Stack of boxes, saddle box, spinning axes, pendulum axes
+			Rigidbodies: Stack of boxes, Small spheres, giant spinning spheres, saddle box, spinning axes, pendulum axes
 			Compound Objects and Joints: Spinning axes, swinging axes
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
 			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
 			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
 			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 
-		KP:- Theme: Futuristic enclosed space dimension
-		Compound Objects hinged restaurant doors and hinged ramp
+		KP:- 
+			Theme: Futuristic enclosed space dimension
+		Compound Objects and Joints: hinged restaurant doors and hinged ramp
 		
 		Terrain: Multiple terrains and stairs and decks.
 		 
