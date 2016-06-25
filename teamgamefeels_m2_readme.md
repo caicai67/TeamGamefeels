@@ -191,9 +191,9 @@ v. Game Testing Steps
 
 vi. Main Scene File
 
-	Chris
-
-
-
-
-
+	1. Chris
+	2. KP
+	3. Caitlin
+	4. Ambrose
+	5. Justin
+	6. Charlie
