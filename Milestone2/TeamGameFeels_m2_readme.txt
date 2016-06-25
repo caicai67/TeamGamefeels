@@ -40,7 +40,7 @@ ii. Requirements
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
 			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
 			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
-			Bugs: Character configurations did not work on everyone's computers, and joints fall apart easily (despite forces being set to infinity)
+			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 
 		KP:
 
@@ -97,25 +97,25 @@ iv. Special Install Instructions
 
 v. Game Testing Steps
 
-	Caitlin's Scene:
+	Caitlin's Scene ("3" Key):
 		The camera can be turned using the arrow keys. Turning the camera to the right and using WASD to move, approaching the gate should activate it to open. Walking across using the moving sidewalk, the character is moved in tandem with the sidewalk. Once the player is on the other tower, they have the option of running toward the table and knocking it off the platform (who doesn't like flipping tables?). It will make a crashing sound and, if enough force is applied, the legs may break off. 
 		From here the player can walk/run onto the cloth canopy, which will bend and stretch as the player falls through. To the right, there is a collection of blocks. They can give and wobble (especially the smaller ones), but eventually settle back due to gravity. The player can go back up to the top using the blocks and jump key (space), but this is a little tricky. Turning back toward the space between the towers, the player can go through the double doors. If the player hits them with enough force they should squeak. Moving away from all the other objects, the player will notice the sound of the escalator drops off.
 
 		Sneaking:
 			Sneaking is toggled using the "/" key. Once in sneak mode, the controls are similar to those of run mode (WASD to move, left-right-up-down to move the camera). The differences are that in sneak mode the character is slower and can no longer jump.
 
-	Ambrose's Scene (Using Keyboard (WASD)):
+	Ambrose's Scene ("4" Key) [Keyboard (WASD)]:
 		Run forward through the boxes, up the hill, up the stairs, and through the double doors.
 		Run forward until touching the wall, but under the ledge jutting out from it.
 		Press 'E' to climb and hang on the wall
 		Hold 'D' to shimmy to the other side of the valley
 		Upon reaching the end of the ledge, press 'E' to fall onto the ground.
 
-	Chris' Scene:
+	Chris' Scene ("1" Key):
 
-	KP's Scene:
+	KP's Scene ("2" Key):
 
-	Justin's Scene:
+	Justin's Scene ("5" Key):
 
 	Charlie's Scene:
 
