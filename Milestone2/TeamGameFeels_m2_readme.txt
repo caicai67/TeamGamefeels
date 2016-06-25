@@ -161,6 +161,18 @@ v. Game Testing Steps
 		Meshes were custom (besides character, terrain, and small spheres)
 
 	KP's Scene ("2" Key):
+		Run on the concrete area for a bit.
+		Finally, run, roll or jump up the stairs and get on top of the metal deck.
+		Roll through or jump over the crates on top of the metal deck.
+		Right behind the crates is a hinged metal ramp that will let you come down from the ramp or you can jump off the ramp.
+		Roll or bump into the metal barrels outside the beach dining area.
+		The dining area can be entered through the 2 swinging doors.
+		You can roll through the dining table and chairs.
+		Knock over the stacked barrels for fun and hear them rolling away.
+		Look at the palm trees swaying in the ocean breeze.
+		Hear the ocean breeze get stronger as you reach the dining area.
+		Notice the sounds your big feet make whenever you run over a new surface.
+		
 		
 
 	Justin's Scene ("5" Key):
