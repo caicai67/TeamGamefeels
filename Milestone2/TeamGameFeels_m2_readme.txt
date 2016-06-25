@@ -1,4 +1,4 @@
-Caitlins_readme.txt
+Team GameFeels
 
 i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
