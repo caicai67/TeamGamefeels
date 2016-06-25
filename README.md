@@ -24,6 +24,3 @@ Currently, WASD maps to camera and Arrows map to movement.
 
 - Chris: Theme: undecided; Physics: swinging pendulums, small pursuit boids (spheres), roll ball to destination
 
-- KP: Theme: Futuristic enclosed space dimension, Physics: hinged restaurant doors, higned ramps, objects create sound when they fall or roll, 
-wind zone with decreasing sound dopplar effect and swaying palm trees for immersion, different floors cause different footstep sounds.
-Please note that all the hinges in my level were lubricated recently!
