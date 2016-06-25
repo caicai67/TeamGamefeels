@@ -168,10 +168,10 @@ public class PlayerController : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Application.LoadLevel("Ambrose");
-        } else if (Input.GetKeyDown(KeyCode.Alpha5))
+        } else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             Application.LoadLevel("Charlie");
-        } else if (Input.GetKeyDown(KeyCode.Alpha6))
+        } else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             Application.LoadLevel("Justin");
         }
