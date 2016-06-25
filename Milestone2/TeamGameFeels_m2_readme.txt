@@ -35,13 +35,13 @@ ii. Requirements
 			Bugs: Hanging animations clip through objects
 
 		Chris:
-			Rigidbodies: Stack of boxes, saddle box, spinning axes, pendulum axes
+			Rigidbodies: Stack of boxes, Small spheres, giant spinning spheres, saddle box, spinning axes, pendulum axes
 			Compound Objects and Joints: Spinning axes, swinging axes
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
-			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
-			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
-			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
-
+			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal; dying sound when contact with giant obstacles
+			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character, spheres constantly spin, olive trees in second area
+			Bugs: joints break on the spinning pendulums. character can get stuck under saddle--just keep rolling.  Late Update should keep character from getting tossed around by capsule interactions--but that was a source of problems (using character controller and capsule collider together for running agility)
+			Terrain: Three areas (pendulums and giant sphere, olive trees and mountains, giant mountain in the way back)
 		KP:
 
 		Justin:
@@ -84,6 +84,7 @@ iii. Resources
 		Mocap and Standard Asset Animations
 		Mixamo
 		Freesounds.org
+		Unity Standard Assets (Terrain, animations`)
 
 	KP:
 
@@ -112,6 +113,17 @@ v. Game Testing Steps
 		Upon reaching the end of the ledge, press 'E' to fall onto the ground.
 
 	Chris' Scene ("1" Key):
+		Run toward boxes, bust through them
+		Run around spheres, walk on top of them, roll into them (circle button, numpad zero)
+		Run at the green saddle, hold R1 (left shift) and press jump (space bar) to hurdle the saddle
+		Roll under the saddle. 
+		Run up to axes, let them hit you. press options (backspace to reload the level). 
+		Run up to pendulums, let them hit you.  press options (backspace)
+		Run up to giant spheres in next room, let them hit. (backspace)
+		Run past giant spheres on both the metal and concrete squares. run up side ramps. 
+		Run into next area, through far hallway.  Unity generated terrain, olive trees, painted terrain textures
+		Run past mountains to giant mountain in rear. climb up mountain. 
+		Meshes were custom (besides character, terrain, and small spheres)
 
 	KP's Scene ("2" Key):
 
