@@ -44,21 +44,25 @@ ii. Requirements
 			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 
 		KP:- 
+			Input: Press X on PS4 Controller and Space on keyboard to jump. Use direction and jump together to do a forward or backward running jump.
+			
 			Theme: Futuristic enclosed space dimension
-		Compound Objects and Joints: hinged restaurant doors and hinged ramp
-		
-		Terrain: Multiple terrains and stairs and decks.
+			
+			Compound Objects and Joints: hinged restaurant doors and hinged ramp
+			
+			Terrain: Multiple terrains and stairs and decks.
 		 
-		Physics: objects create different sound when they fall or roll, player can knock over all moveable objects, 
-		player can push hinged doors and go down a platform via a hinged ramp. 
+			Physics: objects create different sound when they fall or roll, player can knock over all moveable objects, 
+			player can push hinged doors and go down a platform via a hinged ramp. 
 		
-		Game Feel: wind zone with decreasing sound dopplar effect and swaying palm trees for immersion, Everything is textured. 
+			Game Feel: wind zone with decreasing sound dopplar effect and swaying palm trees for immersion, Everything is textured. 
 		
-		Sounds: different floors cause different footstep sounds.
+			Sounds: different floors cause different footstep sounds.
 		
-		Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
+			Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
 
-		I got all resources and textures from the Unity Asset Store.
+			I got all resources and textures from the Unity Asset Store.
+			
 
 
 		Justin:
