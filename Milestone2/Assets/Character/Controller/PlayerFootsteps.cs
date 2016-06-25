@@ -15,6 +15,7 @@ public class PlayerFootsteps : MonoBehaviour {
 	private float offset_timer = 0f;
 	// Use this for initialization
 	void Start () {
+		this.audio.volume = 0.2f;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +29,7 @@ public class PlayerFootsteps : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider floor){
-		if (player.velocity.magnitude > 0.2f) {
+		if (player.velocity.magnitude > 0.4f) {
 			if (floor.gameObject.layer == 10 && !this.step_triggered) {
 				audio.clip = this.metal_step;
 				this.offset_timer = 0f;
@@ -37,6 +38,7 @@ public class PlayerFootsteps : MonoBehaviour {
 			} else if (floor.gameObject.layer == 11 && !this.step_triggered) {
 				audio.clip = this.concrete_step;
 				this.offset_timer = 0f;
+
 				audio.Play ();
 				this.step_triggered = true;
 			} else if (floor.gameObject.layer == 13 && !this.step_triggered) {

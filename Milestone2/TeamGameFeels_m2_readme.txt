@@ -117,7 +117,7 @@ v. Game Testing Steps
 
 	Justin's Scene ("5" Key):
 
-	Charlie's Scene:
+	Charlie's Scene: No work done
 
 vi. Main Scene File
 
