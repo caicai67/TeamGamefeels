@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
+// Team GameFeels
+// Chris, Ambrose, KP, Justin, Caitlin, Charlie
+
 public class SphereRoll : MonoBehaviour {
 	private Rigidbody sphere_rigid;
 	private SphereCollider sphere;
