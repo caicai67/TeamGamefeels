@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Team GameFeels
+// Chris, Ambrose, KP, Justin, Caitlin, Charlie
+using UnityEngine;
 using System.Collections;
 
 public class TriggerSound : MonoBehaviour {
