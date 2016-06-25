@@ -4,7 +4,7 @@ i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
 	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
-	KP
+	KP - kps@gatech.edu - ksingh75
 	Justin
 	Charlie
 
@@ -57,6 +57,8 @@ ii. Requirements
 		Sounds: different floors cause different footstep sounds.
 		
 		Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
+
+		I got all resources and textures from the Unity Asset Store.
 
 
 		Justin:
