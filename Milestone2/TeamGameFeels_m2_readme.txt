@@ -3,7 +3,7 @@ Caitlins_readme.txt
 i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
-	Chris
+	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
 	KP
 	Justin
 	Charlie
@@ -32,8 +32,15 @@ ii. Requirements
 			Variable Height Terrain: Hill and stone platform
 			Sounds: Boxes, footsteps, and doors
 			Game Feel: Player can push open the doors
+			Bugs: Hanging animations clip through objects
 
 		Chris:
+			Rigidbodies: Stack of boxes, saddle box, spinning axes, pendulum axes
+			Compound Objects and Joints: Spinning axes, swinging axes
+			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
+			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
+			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
+			Bugs: Character configurations did not work on everyone's computers, and joints fall apart easily (despite forces being set to infinity)
 
 		KP:
 
@@ -72,6 +79,11 @@ iii. Resources
 		Used freesound.org for sounds and Unity Standard Asset textures
 
 	Chris:
+		Free footsteps sound effect from Unity Asset Store
+		Mountain Terrain Package
+		Mocap and Standard Asset Animations
+		Mixamo
+		Freesounds.org
 
 	KP:
 
@@ -98,6 +110,14 @@ v. Game Testing Steps
 		Press 'E' to climb and hang on the wall
 		Hold 'D' to shimmy to the other side of the valley
 		Upon reaching the end of the ledge, press 'E' to fall onto the ground.
+
+	Chris' Scene:
+
+	KP's Scene:
+
+	Justin's Scene:
+
+	Charlie's Scene:
 
 vi. Main Scene File
 
