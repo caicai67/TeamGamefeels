@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
+
+// Team GameFeels
+// Chris, Ambrose, KP, Justin, Caitlin, Charlie
 public class Keymapping : MonoBehaviour {
 	
 	public struct MovementToggle1
