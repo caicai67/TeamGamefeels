@@ -8749,52 +8749,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.0009861588
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.81427526
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalPosition.z
       value: -370
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 425550, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 157034, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+    - target: {fileID: 135944, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_Name
       value: Dreyar_Character_controller_rig
       objectReference: {fileID: 0}
-    - target: {fileID: 5447794, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 13660414, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4cea1b10d9fad584ba553f7a1fda0214, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &848284264 stripped
 GameObject:
