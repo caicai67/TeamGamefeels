@@ -4,7 +4,7 @@ i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
 	Ambrose Cheung - acheung30@gatech.edu - acheung30
 	Chris Donlan - chris.donlan87@gmail.com - cdonlan3
-	KP
+	Karan Pratap Singh - kps@gatech.edu - ksingh75
 	Justin
 	Charlie
 
@@ -16,6 +16,7 @@ ii. Requirements
 		Collider Animation - Player character collider changes when jumping and rolling to better fit the animation
 		Ragdoll Simulation
 		Game Feel - Realtime responsive control
+		Collider Animation: Character's collider animates in various animations
 
 	Individual Requirements:
 
@@ -38,11 +39,34 @@ ii. Requirements
 			Rigidbodies: Stack of boxes, Small spheres, giant spinning spheres, saddle box, spinning axes, pendulum axes
 			Compound Objects and Joints: Spinning axes, swinging axes
 			Variable Height Terrain: Metal/concrete checkerboard area with ramps, cliff-like area, steep mountain
-			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal; dying sound when contact with giant obstacles
-			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character, spheres constantly spin, olive trees in second area
-			Bugs: joints break on the spinning pendulums. character can get stuck under saddle--just keep rolling.  Late Update should keep character from getting tossed around by capsule interactions--but that was a source of problems (using character controller and capsule collider together for running agility)
+			Sounds: Three different walking sounds on different terrains - concrete, dirt, metal
+			Game Feel: Dying scream when hit by giant spheres, pendulums, spinning axes, as well as reaction of axes to character
+			Bugs: Character configurations did not work on everyone's computers, character colliders may conflict (should be fixed), and joints fall apart easily (despite forces being set to infinity)
 			Terrain: Three areas (pendulums and giant sphere, olive trees and mountains, giant mountain in the way back)
-		KP:
+
+		KP:- 
+			I have completed all of the requirements.
+
+			Input: Press X on PS4 Controller and Space on keyboard to jump. Use direction and jump together to do a forward or backward running jump.
+			
+			Theme: Futuristic enclosed space dimension
+			
+			Compound Objects and Joints: hinged restaurant doors and hinged ramp. Created stairs and their collider myself.
+			
+			Terrain: Multiple terrains and stairs and decks.
+		 
+			Physics: objects create different sound when they fall or roll, player can knock over all moveable objects, 
+			player can push hinged doors and go down a platform via a hinged ramp. 
+		
+			Game Feel: wind zone with decreasing sound dopplar effect and swaying palm trees for immersion, Everything is textured. 
+		
+			Sounds: different floors cause different footstep sounds.
+		
+			Bug: Please note that all the hinges in my level were lubricated recently so they don't creak.
+
+			
+			
+
 
 		Justin:
 
@@ -86,7 +110,11 @@ iii. Resources
 		Freesounds.org
 		Unity Standard Assets (Terrain, animations`)
 
-	KP:
+	KP:	Free footsteps sound effect from Unity Asset Store
+		Mocap and Standard Asset Animations
+		Mixamo
+		Freesounds.org
+
 
 	Justin:
 
