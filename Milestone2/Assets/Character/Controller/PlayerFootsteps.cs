@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Team GameFeels
+// Chris, Ambrose, KP, Justin, Caitlin, Charlie
+
 [RequireComponent(typeof(SphereCollider))]
 public class PlayerFootsteps : MonoBehaviour {
 	public AudioClip metal_step;
