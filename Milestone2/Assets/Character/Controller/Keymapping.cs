@@ -60,8 +60,8 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = ps4button;
 		}
 	}
-    public Control movement_toggle1 = new Control(KeyCode.Slash,"PS4ControllerL3");
-	public Control roll_action = new Control(KeyCode.Keypad0,"PS4ControllerCircle");
+	public Control movement_toggle1 = new Control(KeyCode.C,"PS4ControllerL3");
+	public Control roll_action = new Control(KeyCode.R,"PS4ControllerCircle");
 	public Control jump = new Control(KeyCode.Space,"PS4ControllerCross");
     public Control interaction = new Control(KeyCode.E, "PS4ControllerSquare");
 	public Control run_skill = new Control(KeyCode.LeftShift,"PS4ControllerR1");

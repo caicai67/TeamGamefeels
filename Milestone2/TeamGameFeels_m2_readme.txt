@@ -114,7 +114,7 @@ v. Game Testing Steps
 
 	Chris' Scene ("1" Key):
 		Run toward boxes, bust through them
-		Run around spheres, walk on top of them, roll into them (circle button, numpad zero)
+		Run around spheres, walk on top of them, roll into them (circle button, keyboard 'r')
 		Run at the green saddle, hold R1 (left shift) and press jump (space bar) to hurdle the saddle
 		Roll under the saddle. 
 		Run up to axes, let them hit you. press options (backspace to reload the level). 
