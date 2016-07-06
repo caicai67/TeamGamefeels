@@ -282,6 +282,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b6a038ea226a54948a3b544ee15d1124, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e6c452ce64c05495f8db7e132381e53e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6a038ea226a54948a3b544ee15d1124, type: 3}
   m_IsPrefabParent: 0
@@ -413,7 +417,7 @@ MonoBehaviour:
       refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
       elementtype="RAIN.Memory.BasicMemory+MemoryItem" /></reference><reference type="RAIN.Minds.BasicMind"
       refcount="1" id="2"><field type="RAIN.BehaviorTrees.BTAsset" id="_behaviorTreeAsset"
-      gameobject="-1" /><field type="System.Collections.Generic.List" id="_behaviorTreeBindings"
+      gameobject="1" /><field type="System.Collections.Generic.List" id="_behaviorTreeBindings"
       elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference type="RAIN.Motion.BasicMotor"
       refcount="1" id="3"><field value="1" type="System.Single" id="_speed" /><field
       value="360" type="System.Single" id="_rotationSpeed" /><field value="0.1" type="System.Single"
@@ -482,6 +486,7 @@ MonoBehaviour:
       type="RAIN.Representation.Expression" refcount="1" id="16" customdata="9" /></references></component>
     _serializedGameObjects:
     - {fileID: 429564176}
+    - {fileID: 11400000, guid: 5342599f7e7a64f638f32c9746ac0b87, type: 2}
     _serializedCustomData:
     - _data: 
       _stringData: Cg==

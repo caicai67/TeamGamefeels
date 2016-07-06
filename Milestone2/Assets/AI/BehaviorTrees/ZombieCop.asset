@@ -17,10 +17,11 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Walking&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;animate&quot; debugbreak=&quot;False&quot; animationstate=&quot;&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String" id="treeData"
-      /><field type="System.Array" id="treeBindings" elementtype="System.String" /></fields><references
-      /></scriptableobject>
+      animationstate=&quot;Walk&quot; /&gt;&lt;mecparam valueexpression=&quot;true&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;boolean&quot;
+      parametername=&quot;isRunning&quot; name=&quot;mecparam&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"
+      id="treeData" /><field type="System.Array" id="treeBindings" elementtype="System.String"
+      /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
