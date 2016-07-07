@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 		//if (!current_state.IsName ("Sneak Mode")) {
 		//this.animator.ResetTrigger ("sneakTrigger");
 		//}
-		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||Input.GetButtonDown(this.keymap.movement_toggle1.ps4)){
+		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||inputDevice.LeftStickButton.WasPressed){
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
 			//this.animator.SetTrigger ("sneakTrigger");
