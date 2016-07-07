@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour {
 
 		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || Input.GetButton (this.keymap.run_skill.ps4)));
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || inputDevice.RightBumper.IsPressed));
 		// Inputs
 
 
