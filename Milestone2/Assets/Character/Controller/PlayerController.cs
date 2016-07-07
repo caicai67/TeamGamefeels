@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
 		}
-		if (Input.GetKey (this.keymap.respawn.keyboard) || Input.GetButtonDown (this.keymap.respawn.ps4)) {
+		if (Input.GetKey (this.keymap.respawn.keyboard) || inputDevice.GetControl(InputControlType.Select).WasPressed) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		}
 		AnimatorStateInfo current_state = this.animator.GetCurrentAnimatorStateInfo (0);
