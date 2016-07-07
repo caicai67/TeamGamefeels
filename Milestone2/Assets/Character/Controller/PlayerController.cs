@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour {
 		if (!current_state.IsName("Roll")){
 			this.animator.ResetTrigger ("roll");
 		}
-		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
+		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || inputDevice.Action2.WasPressed) {
 			this.animator.SetTrigger ("roll");
 		}
 
