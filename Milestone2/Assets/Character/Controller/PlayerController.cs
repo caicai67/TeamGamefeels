@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour {
 			this.animator.SetTrigger ("Jump");
 		}
         //Hanging Code
-		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action4.WasPressed))
+		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
         //if (canInteract && Input.GetButtonDown("E"))
         {
             if(this.animator.GetInteger("CurrentInteraction") == 0)
