@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+using InControl;
 
 // Team GameFeels
 // Chris, Ambrose, KP, Justin, Caitlin, Charlie
@@ -66,6 +66,9 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		InputDevice inputDevice = InputManager.ActiveDevice;
+
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
 		}
@@ -120,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Jumping Code
-		if (Input.GetKeyDown(this.keymap.jump.keyboard) || Input.GetButtonDown (this.keymap.jump.ps4)) {
+		if (Input.GetKeyDown(this.keymap.jump.keyboard) || inputDevice.Action1.WasPressed) {
 			this.animator.SetTrigger ("Jump");
 		}
         //Hanging Code
