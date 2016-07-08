@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+using InControl;
 
 // Team GameFeels
 // Chris, Ambrose, KP, Justin, Caitlin, Charlie
@@ -66,17 +66,22 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		InputDevice inputDevice = InputManager.ActiveDevice;
+
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
 		}
-		if (Input.GetKey (this.keymap.respawn.keyboard) || Input.GetButtonDown (this.keymap.respawn.ps4)) {
+
+		//Note here that inControl treats the Options key on a PS4 controller as the Select key for some reason
+		if (Input.GetKey (this.keymap.respawn.keyboard) || inputDevice.GetControl(InputControlType.Select).WasPressed) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		}
 		AnimatorStateInfo current_state = this.animator.GetCurrentAnimatorStateInfo (0);
 
 		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || Input.GetButton (this.keymap.run_skill.ps4)));
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || inputDevice.RightBumper.IsPressed));
 		// Inputs
 
 
@@ -102,7 +107,7 @@ public class PlayerController : MonoBehaviour {
 		//if (!current_state.IsName ("Sneak Mode")) {
 		//this.animator.ResetTrigger ("sneakTrigger");
 		//}
-		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||Input.GetButtonDown(this.keymap.movement_toggle1.ps4)){
+		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||inputDevice.LeftStickButton.WasPressed){
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
 			//this.animator.SetTrigger ("sneakTrigger");
@@ -115,16 +120,16 @@ public class PlayerController : MonoBehaviour {
 		if (!current_state.IsName("Roll")){
 			this.animator.ResetTrigger ("roll");
 		}
-		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || Input.GetButtonDown (this.keymap.roll_action.ps4)) {
+		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || inputDevice.Action2.WasPressed) {
 			this.animator.SetTrigger ("roll");
 		}
 
 		//Jumping Code
-		if (Input.GetKeyDown(this.keymap.jump.keyboard) || Input.GetButtonDown (this.keymap.jump.ps4)) {
+		if (Input.GetKeyDown(this.keymap.jump.keyboard) || inputDevice.Action1.WasPressed) {
 			this.animator.SetTrigger ("Jump");
 		}
         //Hanging Code
-        if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || Input.GetButtonDown(this.keymap.interaction.ps4)))
+		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
         //if (canInteract && Input.GetButtonDown("E"))
         {
             if(this.animator.GetInteger("CurrentInteraction") == 0)
