@@ -30,6 +30,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SampleScenes/Scenes/RollerBall.unity
   - enabled: 1
+    path: Assets/Scenes/Chris.unity
+  - enabled: 1
     path: Assets/Scenes/Charlie.unity
   - enabled: 0
     path: Assets/Scenes/temp2.unity
@@ -39,8 +41,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Caitlin.unity
   - enabled: 0
     path: Assets/Scenes/Charlie.unity
-  - enabled: 1
-    path: Assets/Scenes/Chris.unity
   - enabled: 1
     path: Assets/Scenes/Justin.unity
   - enabled: 1
