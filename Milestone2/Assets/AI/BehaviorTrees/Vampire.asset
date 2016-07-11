@@ -18,15 +18,19 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
       tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
-      valueexpression=&quot;&quot; repeatuntil=&quot;success&quot; parametertype=&quot;float&quot;
+      valueexpression=&quot;inputMagnitude&quot; repeatuntil=&quot;running&quot; parametertype=&quot;float&quot;
       parametername=&quot;InputMagnitude&quot; name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot;
-      damptime=&quot;0&quot; /&gt;&lt;mecparam valueexpression=&quot;1.0&quot; repeatuntil=&quot;success&quot;
-      parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot; name=&quot;AngularInput&quot;
-      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;&amp;quot;Navigation
-      Target 1&amp;quot;&quot; movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
-      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
-      elementtype="System.String" /></fields><references /></scriptableobject>
+      damptime=&quot;0&quot; /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot;
+      repeatuntil=&quot;running&quot; parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot;
+      name=&quot;AngularInput&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
+      movetarget=&quot;&amp;quot;Navigation Target 1&amp;quot;&quot; movespeed=&quot;&quot;
+      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;action&quot; debugbreak=&quot;False&quot; classname=&quot;myMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"
+      id="treeData" /><field type="System.Array" id="treeBindings" elementtype="System.String"
+      /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
