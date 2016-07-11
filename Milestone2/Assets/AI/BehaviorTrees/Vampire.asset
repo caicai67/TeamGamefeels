@@ -26,7 +26,7 @@ MonoBehaviour:
       /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
       movetarget=&quot;&amp;quot;Navigation Target 1&amp;quot;&quot; movespeed=&quot;&quot;
       facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;action repeatuntil=&quot;success&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
       name=&quot;action&quot; debugbreak=&quot;False&quot; classname=&quot;myMove&quot;
       /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"

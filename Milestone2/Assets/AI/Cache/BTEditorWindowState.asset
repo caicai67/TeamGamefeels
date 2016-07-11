@@ -31,8 +31,8 @@ MonoBehaviour:
     BehaviorTreeName: Vampire
     BehaviorTreeID: 13
     BehaviorTreeBindings: []
-    LastUpdate: 636038322519439402
-    LastModified: 636037896283254129
+    LastUpdate: 636038503980991127
+    LastModified: 636038322537580322
     Errored: 0
   - AssetPath: Assets/AI/BehaviorTrees/ZombieCop.asset
     BehaviorTreeName: ZombieCop
@@ -411,7 +411,7 @@ MonoBehaviour:
       _type: 4
       _stateIndex: 13
       _parent: 0
-      _lastUpdate: 636038322519384258
+      _lastUpdate: 636038503980940992
       _children: 0e000000
       _variables: 
       _focused: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
       _type: 19
       _stateIndex: 14
       _parent: 13
-      _lastUpdate: 636038322519389273
+      _lastUpdate: 636038503980940992
       _children: 0f000000
       _variables: 
       _focused: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
       _type: 15
       _stateIndex: 15
       _parent: 14
-      _lastUpdate: 636038322519439402
+      _lastUpdate: 636038503980991127
       _children: 10000000110000001200000013000000
       _variables: 
       _focused: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       - _field: repeatuntil
-        _currentValue: success
+        _currentValue: running
         _recordChange: 1
         _changed: 0
       - _field: debugbreak

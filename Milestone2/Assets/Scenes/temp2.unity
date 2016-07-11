@@ -723,7 +723,12 @@ MonoBehaviour:
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
       type="RAIN.Memory.BasicMemory+MemoryItem" reference="17" id="element0" /><field
-      type="RAIN.Memory.BasicMemory+MemoryItem" reference="18" id="element1" /></field></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="18" id="element1" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="19" id="element2" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="20" id="element3" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="21" id="element4" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="22" id="element5" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="23" id="element6" /></field></reference><reference
       type="RAIN.Minds.BasicMind" refcount="1" id="2"><field type="RAIN.BehaviorTrees.BTAsset"
       id="_behaviorTreeAsset" gameobject="1" /><field type="System.Collections.Generic.List"
       id="_behaviorTreeBindings" elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference
@@ -800,10 +805,32 @@ MonoBehaviour:
       id="ValueType" /><field value="1" type="System.Single" id="Value" /></reference><reference
       type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="18"><field value="angularInput"
       type="System.String" id="Key" /><field value="System.Single" type="System.Type"
-      id="ValueType" /><field value="1" type="System.Single" id="Value" /></reference></references></component>
+      id="ValueType" /><field value="1" type="System.Single" id="Value" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="19"><field value="navTarget1"
+      type="System.String" id="Key" /><field value="UnityEngine.GameObject" type="System.Type"
+      id="ValueType" /><field value="" type="UnityEngine.GameObject" id="Value" gameobject="2"
+      /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1"
+      id="20"><field value="navTarget2" type="System.String" id="Key" /><field value="UnityEngine.GameObject"
+      type="System.Type" id="ValueType" /><field value="" type="UnityEngine.GameObject"
+      id="Value" gameobject="3" /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
+      refcount="1" id="21"><field value="navTarget3" type="System.String" id="Key"
+      /><field value="UnityEngine.GameObject" type="System.Type" id="ValueType" /><field
+      value="" type="UnityEngine.GameObject" id="Value" gameobject="4" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="22"><field value="navTarget4"
+      type="System.String" id="Key" /><field value="UnityEngine.GameObject" type="System.Type"
+      id="ValueType" /><field value="" type="UnityEngine.GameObject" id="Value" gameobject="5"
+      /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1"
+      id="23"><field value="character" type="System.String" id="Key" /><field value="UnityEngine.GameObject"
+      type="System.Type" id="ValueType" /><field value="" type="UnityEngine.GameObject"
+      id="Value" gameobject="6" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 1352768786}
     - {fileID: 11400000, guid: aef1cc8ef86fb1e4ea6bfc12906d2bc9, type: 2}
+    - {fileID: 415898106}
+    - {fileID: 840602548}
+    - {fileID: 82168522}
+    - {fileID: 51441901}
+    - {fileID: 1352768786}
     _serializedCustomData:
     - _data: 
       _stringData: DQo=
@@ -1314,7 +1341,7 @@ MonoBehaviour:
     _serializedData: <component version="1.3" type="RAIN.Navigation.Waypoints.WaypointRig"><fields><field
       value="AlwaysOn" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /></fields><references><reference type="RAIN.Navigation.Waypoints.WaypointSet"
-      refcount="34" id="0"><field type="UnityEngine.Transform" id="_mountPoint" gameobject="0"
+      refcount="35" id="0"><field type="UnityEngine.Transform" id="_mountPoint" gameobject="0"
       /><field value="Waypoint Network" type="System.String" id="_setName" /><field
       value="Network" type="RAIN.Navigation.Waypoints.WaypointSet+WaypointSetType"
       id="_setType" /><field value="0.6,0,0.6,1" type="UnityEngine.Color" id="_networkColor"
@@ -1353,7 +1380,8 @@ MonoBehaviour:
       reference="58" id="element29" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="60" id="element30" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="62" id="element31" /><field type="RAIN.Navigation.Waypoints.Waypoint"
-      reference="65" id="element32" /></field><field type="System.Collections.Generic.List"
+      reference="65" id="element32" /><field type="RAIN.Navigation.Waypoints.Waypoint"
+      reference="67" id="element33" /></field><field type="System.Collections.Generic.List"
       id="_connections" elementtype="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"><field
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" reference="3"
       id="element0" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
@@ -1388,7 +1416,8 @@ MonoBehaviour:
       reference="61" id="element29" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       reference="63" id="element30" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       reference="64" id="element31" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
-      reference="66" id="element32" /></field></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
+      reference="66" id="element32" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
+      reference="68" id="element33" /></field></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="1"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
       /><field value="-37.42757,-38.6854,-89.68626" type="UnityEngine.Vector3" id="_position"
@@ -1631,7 +1660,14 @@ MonoBehaviour:
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="66"><field value="19" type="System.Int32" id="wpOne" /><field value="32"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
-      /></reference></references></component>
+      /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
+      id="67"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-60.40189,-38.6854,-110.3608"
+      type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
+      id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
+      refcount="1" id="68"><field value="0" type="System.Int32" id="wpOne" /><field
+      value="33" type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean"
+      id="twoWay" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 475596184}
     _serializedCustomData: []
