@@ -7,39 +7,74 @@ using UnityEngine;
 
 namespace InControl
 {
-	public class InControlManager : MonoBehaviour
+	public class InControlManager : SingletonMonoBehavior<InControlManager>
 	{
 		public bool logDebugInfo = false;
 		public bool invertYAxis = false;
-		public bool enableXInput = false;
 		public bool useFixedUpdate = false;
 		public bool dontDestroyOnLoad = false;
+		public bool suspendInBackground = false;
+
+		public bool enableICade = false;
+
+		public bool enableXInput = false;
+		public bool xInputOverrideUpdateRate = false;
+		public int xInputUpdateRate = 0;
+		public bool xInputOverrideBufferSize = false;
+		public int xInputBufferSize = 0;
+
+		public bool enableNativeInput = false;
+		public bool nativeInputEnableXInput = true;
+		public bool nativeInputPreventSleep = false;
+		public bool nativeInputOverrideUpdateRate = false;
+		public int nativeInputUpdateRate = 0;
+
 		public List<string> customProfiles = new List<string>();
 
 
 		void OnEnable()
 		{
-			if (logDebugInfo)
+			if (!SetupSingleton())
 			{
-				Debug.Log( "InControl (version " + InputManager.Version + ")" );
-				Logger.OnLogMessage += HandleOnLogMessage;
+				return;
 			}
 
 			InputManager.InvertYAxis = invertYAxis;
-			InputManager.EnableXInput = enableXInput;
-			InputManager.SetupInternal();
+			InputManager.SuspendInBackground = suspendInBackground;
+			InputManager.EnableICade = enableICade;
 
-			foreach (var className in customProfiles)
+			InputManager.EnableXInput = enableXInput;
+			InputManager.XInputUpdateRate = (uint) Mathf.Max( xInputUpdateRate, 0 );
+			InputManager.XInputBufferSize = (uint) Mathf.Max( xInputBufferSize, 0 );
+
+			InputManager.EnableNativeInput = enableNativeInput;
+			InputManager.NativeInputEnableXInput = nativeInputEnableXInput;
+			InputManager.NativeInputUpdateRate = (uint) Mathf.Max( nativeInputUpdateRate, 0 );
+			InputManager.NativeInputPreventSleep = nativeInputPreventSleep;
+
+			if (InputManager.SetupInternal())
 			{
-				var classType = Type.GetType( className );
-				if (classType == null)
+				if (logDebugInfo)
 				{
-					Debug.LogError( "Cannot find class for custom profile: " + className );
+					Debug.Log( "InControl (version " + InputManager.Version + ")" );
+					Logger.OnLogMessage += LogMessage;
 				}
-				else
+
+				foreach (var className in customProfiles)
 				{
-					var customProfileInstance = Activator.CreateInstance( classType ) as UnityInputDeviceProfile;
-					InputManager.AttachDevice( new UnityInputDevice( customProfileInstance ) );
+					var classType = Type.GetType( className );
+					if (classType == null)
+					{
+						Debug.LogError( "Cannot find class for custom profile: " + className );
+					}
+					else
+					{
+						var customProfileInstance = Activator.CreateInstance( classType ) as UnityInputDeviceProfileBase;
+						if (customProfileInstance != null)
+						{
+							InputManager.AttachDevice( new UnityInputDevice( customProfileInstance ) );
+						}
+					}
 				}
 			}
 
@@ -52,7 +87,10 @@ namespace InControl
 
 		void OnDisable()
 		{
-			InputManager.ResetInternal();
+			if (InControlManager.Instance == this)
+			{
+				InputManager.ResetInternal();
+			}
 		}
 
 
@@ -65,10 +103,14 @@ namespace InControl
 
 		IEnumerator CheckForOuyaEverywhereSupport()
 		{
+			Debug.Log( "[InControl] Checking for OUYA Everywhere support..." );
+
 			while (!OuyaSDK.isIAPInitComplete())
 			{
 				yield return null;
 			}
+
+			Debug.Log( "[InControl] OUYA SDK IAP initialization has completed." );
 
 			OuyaEverywhereDeviceManager.Enable();
 		}
@@ -77,7 +119,7 @@ namespace InControl
 
 		void Update()
 		{
-			if (!useFixedUpdate || Mathf.Approximately( Time.timeScale, 0.0f ))
+			if (!useFixedUpdate || Utility.IsZero( Time.timeScale ))
 			{
 				InputManager.UpdateInternal();
 			}
@@ -111,7 +153,13 @@ namespace InControl
 		}
 
 
-		void HandleOnLogMessage( LogMessage logMessage )
+		void OnLevelWasLoaded( int level )
+		{
+			InputManager.OnLevelWasLoaded();
+		}
+
+
+		void LogMessage( LogMessage logMessage )
 		{
 			switch (logMessage.type)
 			{

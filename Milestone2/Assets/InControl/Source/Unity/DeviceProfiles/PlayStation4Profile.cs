@@ -12,7 +12,7 @@ namespace InControl
 			Name = "PlayStation 4 Controller";
 			Meta = "PlayStation 4 Controller on PlayStation 4";
 
-			SupportedPlatforms = new[] {
+			IncludePlatforms = new[] {
 				"PS4"
 			};
 
@@ -52,8 +52,13 @@ namespace InControl
 					Source = Button5
 				},
 				new InputControlMapping {
+					Handle = "Touchpad",
+					Target = InputControlType.TouchPadTap,
+					Source = Button6
+				},
+				new InputControlMapping {
 					Handle = "Options",
-					Target = InputControlType.Select,
+					Target = InputControlType.Options,
 					Source = Button7
 				},
 				new InputControlMapping {
@@ -65,14 +70,54 @@ namespace InControl
 					Handle = "Right Stick Button",
 					Target = InputControlType.RightStickButton,
 					Source = Button9
-				}
+				},
+				new InputControlMapping {
+					Handle = "DPad Up",
+					Target = InputControlType.DPadUp,
+					Source = Button10
+				},
+				new InputControlMapping {
+					Handle = "DPad Right",
+					Target = InputControlType.DPadRight,
+					Source = Button11
+				},
+				new InputControlMapping {
+					Handle = "DPad Down",
+					Target = InputControlType.DPadDown,
+					Source = Button12
+				},
+				new InputControlMapping {
+					Handle = "DPad Left",
+					Target = InputControlType.DPadLeft,
+					Source = Button13
+				},
+				new InputControlMapping {
+					Handle = "TouchPad Button",
+					Target = InputControlType.TouchPadTap,
+					Source = Button6
+				},
 			};
 
 			AnalogMappings = new[] {
+				LeftStickLeftMapping( Analog0 ),
+				LeftStickRightMapping( Analog0 ),
+				LeftStickUpMapping( Analog1 ),
+				LeftStickDownMapping( Analog1 ),
+
+				RightStickLeftMapping( Analog3 ),
+				RightStickRightMapping( Analog3 ),
+				RightStickUpMapping( Analog4 ),
+				RightStickDownMapping( Analog4 ),
+
+				DPadLeftMapping( Analog5 ),
+				DPadRightMapping( Analog5 ),
+				DPadUpMapping2( Analog6 ),
+				DPadDownMapping2( Analog6 ),
+
 				new InputControlMapping {
 					Handle = "Left Trigger",
 					Target = InputControlType.LeftTrigger,
-					Source = Analog7
+					Source = Analog7,
 				},
 				new InputControlMapping {
 					Handle = "Right Trigger",
@@ -80,60 +125,9 @@ namespace InControl
 					Source = Analog2,
 					Invert = true
 				},
-				new InputControlMapping {
-					Handle = "Left Stick X",
-					Target = InputControlType.LeftStickX,
-					Source = Analog0
-				},
-				new InputControlMapping {
-					Handle = "Left Stick Y",
-					Target = InputControlType.LeftStickY,
-					Source = Analog1,
-					Invert = true
-				},
-				new InputControlMapping {
-					Handle = "Right Stick X",
-					Target = InputControlType.RightStickX,
-					Source = Analog3
-				},
-				new InputControlMapping {
-					Handle = "Right Stick Y",
-					Target = InputControlType.RightStickY,
-					Source = Analog4,
-					Invert = true
-				},
-				new InputControlMapping {
-					Handle = "DPad Left",
-					Target = InputControlType.DPadLeft,
-					Source = Analog5,
-					SourceRange = InputControlMapping.Range.Negative,
-					TargetRange = InputControlMapping.Range.Negative,
-					Invert = true
-				},
-				new InputControlMapping {
-					Handle = "DPad Right",
-					Target = InputControlType.DPadRight,
-					Source = Analog5,
-					SourceRange = InputControlMapping.Range.Positive,
-					TargetRange = InputControlMapping.Range.Positive
-				},
-				new InputControlMapping {
-					Handle = "DPad Up",
-					Target = InputControlType.DPadUp,
-					Source = Analog6,
-					SourceRange = InputControlMapping.Range.Positive,
-					TargetRange = InputControlMapping.Range.Positive
-				},
-				new InputControlMapping {
-					Handle = "DPad Down",
-					Target = InputControlType.DPadDown,
-					Source = Analog6,
-					SourceRange = InputControlMapping.Range.Negative,
-					TargetRange = InputControlMapping.Range.Negative,
-					Invert = true
-				}
 			};
 		}
 	}
+	// @endcond
 }
 
