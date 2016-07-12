@@ -4,12 +4,10 @@ using System.Collections.Generic;
 using RAIN.Action;
 using RAIN.Core;
 
+
 [RAINAction]
 public class myMove : RAINAction
 {
-	private float inputMagnitude = 0f;
-	private float angularInput = 0f;
-
 	private GameObject character = null;
 
 	private Transform navTarget1 = null;
@@ -62,13 +60,21 @@ public class myMove : RAINAction
 		}
 		this.current_position = this.character.transform.position;
 		this.current_orientation = this.character.transform.eulerAngles;
+	
+		Vector2 difference_vector;
+		float turnAngle = AngularDisplacement_VerticalAxis (this.current_position, this.current_orientation, this.next_waypoint_position, out difference_vector);
 
-
-
-
-
-		UpdateFloat(ai,"inputMagnitude",this.inputMagnitude);
-		UpdateFloat (ai, "angularInput", this.angularInput);
+		UpdateFloat(ai,"angularInput",turnAngle);
+		float input_magnitude = 0f;
+		if (difference_vector.magnitude < 1f) {
+			input_magnitude = 0f;
+		}
+		else if (difference_vector.magnitude < 5f) {
+			input_magnitude = difference_vector.magnitude / 4f;
+		} else {
+			input_magnitude = 1f;
+		}
+		UpdateFloat (ai, "inputMagnitude", input_magnitude);
         return ActionResult.SUCCESS;
     }
 
@@ -76,6 +82,19 @@ public class myMove : RAINAction
     {
         base.Stop(ai);
     }
+
+	float AngularDisplacement_VerticalAxis(Vector3 position,Vector3 orientation, Vector3 destination,out Vector2 difference_vector){
+		float theta_y = Mathf.Deg2Rad * orientation.y;
+		Vector2 start = new Vector2 (position.x, position.z);
+		Vector2 end = new Vector2 (destination.x, destination.z);
+
+		difference_vector.x = end.x - start.x;
+		difference_vector.y = end.y - start.y;
+		Vector2 face_unit_vector = new Vector2 (Mathf.Cos(theta_y), Mathf.Sin (theta_y));
+
+		float phi_prime = Mathf.Acos (face_unit_vector.x * difference_vector.x + face_unit_vector.y * difference_vector.y);
+		return phi_prime * Mathf.Sign (face_unit_vector.x * difference_vector.y - face_unit_vector.y * difference_vector.x);
+	}
 
 	void UpdateFloat(AI ai,string var_name,float value){
 		ai.WorkingMemory.SetItem (var_name, value);
