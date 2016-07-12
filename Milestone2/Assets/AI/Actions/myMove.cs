@@ -23,13 +23,16 @@ public class myMove : RAINAction
 
 
 	// waypoint navigation
-	private int last_waypoint_index = 0;
+	private int last_waypoint_index = -1;
 	private int next_waypoint_index = 0;
+	private int current_target_index;
 	private Vector3 next_waypoint_position;
 	private Vector3 current_position;
 	private Vector3 current_orientation;
+	private Vector3 target_waypoint;
 	// first waypoint guard
 	private bool first_waypoint = false;
+	private bool initialized = false;
 
     public override void Start(RAIN.Core.AI ai)
     {
@@ -40,60 +43,86 @@ public class myMove : RAINAction
 		this.navTarget4 = ai.WorkingMemory.GetItem<GameObject>("navTarget4").transform;
 
 		this.navTargetList = new Transform[]{ navTarget1, navTarget2, navTarget3,navTarget4 };
-		UpdateActiveTarget ();
-		this.current_target = GetActiveTarget ();
+		if (!initialized) {
+			this.current_target_index = 0;
+			this.current_target = this.navTargetList [this.current_target_index];
+			this.initialized = true;
+		}
 		base.Start(ai);
     }
+
+	bool GetNextPath(AI ai){
+		this.current_target = GetActiveTarget();
+		this.target_waypoint = ai.Navigator.ClosestPointOnGraph(this.current_target.position, 10f);
+		return ai.Navigator.GetPathTo(this.current_target.position,int.MaxValue,float.MaxValue,true,out this.current_path);
+	}
+	void UpdateWaypoint(){
+		this.last_waypoint_index += 1;
+		this.next_waypoint_index = this.current_path.GetNextWaypoint (this.character.transform.position, 0.5f, this.last_waypoint_index);
+		this.next_waypoint_position = this.current_path.GetWaypointPosition (this.next_waypoint_index);
+	}
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
 		if (!first_waypoint) {
 			// I'll have to add logic to nullify the current path later.
-			if (this.current_path == null) {
-				Vector3 target_waypoint = ai.Navigator.ClosestPointOnGraph (this.current_target.position, 10f);
-				bool path_found = ai.Navigator.GetPathTo (target_waypoint, int.MaxValue, float.MaxValue, true, out this.current_path);
-			}
-			this.next_waypoint_index = this.current_path.GetNextWaypoint (this.character.transform.position, 0.5f, this.last_waypoint_index);
-
-			this.next_waypoint_position = this.current_path.GetWaypointPosition (this.next_waypoint_index);
-
+			bool path_found = GetNextPath (ai);
+			UpdateWaypoint ();
 			first_waypoint = true;
 		}
+
 		this.current_position = this.character.transform.position;
 		this.current_orientation = this.character.transform.eulerAngles;
-	
 		Vector2 difference_vector;
 		float turnAngle = AngularDisplacement_VerticalAxis (this.current_position, this.current_orientation, this.next_waypoint_position, out difference_vector);
+		float turnAngleMagnitude = Mathf.Abs (turnAngle);
 
-		UpdateFloat(ai,"angularInput",turnAngle);
-		float input_magnitude = 0f;
-		if (difference_vector.magnitude < 1f) {
-			input_magnitude = 0f;
-		}
-		else if (difference_vector.magnitude < 5f) {
-			input_magnitude = difference_vector.magnitude / 4f;
+		if (turnAngleMagnitude > 0.1f && difference_vector.magnitude > 2f) {
+			UpdateFloat (ai, "angularInput", turnAngle);
 		} else {
-			input_magnitude = 1f;
+			UpdateFloat(ai,"angularInput",0f);
 		}
-		UpdateFloat (ai, "inputMagnitude", input_magnitude);
+
+		if (difference_vector.magnitude > 5f) {
+			UpdateFloat (ai, "inputMagnitude", 1f);
+		} else {
+			UpdateFloat (ai, "inputMagnitude", difference_vector.magnitude / 3f);
+			// check if at destination
+			Vector2 distance;
+			XZ_Distance (this.current_position, this.target_waypoint,out distance);
+			if (distance.magnitude < 1f) {
+				// If at destination, choose next target and calculate path
+				UpdateFloat (ai, "inputMagnitude", 0f);
+				bool path_found = GetNextPath (ai);
+				this.last_waypoint_index = -1;
+				UpdateWaypoint ();
+			} else {
+				// Choose Next Waypoint
+				UpdateWaypoint();
+			}
+
+		}
         return ActionResult.SUCCESS;
     }
-
     public override void Stop(RAIN.Core.AI ai)
     {
         base.Stop(ai);
     }
 
+	void XZ_Distance(Vector3 positionA,Vector3 positionB,out Vector2 distance){
+		distance.x = positionB.x - positionA.x;
+		distance.y = positionB.z - positionA.z;
+	}
 	float AngularDisplacement_VerticalAxis(Vector3 position,Vector3 orientation, Vector3 destination,out Vector2 difference_vector){
 		float theta_y = Mathf.Deg2Rad * orientation.y;
-		Vector2 start = new Vector2 (position.x, position.z);
-		Vector2 end = new Vector2 (destination.x, destination.z);
+		Vector2 start = new Vector2 (position.z, position.x);
+		Vector2 end = new Vector2 (destination.z, destination.x);
 
 		difference_vector.x = end.x - start.x;
 		difference_vector.y = end.y - start.y;
 		Vector2 face_unit_vector = new Vector2 (Mathf.Cos(theta_y), Mathf.Sin (theta_y));
 
-		float phi_prime = Mathf.Acos (face_unit_vector.x * difference_vector.x + face_unit_vector.y * difference_vector.y);
-		return phi_prime * Mathf.Sign (face_unit_vector.x * difference_vector.y - face_unit_vector.y * difference_vector.x);
+		float phi_prime = Mathf.Acos ((face_unit_vector.x * difference_vector.x + face_unit_vector.y * difference_vector.y)/difference_vector.magnitude);
+		return -1*phi_prime * Mathf.Sign (face_unit_vector.x * difference_vector.y - face_unit_vector.y * difference_vector.x);
 	}
 
 	void UpdateFloat(AI ai,string var_name,float value){
@@ -103,78 +132,11 @@ public class myMove : RAINAction
 		return (float)ai.WorkingMemory.GetItem (var_name);
 	}
 	Transform GetActiveTarget(){
-		for (int i = 0; i < this.activeTarget.Length; i++){
-			if (this.activeTarget[i]){
-				return this.navTargetList[i];	
-			}
-		}
-		return null;
-	}
-	void UpdateActiveTarget(){
-		bool targetsExist = false;
-		bool moreThanOne = false;
-		int first_target = -1;
-		int current_target = -1;
-		for (int i = 0; i < this.activeTarget.Length; i++) {
-			if (!(this.navTargetList [i] == null)) {
-				if (targetsExist) {
-					moreThanOne = true;
-				} else{
-					targetsExist = true;
-					first_target = i;
-				}
-				if (this.activeTarget [i]) {
-					current_target = i;
-				}
-			}
-		}
-
-		if (!targetsExist) {
-			for (int i = 0; i < this.activeTarget.Length; i++) {
-				this.activeTarget [i] = false;
-			}
-			return;
-		}
-
-		if (!moreThanOne){
-			for (int i = 0; i < this.activeTarget.Length; i++) {
-				if (i == first_target) {
-					this.activeTarget [i] = true;
-				} else {
-					this.activeTarget [i] = false;
-				}
-			}
-			return;
-		}
-		if (current_target == -1) {
-			for (int i = 0; i < this.activeTarget.Length; i++) {
-				if (this.navTargetList [i] != null) {
-					this.activeTarget [i] = true;
-					return;
-				} else {
-					throw new System.ArgumentException ("no non-null target in navigation target list");
-				}
-			}
+		if (this.current_target_index >= this.navTargetList.Length - 1) {
+			this.current_target_index = 0;
 		} else {
-			for (int i = current_target; i < this.activeTarget.Length; i++) {
-				if (i > current_target && this.navTargetList [i] != null) {
-					this.activeTarget [i] = true;
-					this.activeTarget [current_target] = false;
-					return;
-				}
-			}
-			for (int i = 0; i < current_target; i++) {
-				if (this.navTargetList [i] != null) {
-					this.activeTarget [i] = true;
-					this.activeTarget [current_target] = false;
-					return;
-				}
-			}
-
+			this.current_target_index += 1;
 		}
-		throw new System.Exception ("this part of the code should not be reached.");
-		return;
+		return this.navTargetList[this.current_target_index];
 	}
-
-	
 }
