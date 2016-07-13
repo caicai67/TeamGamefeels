@@ -126,7 +126,20 @@ public class PlayerController : MonoBehaviour {
 
 		//Jumping Code
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || inputDevice.Action1.WasPressed) {
-			this.animator.SetTrigger ("Jump");
+			
+			//Disable sneaking if it was active.
+			if (this.sneaking == true) {
+				this.sneaking = false;
+
+				//Let animator know that sneak mode is over
+				this.animator.SetBool ("sneak", this.sneaking);
+
+			} else {
+				
+				//Set jump trigger to jump
+				this.animator.SetTrigger ("Jump");
+			}
+
 		}
         //Hanging Code
 		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
