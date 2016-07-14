@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 this.animator.SetInteger("CurrentInteraction", 0);
-                this.rigid_body.useGravity = true;
+                //this.rigid_body.useGravity = true;
                 canInteract = false;
             }
         }
