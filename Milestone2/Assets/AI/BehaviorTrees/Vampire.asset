@@ -14,23 +14,38 @@ MonoBehaviour:
   _dataSerializer:
     _serializedData: <scriptableobject version="1.3" type="RAIN.BehaviorTrees.BTAsset"><fields><field
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;Vampire&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
+      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;Eyes&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;detect&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;player&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;playerCharacter&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;player
+      == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
       valueexpression=&quot;inputMagnitude&quot; repeatuntil=&quot;running&quot; parametertype=&quot;float&quot;
       parametername=&quot;InputMagnitude&quot; name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot;
       repeatuntil=&quot;running&quot; parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot;
       name=&quot;AngularInput&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
-      movetarget=&quot;&amp;quot;Navigation Target 1&amp;quot;&quot; movespeed=&quot;&quot;
-      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
+      /&gt;&lt;action repeatuntil=&quot;running&quot; parametervalues=&quot;&quot;
+      parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;custom_patrol&quot;
+      debugbreak=&quot;False&quot; classname=&quot;VampireMove&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;player != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;inputMagnitude&quot;
+      repeatuntil=&quot;running&quot; parametertype=&quot;float&quot; parametername=&quot;InputMagnitude&quot;
+      name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot; repeatuntil=&quot;running&quot;
+      parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot; name=&quot;AngularInput&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;action&quot; debugbreak=&quot;False&quot; classname=&quot;myMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;" type="System.String"
-      id="treeData" /><field type="System.Array" id="treeBindings" elementtype="System.String"
-      /></fields><references /></scriptableobject>
+      name=&quot;custom_pursue&quot; debugbreak=&quot;False&quot; classname=&quot;VampirePursue&quot;
+      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
+      elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
