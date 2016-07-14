@@ -104,13 +104,25 @@ public class PlayerController : MonoBehaviour {
 		// ...for some reason, the sneak mode is not "triggering;" so janky boolean local variable instead. 
 		// ...maybe it has something to do with the animation transitions
 
-		//if (!current_state.IsName ("Sneak Mode")) {
-		//this.animator.ResetTrigger ("sneakTrigger");
-		//}
+		//Code to change the collider height and Y value if in sneak mode
+		if (this.sneaking == true) {
+
+			//Make collider smaller in sneak mode
+			//this.collider_.height = 0.7f;
+		//	this.collider_. = new Vector3 (0.0f, 0.35f, 0.0f);
+
+		} else {
+			//Make collider larger in walking/idle/run mode
+			//this.animator.SetFloat ("ColliderHeight", 1.7f);
+			//this.animator.SetFloat ("ColliderY", 0.85f);
+
+		}
+
 		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||inputDevice.LeftStickButton.WasPressed){
+			
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
-			//this.animator.SetTrigger ("sneakTrigger");
+
 		}
 
 
@@ -126,7 +138,20 @@ public class PlayerController : MonoBehaviour {
 
 		//Jumping Code
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || inputDevice.Action1.WasPressed) {
-			this.animator.SetTrigger ("Jump");
+			
+			//Disable sneaking if it was active.
+			if (this.sneaking == true) {
+				this.sneaking = false;
+
+				//Let animator know that sneak mode is over
+				this.animator.SetBool ("sneak", this.sneaking);
+
+			} else {
+				
+				//Set jump trigger to jump
+				this.animator.SetTrigger ("Jump");
+			}
+
 		}
         //Hanging Code
 		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
