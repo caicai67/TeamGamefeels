@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour {
 	private SphereCollider trigger;
 	public AudioSource audio;
 	public AudioClip die;
+
+	//InControl's InputDevice variable
+	private InputDevice activeController;
+
 	// Collider/Controller Defaults
 	float controller_height;
 	float collider_height;
@@ -68,25 +72,43 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		InputDevice inputDevice = InputManager.ActiveDevice;
+		//Get the connected controller through InControl's InputManager
+		activeController = InputManager.ActiveDevice;
 
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
 		}
 
 		//Note here that inControl treats the Options key on a PS4 controller as the Select key for some reason
-		if (Input.GetKey (this.keymap.respawn.keyboard) || inputDevice.GetControl(InputControlType.Select).WasPressed) {
+		if (Input.GetKey (this.keymap.respawn.keyboard) || activeController.GetControl(InputControlType.Select).WasPressed) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		}
 		AnimatorStateInfo current_state = this.animator.GetCurrentAnimatorStateInfo (0);
 
 		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || inputDevice.RightBumper.IsPressed));
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || activeController.RightBumper.IsPressed));
 		// Inputs
 
 
+		/////////////////
+		/// @Chris: Use the following lines to get horizontal and vertical float values
+		/// from the left analog stick and then pass them to your player metrics however
+		/// you want to.
+		///////////////// 
 
+		float player_horizontal_axis = activeController.LeftStickX.Value;
+		float player_vertical_axis = activeController.LeftStickY.Value;
+
+		/////////////////
+		/// I am also including the lines in the following section for the float values
+		/// of the right analog stick that you can pass on to camera control logic
+		/////////////////
+
+		float camera_horizontal_axis = activeController.RightStickX.Value;
+		float camera_vertical_axis = activeController.RightStickY.Value;
+
+		////////////////
 
 
 		this.animator.SetFloat("ForwardInput",this.metrics.forward_input);
@@ -119,7 +141,7 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
-		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||inputDevice.LeftStickButton.WasPressed){
+		if (Input.GetKeyDown(this.keymap.movement_toggle1.keyboard)||activeController.LeftStickButton.WasPressed){
 			
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
@@ -133,12 +155,12 @@ public class PlayerController : MonoBehaviour {
 		if (!current_state.IsName("Roll")){
 			this.animator.ResetTrigger ("roll");
 		}
-		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || inputDevice.Action2.WasPressed) {
+		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || activeController.Action2.WasPressed) {
 			this.animator.SetTrigger ("roll");
 		}
 
 		//Jumping Code
-		if (Input.GetKeyDown(this.keymap.jump.keyboard) || inputDevice.Action1.WasPressed) {
+		if (Input.GetKeyDown(this.keymap.jump.keyboard) || activeController.Action1.WasPressed) {
 			
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
@@ -156,7 +178,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Sword Fight Code
-		if (Input.GetKeyDown (this.keymap.fight.keyboard) || inputDevice.LeftTrigger.WasPressed) {
+		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.LeftBumper.WasPressed) {
 
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
@@ -174,7 +196,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
         //Hanging Code
-		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
+		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || activeController.Action3.WasPressed))
         //if (canInteract && Input.GetButtonDown("E"))
         {
             if(this.animator.GetInteger("CurrentInteraction") == 0)
