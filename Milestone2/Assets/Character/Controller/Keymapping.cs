@@ -35,6 +35,15 @@ public class Keymapping : MonoBehaviour {
 			this.ps4 = ps4button;
 		}
 	}
+	public struct Fight
+	{
+		public KeyCode keyboard;
+		public string ps4;
+		public Fight(KeyCode key, string ps4button){
+			this.keyboard = key;
+			this.ps4 = ps4button;
+		}
+	}
     public struct Interaction
     {
         public KeyCode keyboard;
@@ -66,6 +75,7 @@ public class Keymapping : MonoBehaviour {
 	public Control movement_toggle1 = new Control(KeyCode.C,"PS4ControllerL3");
 	public Control roll_action = new Control(KeyCode.R,"PS4ControllerCircle");
 	public Control jump = new Control(KeyCode.Space,"PS4ControllerCross");
+	public Control fight = new Control(KeyCode.F,"PS4ControllerL2");
     public Control interaction = new Control(KeyCode.E, "PS4ControllerSquare");
 	public Control run_skill = new Control(KeyCode.LeftShift,"PS4ControllerR1");
 	public Control respawn = new Control(KeyCode.Backspace,"PS4ControllerOptions");

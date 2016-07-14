@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 	// In game variables
 	private bool sneaking = false;
+	private bool fighting = false;
 	private bool player_dead = false;
 	public bool using_character_controller = false;
 	//private bool rolling = false;
@@ -153,6 +154,25 @@ public class PlayerController : MonoBehaviour {
 			}
 
 		}
+
+		//Sword Fight Code
+		if (Input.GetKeyDown (this.keymap.fight.keyboard) || inputDevice.LeftTrigger.WasPressed) {
+
+			//Disable sneaking if it was active.
+			if (this.sneaking == true) {
+				this.sneaking = false;
+
+				//Let animator know that sneak mode is over
+				this.animator.SetBool ("sneak", this.sneaking);
+
+			} else {
+
+				this.fighting = !(this.fighting);
+				this.animator.SetBool("isFighting",this.fighting);
+			}
+
+		}
+
         //Hanging Code
 		if (canInteract && (Input.GetKeyDown(this.keymap.interaction.keyboard) || inputDevice.Action3.WasPressed))
         //if (canInteract && Input.GetButtonDown("E"))
