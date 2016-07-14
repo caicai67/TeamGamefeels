@@ -150,16 +150,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nDefault bone length found in this file is different
-      form the one found in the source avatar:\n\t'mixamorig:LeftUpLeg' : position
-      error = 1090.826416 mm\n\t'mixamorig:LeftLeg' : position error = 3512.361328
-      mm\n\t'mixamorig:LeftFoot' : position error = 3626.624268 mm\n\t'mixamorig:LeftToeBase'
-      : position error = 1644.696655 mm\n\t'mixamorig:RightUpLeg' : position error
-      = 1098.107300 mm\n\t'mixamorig:RightLeg' : position error = 3512.334961 mm\n\t'mixamorig:RightFoot'
-      : position error = 3627.984131 mm\n\t'mixamorig:RightToeBase' : position error
-      = 1650.101807 mm\n\nClip 'mixamo.com' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'mixamorig:Spine2' is inbetween humanoid transforms
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'mixamorig:Spine2' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -177,7 +170,7 @@ ModelImporter:
       lastFrame: 152
       wrapMode: 0
       orientationOffsetY: 0
-      level: 6.16
+      level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -187,9 +180,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
-      heightFromFeet: 1
+      heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -333,7 +326,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
