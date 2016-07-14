@@ -7,6 +7,7 @@ using System.Collections;
 
 public class PlayerMetrics : MonoBehaviour {
 	private Keymapping keymap = new Keymapping();
+	public PlayerController player_controller = null;
 	public Camera cam;
 	public RaycastHit ground_raycast;
 	public float ground_correction = 0.6f;
@@ -22,7 +23,9 @@ public class PlayerMetrics : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.player_joystick = new Vector2 (this.keymap.Player_HorizontalAxis (), this.keymap.Player_VerticalAxis ());
+		if (this.player_controller == null)
+			this.player_controller = GetComponent<PlayerController> ();
+		this.player_joystick = new Vector2 (this.player_controller.player_horizontal_axis, this.player_controller.player_vertical_axis);
 
 		float player_y_rotation = (float)transform.eulerAngles.y;
 		this.player_forward = new Vector2 (Mathf.Sin ((player_y_rotation * Mathf.PI) / 180f), Mathf.Cos ((player_y_rotation * Mathf.PI) / 180f));
@@ -42,8 +45,8 @@ public class PlayerMetrics : MonoBehaviour {
 		UpdateInputs ();
 	}
 	void UpdatePlayerJoystick(){
-		this.player_joystick.x = this.keymap.Player_HorizontalAxis ();
-		this.player_joystick.y = this.keymap.Player_VerticalAxis ();
+		this.player_joystick.x = this.player_controller.player_horizontal_axis;
+		this.player_joystick.y = this.player_controller.player_vertical_axis;
 	}
 	void UpdateGroundHit(){
 		Physics.Raycast (transform.position, -Vector3.up, out this.ground_raycast, 50.0f);

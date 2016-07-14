@@ -29,6 +29,7 @@ public class ShoulderCam : PivotBasedCameraRig
 	private Quaternion pivotTargetRot;
 	private Quaternion transformTargetRot;
 	private Keymapping keymap;
+	public PlayerController player_controller;
 
     protected override void Awake()
     {
@@ -79,8 +80,8 @@ public class ShoulderCam : PivotBasedCameraRig
         //var x = CrossPlatformInputManager.GetAxis("Mouse X");
         //var y = CrossPlatformInputManager.GetAxis("Mouse Y");
 
-		var x = this.keymap.Camera_HorizontalAxis();
-		var y = this.keymap.Camera_VerticalAxis();
+		var x = this.player_controller.camera_horizontal_axis;
+		var y = this.player_controller.camera_vertical_axis;
         // Adjust the look angle by an amount proportional to the turn speed and horizontal input.
 		this.lookAngle += x*this.turnSpeed;
 		//m_TiltAngle2 += x * m_TurnSpeed;

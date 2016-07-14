@@ -28,8 +28,16 @@ public class PlayerController : MonoBehaviour {
 	public AudioSource audio;
 	public AudioClip die;
 
+
+
 	//InControl's InputDevice variable
 	private InputDevice activeController;
+	public float player_horizontal_axis = 0f;
+	public float player_vertical_axis = 0f;
+
+	public float camera_horizontal_axis = 0f;
+	public float camera_vertical_axis = 0f;
+
 
 	// Collider/Controller Defaults
 	float controller_height;
@@ -91,25 +99,7 @@ public class PlayerController : MonoBehaviour {
 		// Inputs
 
 
-		/////////////////
-		/// @Chris: Use the following lines to get horizontal and vertical float values
-		/// from the left analog stick and then pass them to your player metrics however
-		/// you want to.
-		///////////////// 
-
-		float player_horizontal_axis = activeController.LeftStickX.Value;
-		float player_vertical_axis = activeController.LeftStickY.Value;
-
-		/////////////////
-		/// I am also including the lines in the following section for the float values
-		/// of the right analog stick that you can pass on to camera control logic
-		/////////////////
-
-		float camera_horizontal_axis = activeController.RightStickX.Value;
-		float camera_vertical_axis = activeController.RightStickY.Value;
-
 		////////////////
-
 
 		this.animator.SetFloat("ForwardInput",this.metrics.forward_input);
 		this.animator.SetFloat ("AngularInput", this.metrics.angular_input);
@@ -251,6 +241,24 @@ public class PlayerController : MonoBehaviour {
 
 
 	void FixedUpdate(){
+
+		/////////////////
+		/// @Chris: Use the following lines to get horizontal and vertical float values
+		/// from the left analog stick and then pass them to your player metrics however
+		/// you want to.
+		///////////////// 
+
+		this.player_horizontal_axis = activeController.LeftStickX.Value;
+		this.player_vertical_axis = activeController.LeftStickY.Value;
+
+		/////////////////
+		/// I am also including the lines in the following section for the float values
+		/// of the right analog stick that you can pass on to camera control logic
+		/////////////////
+
+		this.camera_horizontal_axis = activeController.RightStickX.Value;
+		this.camera_vertical_axis = activeController.RightStickY.Value;
+
 	}
 
 	void LateUpdate(){
