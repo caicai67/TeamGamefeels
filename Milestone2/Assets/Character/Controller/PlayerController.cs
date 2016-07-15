@@ -194,8 +194,13 @@ public class PlayerController : MonoBehaviour {
 
 			} else {
 
-				this.fighting = !(this.fighting);
-				this.animator.SetBool("isFighting",this.fighting);
+				if (!this.fighting) {
+					this.fighting = true;
+					this.animator.SetTrigger ("DrawSword");
+				} else {
+					this.fighting = false;
+					this.animator.SetTrigger ("SheathSword");
+				}
 			}
 
 		}
@@ -346,10 +351,9 @@ public class PlayerController : MonoBehaviour {
 		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
 		katana.parent = GameObject.FindGameObjectWithTag ("RightHand").transform;
 
-		//katana.rotation = Quaternion.Euler(27.25239f, 76.19941f, 4.854411f);
 
-
-		katana.localPosition = new Vector3 (-0.005f, 0.063f, -0.104f);
+		katana.localPosition = new Vector3 (-0.108f, 0.084f, -0.018f);
+//		katana.localPosition = new Vector3 (-0.108f, 0.084f, -0.018f);
 		katana.rotation = katana.parent.rotation;
 	}
 
@@ -357,9 +361,6 @@ public class PlayerController : MonoBehaviour {
 
 		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
 		katana.parent = GameObject.FindGameObjectWithTag ("SwordHolster").transform;
-
-		//katana.rotation = Quaternion.Euler(27.25239f, 76.19941f, 4.854411f);
-
 
 		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
 		katana.rotation = katana.parent.rotation;
