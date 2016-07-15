@@ -25,21 +25,17 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;spell_attack&quot; debugbreak=&quot;False&quot;
       constraint=&quot;player != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;move&quot; movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;player&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;move&quot; movetarget=&quot;player&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.5&quot; closeenoughangle=&quot;10&quot;
       /&gt;&lt;mecparam valueexpression=&quot;0&quot; repeatuntil=&quot;running&quot;
       parametertype=&quot;float&quot; parametername=&quot;InputMagnitude&quot; name=&quot;InputMagnitude&quot;
       debugbreak=&quot;False&quot; damptime=&quot;0.25&quot; /&gt;&lt;mecparam valueexpression=&quot;&quot;
       repeatuntil=&quot;running&quot; parametertype=&quot;trigger&quot; parametername=&quot;CastSpell&quot;
       name=&quot;CastSpell&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;player&quot;
-      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;0.5&quot; closeenoughangle=&quot;10&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;patrol&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;player == null&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;PatrolRoute&amp;quot;&quot;
+      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;patrol&quot; debugbreak=&quot;False&quot; constraint=&quot;player
+      == null&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;PatrolRoute&amp;quot;&quot;
       waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot;
       repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot;
       movetargetvariable=&quot;nextWaypoint&quot; debugbreak=&quot;False&quot;&gt;&lt;move
