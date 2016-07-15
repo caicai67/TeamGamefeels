@@ -17,7 +17,7 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol
       waypointsetvariable=&quot;PatrolRoute&quot; waypointactiontype=&quot;patrol&quot;
-      traversetype=&quot;oneway&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
+      traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
       pathtargetvariable=&quot;&quot; name=&quot;CopPatrol&quot; movetargetvariable=&quot;nextWaypoint&quot;
       debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       name=&quot;move&quot; movetarget=&quot;nextWaypoint&quot; movespeed=&quot;&quot;
