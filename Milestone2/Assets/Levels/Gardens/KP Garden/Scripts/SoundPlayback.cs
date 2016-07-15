@@ -22,7 +22,7 @@ public class SoundPlayback : MonoBehaviour {
 		if(!audioClip.isPlaying && col.relativeVelocity.magnitude >= 2) {
 
 			//audioClip.volume = col.relativeVelocity.magnitude/10;
-			Debug.Log (col.relativeVelocity.magnitude);
+			//Debug.Log (col.relativeVelocity.magnitude);
 			audioClip.Play();
 		}
 	}

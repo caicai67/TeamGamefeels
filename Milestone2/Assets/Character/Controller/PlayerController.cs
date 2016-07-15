@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour {
 
 		//make the ragdoll kinematic for now
 		//makeRagdollKinematic(true);
+
+		//Intialize 
 	}
 	// Use this for initialization
 	void Start () {
@@ -82,6 +84,19 @@ public class PlayerController : MonoBehaviour {
 
 		//Get the connected controller through InControl's InputManager
 		activeController = InputManager.ActiveDevice;
+
+		//Get input from analog sticks
+		///////////////// 
+
+		this.player_horizontal_axis = activeController.LeftStickX.Value;
+		this.player_vertical_axis = activeController.LeftStickY.Value;
+
+		/////////////////
+
+		this.camera_horizontal_axis = activeController.RightStickX.Value;
+		this.camera_vertical_axis = activeController.RightStickY.Value;
+
+		/////////////////
 
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
@@ -206,7 +221,9 @@ public class PlayerController : MonoBehaviour {
         }
 	
 
-        // Throttles
+        
+
+		// Throttles
 
         // Input Magnitude
 
@@ -242,22 +259,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		/////////////////
-		/// @Chris: Use the following lines to get horizontal and vertical float values
-		/// from the left analog stick and then pass them to your player metrics however
-		/// you want to.
-		///////////////// 
 
-		this.player_horizontal_axis = activeController.LeftStickX.Value;
-		this.player_vertical_axis = activeController.LeftStickY.Value;
-
-		/////////////////
-		/// I am also including the lines in the following section for the float values
-		/// of the right analog stick that you can pass on to camera control logic
-		/////////////////
-
-		this.camera_horizontal_axis = activeController.RightStickX.Value;
-		this.camera_vertical_axis = activeController.RightStickY.Value;
 
 	}
 
