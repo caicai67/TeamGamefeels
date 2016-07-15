@@ -10,7 +10,8 @@ public class clownMove : CustomAIElement {
 	public override void Act() 
 	{
 		IList<RAINAspect> asps = AI.Senses.SenseAll ();
-		Debug.Log (asps.Count);
+
+		Debug.Log ("white clown sensed objects: " + asps.Count);
 		//step 1 - get sensory input and change mecanim param if something in sensor
 		/*check the sensors
 		if(sees player) { //move behind
