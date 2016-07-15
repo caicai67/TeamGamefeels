@@ -23,6 +23,9 @@ public class VampirePursue : RAINAction
 	private Vector3 next_waypoint_position;
 	private bool waypoint_updated_current_loop = false;
 	private Vector3 previous_position;
+
+	public Vector3 sprint_velocity = new Vector3 (0.274f,0f,7.069f);
+
     public override void Start(RAIN.Core.AI ai)
     {
 		UpdateFloat (ai, this.inputMagnitude, 0f);
@@ -64,7 +67,7 @@ public class VampirePursue : RAINAction
 				this.target_leading_position_upon_path_calculation = this.current_target_leading_position;
 				this.last_waypoint_index = -1;
 			}
-		} else if ((target_delta.magnitude / crow_vector.magnitude) > this.recalc_proportion) {
+		} else if (target_delta.magnitude > 3f) {
 			this.path_calculated_current_loop = GetPath (ai, out this.current_path);
 			if (this.path_calculated_current_loop) {
 				this.target_leading_position_upon_path_calculation = this.current_target_leading_position;
@@ -74,7 +77,7 @@ public class VampirePursue : RAINAction
 			this.current_path = null;
 			this.last_waypoint_index = -1;
 			this.next_waypoint_index = 0;
-		}
+		} 
 
 		if (this.current_path != null) {
 			if (this.last_waypoint_index == -1) {
@@ -92,7 +95,7 @@ public class VampirePursue : RAINAction
 			} else {
 				UpdateFloat(ai,"angularInput",0f);
 			}
-			if (difference_vector.magnitude < 2f) {
+			if (difference_vector.magnitude < 5f) {
 				if (!this.waypoint_updated_current_loop) {
 					UpdateWaypoint ();
 					this.waypoint_updated_current_loop = true;
@@ -106,12 +109,6 @@ public class VampirePursue : RAINAction
 				}
 			}
 		}
-
-
-
-
-
-
 
 		// End code
 		this.path_calculated_current_loop = false;
@@ -153,13 +150,43 @@ public class VampirePursue : RAINAction
 
 
 		// placeholder; actually calculate leading target next
-		Vector3 new_target = this.current_target.transform.position;
+		Rigidbody target_rigidbody = this.current_target.GetComponent<Rigidbody>();
+		Vector3 target_velocity = target_rigidbody.velocity;
 
-		target_delta.x = new_target.x - last_target.x;
-		target_delta.y = new_target.y - last_target.y;
-		target_delta.z = new_target.z - last_target.z;
 
-		return new_target;
+		Vector3 current_target_position = this.current_target.transform.position;
+		Vector3 current_self_position = this.self.transform.position;
+
+		Vector2 current_difference = new Vector2 ();
+
+		current_difference.x = current_target_position.x - current_self_position.x;
+		current_difference.y = current_target_position.y - current_self_position.y;
+
+
+		float current_difference_length = current_difference.magnitude;
+		float estimated_time_to_arrival = current_difference_length / this.sprint_velocity.magnitude;
+
+		target_velocity.x *= estimated_time_to_arrival;
+		target_velocity.y *= estimated_time_to_arrival;
+		target_velocity.z *= estimated_time_to_arrival;
+
+		Vector3 leading_position = new Vector3 ();
+		leading_position.x = current_target_position.x + target_velocity.x;
+		leading_position.y = current_target_position.y + target_velocity.y;
+		leading_position.z = current_target_position.z + target_velocity.z;
+
+		target_delta.x = leading_position.x - last_target.x;
+		target_delta.y = leading_position.y - last_target.y;
+		target_delta.z = leading_position.z - last_target.z;
+
+
+
+
+		target_delta.x = 0f;
+		target_delta.y = 0f;
+		target_delta.z = 0f;
+		return current_target_position;
+		//return leading_position;
 	}
 	void UpdateFloat(AI ai,string var_name,float value){
 		ai.WorkingMemory.SetItem (var_name, value);
