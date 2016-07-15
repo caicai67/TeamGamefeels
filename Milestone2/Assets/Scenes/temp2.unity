@@ -175,7 +175,7 @@ MonoBehaviour:
       value="AlwaysOn" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field type="RAIN.Navigation.Targets.NavigationTarget"
       reference="0" id="_target" /></fields><references><reference type="RAIN.Navigation.Targets.NavigationTarget"
       refcount="1" id="0"><field value="Navigation Target" type="System.String" id="_targetName"
-      /><field value="0.6,0,0.6,1" type="UnityEngine.Color" id="_targetColor" /><field
+      /><field value="0,0.6,0,1" type="UnityEngine.Color" id="_targetColor" /><field
       value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
       type="System.Single" id="_selectionColorOffset" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="0" /><field value="0,0,0" type="UnityEngine.Vector3"
@@ -1102,7 +1102,7 @@ MonoBehaviour:
     _serializedData: <component version="1.3" type="RAIN.Navigation.Waypoints.WaypointRig"><fields><field
       value="AlwaysOn" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /></fields><references><reference type="RAIN.Navigation.Waypoints.WaypointSet"
-      refcount="35" id="0"><field type="UnityEngine.Transform" id="_mountPoint" gameobject="0"
+      refcount="36" id="0"><field type="UnityEngine.Transform" id="_mountPoint" gameobject="0"
       /><field value="Waypoint Network" type="System.String" id="_setName" /><field
       value="Network" type="RAIN.Navigation.Waypoints.WaypointSet+WaypointSetType"
       id="_setType" /><field value="0.6,0,0.6,1" type="UnityEngine.Color" id="_networkColor"
@@ -1142,7 +1142,8 @@ MonoBehaviour:
       reference="60" id="element30" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="62" id="element31" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="65" id="element32" /><field type="RAIN.Navigation.Waypoints.Waypoint"
-      reference="67" id="element33" /></field><field type="System.Collections.Generic.List"
+      reference="67" id="element33" /><field type="RAIN.Navigation.Waypoints.Waypoint"
+      reference="69" id="element34" /></field><field type="System.Collections.Generic.List"
       id="_connections" elementtype="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"><field
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" reference="3"
       id="element0" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
@@ -1178,7 +1179,9 @@ MonoBehaviour:
       reference="63" id="element30" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       reference="64" id="element31" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       reference="66" id="element32" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
-      reference="68" id="element33" /></field></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
+      reference="68" id="element33" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
+      reference="70" id="element34" /><field type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
+      reference="71" id="element35" /></field></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="1"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
       /><field value="-37.42757,-38.6854,-89.68626" type="UnityEngine.Vector3" id="_position"
@@ -1428,6 +1431,17 @@ MonoBehaviour:
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="68"><field value="0" type="System.Int32" id="wpOne" /><field
       value="33" type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean"
+      id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
+      refcount="1" id="69"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
+      id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
+      /><field value="289.2439,-38.68541,145.1762" type="UnityEngine.Vector3" id="_position"
+      /><field value="0.5" type="System.Single" id="_range" /></reference><reference
+      type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
+      id="70"><field value="16" type="System.Int32" id="wpOne" /><field value="34"
+      type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
+      /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
+      refcount="1" id="71"><field value="17" type="System.Int32" id="wpOne" /><field
+      value="34" type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean"
       id="twoWay" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 475596184}
@@ -1629,7 +1643,7 @@ MonoBehaviour:
       value="AlwaysOn" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field type="RAIN.Navigation.Targets.NavigationTarget"
       reference="0" id="_target" /></fields><references><reference type="RAIN.Navigation.Targets.NavigationTarget"
       refcount="1" id="0"><field value="Navigation Target" type="System.String" id="_targetName"
-      /><field value="0.6,0,0.6,1" type="UnityEngine.Color" id="_targetColor" /><field
+      /><field value="0,0.6,0,1" type="UnityEngine.Color" id="_targetColor" /><field
       value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
       type="System.Single" id="_selectionColorOffset" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="0" /><field value="0,0,0" type="UnityEngine.Vector3"
@@ -2213,12 +2227,12 @@ MonoBehaviour:
       value="AlwaysOn" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /></fields><references><reference type="RAIN.Navigation.Waypoints.WaypointSet"
       refcount="5" id="0"><field type="UnityEngine.Transform" id="_mountPoint" gameobject="0"
-      /><field value="Waypoint Route" type="System.String" id="_setName" /><field
-      value="Route" type="RAIN.Navigation.Waypoints.WaypointSet+WaypointSetType" id="_setType"
-      /><field value="0.6,0,0,1" type="UnityEngine.Color" id="_networkColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field type="System.Collections.Generic.List"
-      id="_waypoints" elementtype="RAIN.Navigation.Waypoints.Waypoint"><field type="RAIN.Navigation.Waypoints.Waypoint"
+      /><field value="PatrolRoute" type="System.String" id="_setName" /><field value="Route"
+      type="RAIN.Navigation.Waypoints.WaypointSet+WaypointSetType" id="_setType" /><field
+      value="0.6,0,0,1" type="UnityEngine.Color" id="_networkColor" /><field value="-0.5"
+      type="System.Single" id="_outlineColorOffset" /><field value="0.4" type="System.Single"
+      id="_selectionColorOffset" /><field type="System.Collections.Generic.List" id="_waypoints"
+      elementtype="RAIN.Navigation.Waypoints.Waypoint"><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="1" id="element0" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="2" id="element1" /><field type="RAIN.Navigation.Waypoints.Waypoint"
       reference="3" id="element2" /><field type="RAIN.Navigation.Waypoints.Waypoint"
@@ -2235,11 +2249,11 @@ MonoBehaviour:
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="3"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-18.51371,0,20.59617" type="UnityEngine.Vector3" id="_position"
+      /><field value="-7.815437,0,11.70147" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="4"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-27.88828,0,24.95384" type="UnityEngine.Vector3" id="_position"
+      /><field value="-11.14694,0,0.05374527" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 1853187812}
@@ -2253,7 +2267,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 114.7
+      value: 181.2
       objectReference: {fileID: 0}
     - target: {fileID: 410382, guid: 13944289fbac20747b6c8ecdc890d498, type: 2}
       propertyPath: m_LocalPosition.y
