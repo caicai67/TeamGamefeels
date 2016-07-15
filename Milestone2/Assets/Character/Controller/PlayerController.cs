@@ -340,4 +340,28 @@ public class PlayerController : MonoBehaviour {
     {
 
     }
+
+	void DrawSword(){
+
+		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
+		katana.parent = GameObject.FindGameObjectWithTag ("RightHand").transform;
+
+		//katana.rotation = Quaternion.Euler(27.25239f, 76.19941f, 4.854411f);
+
+
+		katana.localPosition = new Vector3 (-0.005f, 0.063f, -0.104f);
+		katana.rotation = katana.parent.rotation;
+	}
+
+	void SheathSword(){
+
+		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
+		katana.parent = GameObject.FindGameObjectWithTag ("SwordHolster").transform;
+
+		//katana.rotation = Quaternion.Euler(27.25239f, 76.19941f, 4.854411f);
+
+
+		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
+		katana.rotation = katana.parent.rotation;
+	}
 }

@@ -13,9 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updateMetaformRequired: 0
   _lastLoadSaveDirectory: 
-<<<<<<< HEAD
-  _lastUpdateCheck: 07/14/2016 21:50:39
-=======
-  _lastUpdateCheck: 07/14/2016 22:41:33
->>>>>>> a0277ed00072ec143d22b69a0b432b0e1b1760a4
-  _lastMetricsUpdate: 7/14/2016 4:08:20 PM
+  _lastUpdateCheck: 07/14/2016 23:47:19
+  _lastMetricsUpdate: 07/15/2016 16:35:43
