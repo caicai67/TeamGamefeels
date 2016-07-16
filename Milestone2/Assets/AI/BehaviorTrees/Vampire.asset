@@ -17,8 +17,8 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;Eyes&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;detect&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;player&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      name=&quot;detect&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;self&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;player&quot;
       aspectobjectvariable=&quot;playerCharacter&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
       /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
