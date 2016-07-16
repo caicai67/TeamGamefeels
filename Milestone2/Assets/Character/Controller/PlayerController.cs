@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour {
 
 		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || activeController.RightBumper.IsPressed));
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || activeController.LeftBumper.IsPressed));
 		// Inputs
 
 
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Sword Fight Code
-		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.LeftBumper.WasPressed) {
+		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.RightBumper.WasPressed || activeController.DPadUp.WasPressed) {
 
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
@@ -194,8 +194,13 @@ public class PlayerController : MonoBehaviour {
 
 			} else {
 
-				this.fighting = !(this.fighting);
-				this.animator.SetBool("isFighting",this.fighting);
+				if (!this.fighting) {
+					this.fighting = true;
+					this.animator.SetTrigger ("DrawSword");
+				} else {
+					this.fighting = false;
+					this.animator.SetTrigger ("SheathSword");
+				}
 			}
 
 		}
@@ -340,4 +345,25 @@ public class PlayerController : MonoBehaviour {
     {
 
     }
+
+	void DrawSword(){
+
+		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
+		katana.parent = GameObject.FindGameObjectWithTag ("RightHand").transform;
+
+		katana.localPosition = new Vector3 (-0.081f, 0.113f, -0.039f);
+		//katana.localPosition = new Vector3 (-0.12f, 0.162f, -0.051f);
+		katana.localEulerAngles = new Vector3 (9.292282f, 39.94241f, 304.3139f);
+		//katana.rotation = katana.parent.rotation;
+
+	}
+
+	void SheathSword(){
+
+		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
+		katana.parent = GameObject.FindGameObjectWithTag ("SwordHolster").transform;
+
+		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
+		katana.rotation = katana.parent.rotation;
+	}
 }

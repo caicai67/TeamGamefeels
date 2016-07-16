@@ -20,7 +20,7 @@ MonoBehaviour:
   _navMeshGenerationThreads: 4
   _useSkin: 1
   _showAdvanced: 1
-  _allowAutoUpdateCheck: 1
+  _allowAutoUpdateCheck: 0
   _updateFrequencyHours: 24
   _showWelcomeWindow: 1
   _displayVersionWarning: 1

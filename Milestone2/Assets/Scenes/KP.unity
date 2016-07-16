@@ -2492,9 +2492,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 786082542}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: RightHandGrip
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2505,13 +2505,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 786082541}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.99765605, y: 0.044434424, z: -0.001242265, w: -0.05202406}
+  m_LocalPosition: {x: -0.0023408541, y: 0.1142068, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.9646, y: -179.8765, z: -174.89319}
   m_Children: []
-  m_Father: {fileID: 1392548912}
-  m_RootOrder: 5
+  m_Father: {fileID: 1135855618}
+  m_RootOrder: 1
 --- !u!1 &898468494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,9 +3278,37 @@ Prefab:
       propertyPath: m_ConnectedAnchor.z
       value: 0.000000044703484
       objectReference: {fileID: 0}
+    - target: {fileID: 491174, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439412, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 472284, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 424934, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 468098, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452906, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1135855618 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 424934, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
+  m_PrefabInternal: {fileID: 1135855617}
 --- !u!1001 &1140550282
 Prefab:
   m_ObjectHideFlags: 0
@@ -4077,10 +4105,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855286164}
   m_RootOrder: 2
---- !u!4 &1392548912 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 452906, guid: 120ad14e87e76da4b93368b1fdba51f4, type: 2}
-  m_PrefabInternal: {fileID: 1135855617}
 --- !u!1 &1397671039 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 157898, guid: 729e82afb7a7b42e0bea90b94a327b05, type: 2}
@@ -5147,9 +5171,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1734551333}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: SwordHolster
-  m_TagString: Untagged
+  m_TagString: SwordHolster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5373,6 +5397,10 @@ Prefab:
     - target: {fileID: 100000, guid: 43cf19174db63f549b650fd48a60e071, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 43cf19174db63f549b650fd48a60e071, type: 3}
+      propertyPath: m_TagString
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43cf19174db63f549b650fd48a60e071, type: 3}
