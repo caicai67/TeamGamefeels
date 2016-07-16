@@ -2126,13 +2126,14 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="3" id="_mind"
-      childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="4"
+      childrenvisible="False" /><field type="RAIN.Motion.BasicMotor" reference="4"
       id="_motor" /><field type="RAIN.Animation.MecanimAnimator" reference="5" id="_animator"
       /><field type="RAIN.Navigation.BasicNavigator" reference="11" id="_navigator"
       /><field type="RAIN.Perception.BasicSenses" reference="12" id="_senses" /><field
       type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
-      /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
-      type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
+      childrenvisible="True"><field type="clownMove" reference="14" id="element0"
+      /></field></reference><reference type="RAIN.Memory.BasicMemory" refcount="1"
+      id="1"><field type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
       type="RAIN.Memory.BasicMemory+MemoryItem" reference="2" id="element0" /></field></reference><reference
       type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="2"><field value="anim"
       type="System.String" id="Key" /><field value="UnityEngine.GameObject" type="System.Type"
@@ -2203,7 +2204,9 @@ MonoBehaviour:
       type="System.Boolean" id="_canDetectSelf" /><field value="137" type="System.Single"
       id="_horizontalAngle" /><field value="101" type="System.Single" id="_verticalAngle"
       /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="65330"
-      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference></references></component>
+      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
+      type="clownMove" refcount="1" id="14"><field value="clownMove" type="System.String"
+      id="_name" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 741292521}
     - {fileID: 9100000, guid: 4adb9772735ae444d865526be270a3d6, type: 2}
