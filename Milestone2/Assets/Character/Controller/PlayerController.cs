@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour {
 	private SphereCollider trigger;
 	public AudioSource audio;
 	public AudioClip die;
+	public bool demon_spell_hit = false;
+	private bool demon_spell_impact_animation_playing = false;
 
 
 
@@ -125,7 +127,25 @@ public class PlayerController : MonoBehaviour {
 
 
 		// Sections below: may not need them; leaving them for notes
-		// Movement Modes
+		// Spell Impacts
+		demon_spell_impact_animation_playing = animator.GetCurrentAnimatorStateInfo(0).IsName("Demon Spell Impact");
+
+		if (demon_spell_impact_animation_playing) {
+			if (animator.GetBool("CanBeHit"))
+				animator.SetBool ("CanBeHit", false);
+			if (animator.GetBool ("DemonSpellHit"))
+				animator.SetBool ("DemonSpellHit", false);
+			if (this.demon_spell_hit)
+				this.demon_spell_hit = false;
+		}
+
+		if (!demon_spell_impact_animation_playing) {
+			if (!animator.GetBool ("CanBeHit"))
+				animator.SetBool ("CanBeHit", true);
+		}
+
+		if (this.demon_spell_hit)
+			animator.SetBool ("DemonSpellHit", true);
 
 
 
