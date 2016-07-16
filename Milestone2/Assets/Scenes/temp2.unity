@@ -2244,6 +2244,10 @@ Prefab:
       propertyPath: isCameraInverted
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 174838, guid: baee7f16d3f85844383311082225c066, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baee7f16d3f85844383311082225c066, type: 2}
   m_IsPrefabParent: 0
