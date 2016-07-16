@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour {
 
 		// Environment Settings (these should be set first!)
 		this.animator.SetBool("Grounded",this.metrics.grounded);
-		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || activeController.RightBumper.IsPressed));
+		this.animator.SetBool ("RunSkill", (Input.GetKey (this.keymap.run_skill.keyboard) || activeController.LeftBumper.IsPressed));
 		// Inputs
 
 
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Sword Fight Code
-		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.LeftBumper.WasPressed) {
+		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.RightBumper.WasPressed || activeController.DPadUp.WasPressed) {
 
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
