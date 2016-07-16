@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour {
 	public float camera_horizontal_axis = 0f;
 	public float camera_vertical_axis = 0f;
 
+	//Sword Combat related variables
+	public bool swingedSword = false;
 
 	// Collider/Controller Defaults
 	float controller_height;
@@ -221,7 +223,8 @@ public class PlayerController : MonoBehaviour {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
 				} else {
-					
+
+					swingedSword = true;
 					this.animator.SetTrigger ("SlashSword");
 				}
 			}
@@ -374,10 +377,14 @@ public class PlayerController : MonoBehaviour {
 		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
 		katana.parent = GameObject.FindGameObjectWithTag ("RightHand").transform;
 
-		katana.localPosition = new Vector3 (-0.081f, 0.113f, -0.039f);
-		//katana.localPosition = new Vector3 (-0.12f, 0.162f, -0.051f);
-		katana.localEulerAngles = new Vector3 (9.292282f, 39.94241f, 304.3139f);
-		//katana.rotation = katana.parent.rotation;
+		//Values for KP's scene
+		//katana.localPosition = new Vector3 (-0.081f, 0.113f, -0.039f);
+		//katana.localEulerAngles = new Vector3 (9.292282f, 39.94241f, 304.3139f);
+
+		//Values for Temp2 scene
+		katana.localPosition = new Vector3 (-0.103f, 0.018f, 0.043f);
+		katana.localEulerAngles = new Vector3 (3.971051f, 134.7626f, 142f);
+
 
 	}
 
@@ -388,5 +395,10 @@ public class PlayerController : MonoBehaviour {
 
 		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
 		katana.rotation = katana.parent.rotation;
+	}
+
+	//Getter method to be used in CombatSounds.cs
+	public bool isFighting(){
+		return this.fighting;
 	}
 }

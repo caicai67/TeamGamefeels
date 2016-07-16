@@ -27,6 +27,7 @@ iii. Resources
 	RAIN AI system. 
 	Mixamo Characters and animations
 	Standard Assets animations
+	http://rivaltheory.com/forums/topic/refusing-waypoint-network-fail-parallel/
 
 
 iv. Special Install Instructions

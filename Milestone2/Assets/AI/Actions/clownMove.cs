@@ -21,9 +21,9 @@ public class clownMove : CustomAIElement {
 		}
 		foreach (RAINAspect detected in asps) {
 			GameObject character = detected.Entity.Form;
-			Debug.Log (character);
 			if (character.CompareTag("Player")) {
-				Debug.Log ("dreyar Forward: " + character.transform.forward);
+				AI.WorkingMemory.SetItem("targetSpot", character.transform.position - (5 * character.transform.forward));
+				AI.WorkingMemory.SetItem ("playerInRange", Vector3.Magnitude(AI.Body.transform.position - character.transform.position) < 10f);
 			}
 
 		}
