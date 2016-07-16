@@ -19,7 +19,7 @@ public class CombatSounds : MonoBehaviour {
 		if (player_controller.swingedSword) {
 			player_controller.swingedSword = false;
 
-			GetComponent<AudioSource> ().PlayDelayed (0.5f);
+			GetComponent<AudioSource> ().PlayDelayed (0.55f);
 		}
 	}
 }
