@@ -66,6 +66,10 @@ public abstract class AbstractTargetFollower : MonoBehaviour {
 			SetTarget (targetObj.transform);
 		}
 	}
+	public virtual void SetTarget(Transform newTransform)
+	{
+		this.target = newTransform;
+	}
 	public Transform Target
 	{
 		get { return this.target; }
