@@ -2173,6 +2173,10 @@ Prefab:
       propertyPath: demon
       value: 
       objectReference: {fileID: 63437718}
+    - target: {fileID: 11443012, guid: baee7f16d3f85844383311082225c066, type: 2}
+      propertyPath: turnSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baee7f16d3f85844383311082225c066, type: 2}
   m_IsPrefabParent: 0
