@@ -10,8 +10,13 @@ public class DemonStateManager : MonoBehaviour {
 	public GameObject dreyar;
 	private PlayerController player_controller;
 	private float spell_casting_timer = 0f;
-	// Use this for initialization
+	public GameObject demon_ai_unity_object;
+	private RAIN.Core.AI demon_ai;
+	private RAIN.Core.AIRig demon_ai_rig;
+	// Use this forinitialization
 	void Start () {
+
+		this.demon_ai_rig = demon_ai_unity_object.GetComponent<RAIN.Core.AIRig> ();
 		this.player_controller = dreyar.GetComponent<PlayerController> ();
 	}
 	
@@ -19,15 +24,19 @@ public class DemonStateManager : MonoBehaviour {
 	void Update () {
 		bool state = animator.GetCurrentAnimatorStateInfo (0).IsName ("Spell");
 		if (state && this.cooldown_timer < 10f) {
-			if (this.animator.GetBool ("CanCast"))
+			if (this.animator.GetBool ("CanCast")) {
 				this.animator.SetBool ("CanCast", false);
+				this.demon_ai_rig.AI.WorkingMemory.SetItem<bool> ("canCast", false);
+			}
 			this.cooldown_timer += Time.deltaTime;
 		} else if (this.cooldown_timer < 10f) {
 			this.cooldown_timer += Time.deltaTime;
 		} else {
 			this.cooldown_timer = 0f;
-			if (!this.animator.GetBool ("CanCast"))
+			if (!this.animator.GetBool ("CanCast")){
 				this.animator.SetBool ("CanCast", true);
+				this.demon_ai_rig.AI.WorkingMemory.SetItem<bool> ("canCast", true);
+			}
 		}
 	}
 	void FixedUpdate(){
@@ -51,46 +60,7 @@ public class DemonStateManager : MonoBehaviour {
 		}
 
 		if (!original_spell_state && (original_spell_state != spell_isCasting)) { //spell just started!
-
-			// dreyar_position
-			Vector3 dreyar_position = dreyar.transform.position;
-
-			// vector between demon and dreyar
-			Vector3 difference_vector;
-			GetDifferenceVector (dreyar_position,transform.position,out difference_vector);
-			difference_vector.Normalize ();
-
-			// demon 2D direction vector
-			float demon_orientation_Y = transform.eulerAngles.y * Mathf.Deg2Rad;
-			Vector3 demon_direction = new Vector3 (Mathf.Cos (demon_orientation_Y), 0f, Mathf.Sin (demon_orientation_Y));
-			// make sure everything is what it is supposed to be
-			demon_direction.Normalize ();
-
-			// calculate theta
-			float theta;
-			GetTheta (demon_direction, difference_vector, out theta);
-
-			transform.Rotate (new Vector3 (0f, 90f, 0f)); // theta - 50f, 0f));
+			transform.Rotate (new Vector3 (0f,85f, 0f)); 
 		}
-	}
-
-	void GetDifferenceVector(Vector3 dreyar_position,Vector3 demon_position,out Vector3 difference_vector){
-		difference_vector.x = dreyar_position.x - demon_position.x;
-		difference_vector.y = 0f;
-		difference_vector.z = dreyar_position.z - demon_position.z;
-	}
-	void GetTheta(Vector3 demon_direction,Vector3 difference_vector, out float theta){
-		float dot_product = 0f;
-		GetDotProduct(demon_direction,difference_vector,out dot_product);
-
-		float theta_prime = Mathf.Acos (dot_product) * Mathf.Rad2Deg;
-		float determinant = demon_direction.z * difference_vector.x - difference_vector.z * demon_direction.x;
-		theta = -1* Mathf.Sign (determinant) * theta_prime;
-	}
-	void GetDotProduct(Vector3 demon_direction,Vector3 difference_vector, out float dot_product){
-		dot_product = 0f;
-		dot_product += demon_direction.x * difference_vector.x;
-		dot_product += demon_direction.y * difference_vector.y;
-		dot_product += demon_direction.z * difference_vector.z;
 	}
 }
