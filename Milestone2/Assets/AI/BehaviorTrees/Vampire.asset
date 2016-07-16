@@ -43,7 +43,7 @@ MonoBehaviour:
       parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot; name=&quot;AngularInput&quot;
       debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;custom_pursue&quot; debugbreak=&quot;False&quot; classname=&quot;VampirePursue&quot;
+      name=&quot;custom_pursue&quot; debugbreak=&quot;False&quot; classname=&quot;VampireMove&quot;
       /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
