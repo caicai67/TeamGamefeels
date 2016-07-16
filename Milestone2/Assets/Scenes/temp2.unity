@@ -397,10 +397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 63437719}
-  spell_casted: 0
-  cooldown: 10
-  cooldown_timer: 0
-  spell_state: 0
   dreyar: {fileID: 1357311048}
 --- !u!1 &82168522
 GameObject:
@@ -8494,7 +8490,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.7
+      value: 119.72
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8502,7 +8498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.777
+      value: 63.73
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
       propertyPath: m_LocalRotation.x

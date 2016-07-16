@@ -24,26 +24,26 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;player Close Enough&quot; debugbreak=&quot;False&quot; constraint=&quot;playerInRange&quot;&gt;&lt;mecparam
       valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; parametertype=&quot;float&quot;
-      parametername=&quot;&quot; name=&quot;moving&quot; debugbreak=&quot;False&quot;
+      parametername=&quot;moving&quot; name=&quot;stop move anim&quot; debugbreak=&quot;False&quot;
       damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       name=&quot;turn&quot; movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;detectedPlayer&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;
-      parametertype=&quot;float&quot; parametername=&quot;&quot; name=&quot;slow&quot;
+      parametertype=&quot;float&quot; parametername=&quot;slow&quot; name=&quot;slow&quot;
       debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Move To Player&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;mecparam valueexpression=&quot;true&quot;
-      repeatuntil=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;&quot;
-      name=&quot;moving&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
-      movetarget=&quot;targetSpot&quot; movespeed=&quot;1000&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;/constraint&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Player not visible&quot;
-      fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;false&quot;
-      repeatuntil=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;&quot;
-      name=&quot;moving&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/parallel&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      debugbreak=&quot;False&quot; constraint=&quot;detectedPlayer != null&quot;&gt;&lt;mecparam
+      valueexpression=&quot;true&quot; repeatuntil=&quot;&quot; parametertype=&quot;float&quot;
+      parametername=&quot;moving&quot; name=&quot;move animation&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      name=&quot;move&quot; movetarget=&quot;targetSpot&quot; movespeed=&quot;1000&quot;
+      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Player
+      not visible&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
+      valueexpression=&quot;false&quot; repeatuntil=&quot;&quot; parametertype=&quot;float&quot;
+      parametername=&quot;moving&quot; name=&quot;stop move anim&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;/parallel&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

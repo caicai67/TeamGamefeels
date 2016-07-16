@@ -11,16 +11,16 @@ public class clownMove : CustomAIElement {
 	public override void Act() 
 	{
 		//IList<RAINAspect> asps = AI.Senses.SenseAll ();
-		Animator anim = AI.Body.GetComponent<Animator> ();
+		//Animator anim = AI.Body.GetComponent<Animator> ();
 		//foreach (RAINAspect detected in asps) {
-			
-		GameObject character = AI.WorkingMemory.GetItem("detectedPlayer");
-			if (character != null) {
-				AI.WorkingMemory.SetItem ("targetSpot", character.transform.position - (5 * character.transform.forward));
-				AI.WorkingMemory.SetItem ("playerInRange", Vector3.Magnitude (AI.Body.transform.position - character.transform.position) < 5f);
-			} else {
-				AI.WorkingMemory.SetItem ("playerInRange", false);
-			}
+		if (AI.WorkingMemory.GetItem<GameObject>("detectedPlayer") != null) {
+			GameObject character = AI.WorkingMemory.GetItem<GameObject> ("detectedPlayer");
+			Debug.Log ("player: " + character);
+			AI.WorkingMemory.SetItem ("targetSpot", character.transform.position - (5 * character.transform.forward));
+			AI.WorkingMemory.SetItem ("playerInRange", Vector3.Magnitude (AI.Body.transform.position - character.transform.position) < 20f);
+		} else {
+			AI.WorkingMemory.SetItem ("playerInRange", false);
+		}
 
 		//}
 		//:) step 1 - get sensory input
