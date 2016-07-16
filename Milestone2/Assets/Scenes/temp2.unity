@@ -2726,27 +2726,29 @@ MonoBehaviour:
       id="_ai" /></fields><references><reference type="RAIN.Core.AI" refcount="1"
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
-      id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind"
-      childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="3"
-      id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="4" id="_animator"
-      /><field type="RAIN.Navigation.BasicNavigator" reference="5" id="_navigator"
-      /><field type="RAIN.Perception.BasicSenses" reference="6" id="_senses" /><field
-      type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
-      /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
-      type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
-      /></reference><reference type="RAIN.Minds.BasicMind" refcount="1" id="2"><field
-      type="RAIN.BehaviorTrees.BTAsset" id="_behaviorTreeAsset" gameobject="2" /><field
-      type="System.Collections.Generic.List" id="_behaviorTreeBindings" elementtype="RAIN.BehaviorTrees.BTAssetBinding"
-      /></reference><reference type="RAIN.Motion.BasicMotor" refcount="1" id="3"><field
-      value="1" type="System.Single" id="_speed" /><field value="360" type="System.Single"
-      id="_rotationSpeed" /><field value="0.1" type="System.Single" id="_closeEnoughDistance"
-      /><field value="0.1" type="System.Single" id="_closeEnoughAngle" /><field value="360"
-      type="System.Single" id="_faceBeforeMoveAngle" /><field value="1" type="System.Single"
-      id="_maxHeightOffset" /><field value="False" type="System.Boolean" id="_allow3DMovement"
-      /><field value="False" type="System.Boolean" id="_allow3DRotation" /><field
-      value="True" type="System.Boolean" id="_allowOffGraphMovement" /></reference><reference
-      type="RAIN.Animation.BasicAnimator" refcount="1" id="4"><field type="System.Collections.Generic.List"
-      id="_animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
+      id="_workingMemory" childrenvisible="True" /><field type="RAIN.Minds.BasicMind"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+      reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
+      reference="4" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="5" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="6"
+      id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
+      elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
+      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
+      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      reference="8" id="element0" /><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      reference="9" id="element1" /></field></reference><reference type="RAIN.Minds.BasicMind"
+      refcount="1" id="2"><field type="RAIN.BehaviorTrees.BTAsset" id="_behaviorTreeAsset"
+      gameobject="2" /><field type="System.Collections.Generic.List" id="_behaviorTreeBindings"
+      elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference type="RAIN.Motion.BasicMotor"
+      refcount="1" id="3"><field value="1" type="System.Single" id="_speed" /><field
+      value="360" type="System.Single" id="_rotationSpeed" /><field value="0.1" type="System.Single"
+      id="_closeEnoughDistance" /><field value="0.1" type="System.Single" id="_closeEnoughAngle"
+      /><field value="360" type="System.Single" id="_faceBeforeMoveAngle" /><field
+      value="1" type="System.Single" id="_maxHeightOffset" /><field value="False"
+      type="System.Boolean" id="_allow3DMovement" /><field value="False" type="System.Boolean"
+      id="_allow3DRotation" /><field value="True" type="System.Boolean" id="_allowOffGraphMovement"
+      /></reference><reference type="RAIN.Animation.BasicAnimator" refcount="1" id="4"><field
+      type="System.Collections.Generic.List" id="_animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       /></reference><reference type="RAIN.Navigation.BasicNavigator" refcount="1"
       id="5"><field value="False" type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1"
       type="UnityEngine.Color" id="_pathColor" /><field value="-0.5" type="System.Single"
@@ -2767,7 +2769,14 @@ MonoBehaviour:
       type="System.Boolean" id="_canDetectSelf" /><field value="137" type="System.Single"
       id="_horizontalAngle" /><field value="101" type="System.Single" id="_verticalAngle"
       /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="65330"
-      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference></references></component>
+      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="8"><field value="playerInRange"
+      type="System.String" id="Key" /><field value="System.Boolean" type="System.Type"
+      id="ValueType" /><field value="False" type="System.Boolean" id="Value" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="9"><field value="targetSpot"
+      type="System.String" id="Key" /><field value="UnityEngine.Vector3" type="System.Type"
+      id="ValueType" /><field value="0,0,0" type="UnityEngine.Vector3" id="Value"
+      /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 741292521}
     - {fileID: 741292523}
