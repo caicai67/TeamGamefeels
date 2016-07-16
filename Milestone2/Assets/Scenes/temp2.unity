@@ -3665,6 +3665,40 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
   m_PrefabInternal: {fileID: 2017014960}
+--- !u!20 &741292524
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741292521}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!1 &743766115
 GameObject:
   m_ObjectHideFlags: 0
@@ -7687,6 +7721,68 @@ Transform:
   - {fileID: 236511916}
   m_Father: {fileID: 1178652791}
   m_RootOrder: 0
+--- !u!1 &1814168298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1814168299}
+  - 108: {fileID: 1814168300}
+  m_Layer: 0
+  m_Name: spellCast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1814168299
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814168298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 741292523}
+  m_RootOrder: 3
+--- !u!108 &1814168300
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814168298}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 0.51724136, b: 0, a: 1}
+  m_Intensity: 1.65
+  m_Range: 1
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1.17
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1001 &1817945822
 Prefab:
   m_ObjectHideFlags: 0
@@ -7781,47 +7877,46 @@ MonoBehaviour:
       id="_ai" /></fields><references><reference type="RAIN.Core.AI" refcount="1"
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
-      id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="5" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
-      reference="6" id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="7"
-      id="_animator" /><field type="RAIN.Navigation.BasicNavigator" reference="8"
-      id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="9" id="_senses"
-      childrenvisible="False" /><field type="System.Collections.Generic.List" id="_customElements"
-      elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"><field type="clownMove"
-      reference="11" id="element0" /></field></reference><reference type="RAIN.Memory.BasicMemory"
-      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
-      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
-      reference="2" id="element0" /><field type="RAIN.Memory.BasicMemory+MemoryItem"
-      reference="4" id="element1" /></field></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
-      refcount="1" id="2"><field value="playerInRange" type="System.String" id="Key"
-      /><field value="System.Boolean" type="System.Type" id="ValueType" /><field value="False"
-      type="System.Boolean" id="Value" /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
-      refcount="0" id="3" /><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1"
-      id="4"><field value="detectedPlayer" type="System.String" id="Key" /><field
-      value="UnityEngine.GameObject" type="System.Type" id="ValueType" /><field value=""
-      type="System.Object" id="Value" /></reference><reference type="RAIN.Minds.BasicMind"
-      refcount="1" id="5"><field type="RAIN.BehaviorTrees.BTAsset" id="_behaviorTreeAsset"
-      gameobject="1" /><field type="System.Collections.Generic.List" id="_behaviorTreeBindings"
-      elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference type="RAIN.Motion.BasicMotor"
-      refcount="1" id="6"><field value="1" type="System.Single" id="_speed" /><field
-      value="360" type="System.Single" id="_rotationSpeed" /><field value="0.1" type="System.Single"
-      id="_closeEnoughDistance" /><field value="0.1" type="System.Single" id="_closeEnoughAngle"
-      /><field value="360" type="System.Single" id="_faceBeforeMoveAngle" /><field
-      value="1" type="System.Single" id="_maxHeightOffset" /><field value="False"
-      type="System.Boolean" id="_allow3DMovement" /><field value="False" type="System.Boolean"
-      id="_allow3DRotation" /><field value="True" type="System.Boolean" id="_allowOffGraphMovement"
-      /></reference><reference type="RAIN.Animation.BasicAnimator" refcount="1" id="7"><field
-      type="System.Collections.Generic.List" id="_animationStates" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState"
-      /></reference><reference type="RAIN.Navigation.BasicNavigator" refcount="1"
-      id="8"><field value="False" type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1"
-      type="UnityEngine.Color" id="_pathColor" /><field value="-0.5" type="System.Single"
-      id="_outlineColorOffset" /><field value="100" type="System.Int32" id="_maxPathfindingSteps"
-      /><field value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
+      id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="4" id="_mind"
+      childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="5"
+      id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="6" id="_animator"
+      /><field type="RAIN.Navigation.BasicNavigator" reference="7" id="_navigator"
+      /><field type="RAIN.Perception.BasicSenses" reference="8" id="_senses" /><field
+      type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
+      childrenvisible="False"><field type="clownMove" reference="10" id="element0"
+      /></field></reference><reference type="RAIN.Memory.BasicMemory" refcount="1"
+      id="1"><field type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="2" id="element0" /><field
+      type="RAIN.Memory.BasicMemory+MemoryItem" reference="3" id="element1" /></field></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="2"><field value="playerInRange"
+      type="System.String" id="Key" /><field value="System.Boolean" type="System.Type"
+      id="ValueType" /><field value="False" type="System.Boolean" id="Value" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="3"><field value="detectedPlayer"
+      type="System.String" id="Key" /><field value="UnityEngine.GameObject" type="System.Type"
+      id="ValueType" /><field value="" type="System.Object" id="Value" /></reference><reference
+      type="RAIN.Minds.BasicMind" refcount="1" id="4"><field type="RAIN.BehaviorTrees.BTAsset"
+      id="_behaviorTreeAsset" gameobject="1" /><field type="System.Collections.Generic.List"
+      id="_behaviorTreeBindings" elementtype="RAIN.BehaviorTrees.BTAssetBinding" /></reference><reference
+      type="RAIN.Motion.BasicMotor" refcount="1" id="5"><field value="1" type="System.Single"
+      id="_speed" /><field value="360" type="System.Single" id="_rotationSpeed" /><field
+      value="0.1" type="System.Single" id="_closeEnoughDistance" /><field value="0.1"
+      type="System.Single" id="_closeEnoughAngle" /><field value="360" type="System.Single"
+      id="_faceBeforeMoveAngle" /><field value="1" type="System.Single" id="_maxHeightOffset"
+      /><field value="False" type="System.Boolean" id="_allow3DMovement" /><field
+      value="False" type="System.Boolean" id="_allow3DRotation" /><field value="True"
+      type="System.Boolean" id="_allowOffGraphMovement" /></reference><reference type="RAIN.Animation.BasicAnimator"
+      refcount="1" id="6"><field type="System.Collections.Generic.List" id="_animationStates"
+      elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState" /></reference><reference
+      type="RAIN.Navigation.BasicNavigator" refcount="1" id="7"><field value="False"
+      type="System.Boolean" id="_drawPaths" /><field value="0,1,0,1" type="UnityEngine.Color"
+      id="_pathColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+      /><field value="100" type="System.Int32" id="_maxPathfindingSteps" /><field
+      value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
       id="_graphTags" elementtype="System.String" /></reference><reference type="RAIN.Perception.BasicSenses"
-      refcount="1" id="9"><field type="System.Collections.Generic.List" id="_sensors"
+      refcount="1" id="8"><field type="System.Collections.Generic.List" id="_sensors"
       elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
-      reference="10" id="element0" /></field></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
-      refcount="1" id="10"><field value="True" type="System.Boolean" id="_showVisual"
+      reference="9" id="element0" /></field></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
+      refcount="1" id="9"><field value="True" type="System.Boolean" id="_showVisual"
       /><field value="eyes" type="System.String" id="_sensorName" /><field value="True"
       type="System.Boolean" id="_isActive" /><field value="0,0.6,0,1" type="UnityEngine.Color"
       id="_sensorColor" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
@@ -7833,7 +7928,7 @@ MonoBehaviour:
       id="_horizontalAngle" /><field value="101" type="System.Single" id="_verticalAngle"
       /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="65330"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
-      type="clownMove" refcount="1" id="11"><field value="clownMove" type="System.String"
+      type="clownMove" refcount="1" id="10"><field value="clownMove" type="System.String"
       id="_name" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 741292521}
