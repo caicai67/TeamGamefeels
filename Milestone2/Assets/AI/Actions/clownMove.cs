@@ -14,16 +14,14 @@ public class clownMove : CustomAIElement {
 
 		//Debug.Log ("white clown sensed objects: " + asps.Count);
 		Animator anim = AI.Body.GetComponent<Animator> ();
-		if (asps.Count > 0) {
-			anim.SetBool ("slow", true);
-		} else {
-			anim.SetBool ("slow", false);
-		}
 		foreach (RAINAspect detected in asps) {
 			GameObject character = detected.Entity.Form;
-			if (character.CompareTag("Player")) {
-				AI.WorkingMemory.SetItem("targetSpot", character.transform.position - (5 * character.transform.forward));
-				AI.WorkingMemory.SetItem ("playerInRange", Vector3.Magnitude(AI.Body.transform.position - character.transform.position) < 10f);
+			if (character.CompareTag ("Player")) {
+				AI.WorkingMemory.SetItem ("targetSpot", character.transform.position - (5 * character.transform.forward));
+				AI.WorkingMemory.SetItem ("playerInRange", Vector3.Magnitude (AI.Body.transform.position - character.transform.position) < 10f);
+			} else {
+				AI.WorkingMemory.SetItem ("targetSpot", character.transform.position - (5 * character.transform.forward));
+				AI.WorkingMemory.SetItem ("playerInRange", false);
 			}
 
 		}
