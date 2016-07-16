@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour {
 	public float camera_horizontal_axis = 0f;
 	public float camera_vertical_axis = 0f;
 
+	//Sword Combat related variables
+	public bool swingedSword = false;
 
 	// Collider/Controller Defaults
 	float controller_height;
@@ -221,7 +223,8 @@ public class PlayerController : MonoBehaviour {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
 				} else {
-					
+
+					swingedSword = true;
 					this.animator.SetTrigger ("SlashSword");
 				}
 			}
@@ -392,5 +395,10 @@ public class PlayerController : MonoBehaviour {
 
 		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
 		katana.rotation = katana.parent.rotation;
+	}
+
+	//Getter method to be used in CombatSounds.cs
+	public bool isFighting(){
+		return this.fighting;
 	}
 }
