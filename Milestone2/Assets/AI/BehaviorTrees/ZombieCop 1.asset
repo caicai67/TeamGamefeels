@@ -16,12 +16,12 @@ MonoBehaviour:
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;ZombieCop
       1&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;waypointpath waypointsetvariable=&quot;SmallNetwork&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;waypointpath waypointsetvariable=&quot;&amp;quot;SmallNetwork&amp;quot;&quot;
       waypointactiontype=&quot;path&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
       repeatuntil=&quot;&quot; pathtargetvariable=&quot;NetworkTarget2&quot; name=&quot;CopPatrol&quot;
       movetargetvariable=&quot;nextWaypoint&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;1&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;nextWaypoint&quot;
-      movespeed=&quot;&quot; facetarget=&quot;nextWaypoint&quot; debugbreak=&quot;False&quot;
+      turnspeed=&quot;5&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;nextWaypoint&quot;
+      movespeed=&quot;10&quot; facetarget=&quot;nextWaypoint&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpath&gt;&lt;animate
       repeatuntil=&quot;running&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
       animationstate=&quot;Walk&quot; /&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
