@@ -24,6 +24,7 @@ public class clownMove : CustomAIElement {
 			Debug.Log (character);
 			if (character.CompareTag("Player")) {
 				Debug.Log ("dreyar Forward: " + character.transform.forward);
+				target = character.transform.position - (5 * character.transform.forward);
 			}
 
 		}
