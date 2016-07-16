@@ -1565,14 +1565,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11443146, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
-      propertyPath: _dataSerializer._serializedGameObjects.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400372, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
-      propertyPath: _dataSerializer._serializedGameObjects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 403312, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
       propertyPath: m_LocalPosition.x
       value: 102.51
@@ -1614,9 +1606,9 @@ Prefab:
         type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
-        childrenvisible="True" /><field type="RAIN.Minds.BasicMind" reference="2"
+        childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
         id="_mind" childrenvisible="False" /><field type="RAIN.Motion.MecanimMotor"
-        reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        reference="3" id="_motor" childrenvisible="True" /><field type="RAIN.Animation.MecanimAnimator"
         reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
         reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
@@ -1676,7 +1668,7 @@ Prefab:
         type="System.Single" id="dampTime" /></reference><reference type="RAIN.Motion.MecanimMotor+MotorParameter"
         refcount="1" id="9"><field value="AngularInput" type="System.String" id="parameterName"
         /><field value="TurnAngle" type="RAIN.Motion.MecanimMotor+MotorField" id="motorField"
-        /><field value="0" type="System.Single" id="dampTime" /></reference><reference
+        /><field value="0.1" type="System.Single" id="dampTime" /></reference><reference
         type="RAIN.Animation.MecanimAnimator+IKTarget" refcount="1" id="10"><field
         value="False" type="System.Boolean" id="isActive" /><field value="0" type="System.Single"
         id="positionWeight" /><field value="0" type="System.Single" id="rotationWeight"
@@ -1714,6 +1706,14 @@ Prefab:
         value="0" type="System.Single" id="Value" /></reference></references></component>
       objectReference: {fileID: 0}
     - target: {fileID: 11443146, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443146, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 63437718}
+    - target: {fileID: 11443146, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[1]
       value: 
       objectReference: {fileID: 1551710508}
@@ -1726,32 +1726,10 @@ Prefab:
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[3]
       value: 
       objectReference: {fileID: 140707769}
-    - target: {fileID: 11400372, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
-      propertyPath: _dataSerializer._serializedData
-      value: <component version="1.3" type="RAIN.Entities.EntityRig"><fields><field
-        value="OnWhenSelected" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field
-        value="True" type="System.Boolean" id="_useUnityMessages" /><field type="RAIN.Entities.Entity"
-        reference="0" id="_entity" /></fields><references><reference type="RAIN.Entities.Entity"
-        refcount="1" id="0"><field value="Demon_Model" type="System.String" id="_entityName"
-        /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
-        id="_form" gameobject="0" /><field type="System.Collections.Generic.List"
-        id="_aspects" elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
-        reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
-        refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-        /><field value="Player" type="System.String" id="_aspectName" /><field value="True"
-        type="System.Boolean" id="_isActive" /><field value="0,0.6,0.6,1" type="UnityEngine.Color"
-        id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-        /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-        value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-        id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
-        id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-        /></reference><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="0"
-        id="2" /></references></component>
+    - target: {fileID: 11443146, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
+      propertyPath: _dataSerializer._serializedCustomData.Array.size
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400372, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
-      propertyPath: _dataSerializer._serializedGameObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 768888050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f50865c41099f942a1fe1fdebddb889, type: 2}
   m_IsPrefabParent: 0
