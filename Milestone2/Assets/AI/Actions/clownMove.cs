@@ -20,9 +20,10 @@ public class clownMove : CustomAIElement {
 			anim.SetBool ("slow", false);
 		}
 		foreach (RAINAspect detected in asps) {
-			Debug.Log (detected.Entity.Form);
-			if (detected.Entity.Form.CompareTag("Player")) {
-				Debug.Log ("Dreyar detected");
+			GameObject character = detected.Entity.Form;
+			Debug.Log (character);
+			if (character.CompareTag("Player")) {
+				Debug.Log ("dreyar Forward: " + character.transform.forward);
 			}
 
 		}
