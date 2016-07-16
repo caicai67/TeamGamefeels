@@ -56,12 +56,12 @@ public class VampirePursue : RAINAction
 		Vector3 target_delta;
 		this.current_target_leading_position = GetLeadingTarget(out target_delta);
 
-		Vector2 crow_vector;
-		GetCrowVector (out crow_vector);
+		Vector2 shortest_distance_vector;
+		GetShortestDistance (out shortest_distance_vector);
 
 		// Calculate or Recalculate Path
 
-		if (crow_vector.magnitude > 2f && this.current_path == null) {
+		if (shortest_distance_vector.magnitude > 2f && this.current_path == null) {
 			this.path_calculated_current_loop = GetPath (ai, out this.current_path);
 			if (this.path_calculated_current_loop) {
 				this.target_leading_position_upon_path_calculation = this.current_target_leading_position;
@@ -73,7 +73,7 @@ public class VampirePursue : RAINAction
 				this.target_leading_position_upon_path_calculation = this.current_target_leading_position;
 				this.last_waypoint_index = -1;
 			}
-		} else if (crow_vector.magnitude <= this.approach_distance && this.current_path != null) {
+		} else if (shortest_distance_vector.magnitude <= this.approach_distance && this.current_path != null) {
 			this.current_path = null;
 			this.last_waypoint_index = -1;
 			this.next_waypoint_index = 0;
@@ -101,8 +101,8 @@ public class VampirePursue : RAINAction
 					this.waypoint_updated_current_loop = true;
 				}
 			} else {
-				if (crow_vector.magnitude < 5f) {
-					float imag = 1.0f + 0.2f * (crow_vector.magnitude - 5f);
+				if (shortest_distance_vector.magnitude < 5f) {
+					float imag = 1.0f + 0.2f * (shortest_distance_vector.magnitude - 5f);
 					UpdateFloat (ai, "inputMagnitude", imag);
 				} else {
 					UpdateFloat (ai, "inputMagnitude", 1.0f);
@@ -141,7 +141,7 @@ public class VampirePursue : RAINAction
 		float phi_prime = Mathf.Acos ((face_unit_vector.x * difference_vector.x + face_unit_vector.y * difference_vector.y)/difference_vector.magnitude);
 		return -1*phi_prime * Mathf.Sign (face_unit_vector.x * difference_vector.y - face_unit_vector.y * difference_vector.x);
 	}
-	void GetCrowVector(out Vector2 crow_vector){
+	void GetShortestDistance(out Vector2 crow_vector){
 		crow_vector.x = this.current_target.transform.position.x - this.self.transform.position.x;
 		crow_vector.y = this.current_target.transform.position.z - this.self.transform.position.z;
 	}
