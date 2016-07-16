@@ -2328,6 +2328,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 174838, guid: baee7f16d3f85844383311082225c066, type: 2}
       propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 163970, guid: baee7f16d3f85844383311082225c066, type: 2}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
