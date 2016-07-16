@@ -374,10 +374,14 @@ public class PlayerController : MonoBehaviour {
 		Transform katana = GameObject.FindGameObjectWithTag ("Sword").transform;
 		katana.parent = GameObject.FindGameObjectWithTag ("RightHand").transform;
 
-		katana.localPosition = new Vector3 (-0.081f, 0.113f, -0.039f);
-		//katana.localPosition = new Vector3 (-0.12f, 0.162f, -0.051f);
-		katana.localEulerAngles = new Vector3 (9.292282f, 39.94241f, 304.3139f);
-		//katana.rotation = katana.parent.rotation;
+		//Values for KP's scene
+		//katana.localPosition = new Vector3 (-0.081f, 0.113f, -0.039f);
+		//katana.localEulerAngles = new Vector3 (9.292282f, 39.94241f, 304.3139f);
+
+		//Values for Temp2 scene
+		katana.localPosition = new Vector3 (-0.103f, 0.018f, 0.043f);
+		katana.localEulerAngles = new Vector3 (3.971051f, 134.7626f, 142f);
+
 
 	}
 
