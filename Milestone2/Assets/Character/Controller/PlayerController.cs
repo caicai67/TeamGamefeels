@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
-		//Sword Fight Code
+		//Sword Draw and Sheath Code
 		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.RightBumper.WasPressed || activeController.DPadUp.WasPressed) {
 
 			//Disable sneaking if it was active.
@@ -200,6 +200,29 @@ public class PlayerController : MonoBehaviour {
 				} else {
 					this.fighting = false;
 					this.animator.SetTrigger ("SheathSword");
+				}
+			}
+
+		}
+
+		//Sword Fight Code
+		if (Input.GetKeyDown (this.keymap.fight.keyboard) || activeController.RightTrigger.WasPressed) {
+
+			//Disable sneaking if it was active.
+			if (this.sneaking == true) {
+				this.sneaking = false;
+
+				//Let animator know that sneak mode is over
+				this.animator.SetBool ("sneak", this.sneaking);
+
+			} else {
+
+				if (!this.fighting) {
+					this.fighting = true;
+					this.animator.SetTrigger ("DrawSword");
+				} else {
+					
+					this.animator.SetTrigger ("SlashSword");
 				}
 			}
 
