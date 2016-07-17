@@ -1,4 +1,4 @@
-﻿Team GameFeels
+Team GameFeels
 
 i. Team Info
 	Caitlin Morris - cmorris40@gatech.edu - cmorris40
@@ -31,7 +31,14 @@ iii. Resources
 
 iv. Special Install Instructions
 
-	Developed using both Mac OS X 10.11 and Windows 10. 
+	Developed using both Mac OS X 10.11 and Windows 10.
+	We currently support PS4 and PS3 controllers only.
+	X = Jump, exits sneak mode if pressed
+	O = Roll
+	L1 = Hold while running and jump to dive
+	R1 = Draw or Sheath sword
+	R2 = Draw sword if not already out, otherwise do a sword slash
+	L3 = toggle sneak mode 
 
 v. Game Testing Steps
 	
