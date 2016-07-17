@@ -64,6 +64,7 @@ vi. Main Scene File
 vii. Known bugs/issues
 	1) If Dreyar is hit by a spell from the Demon while he is drawing or sheathing his sword. The sword might not transfer as the event that is triggering the sword transfer to the holster from hand or hand to holster is not triggered as we can get to Dreyar spell hit state from any state.
 	2) Right now Dreyar's sword hit doesn't affect the NPCs at all. We are still working on getting sword hit detection to work properly.
+	3) The clown does not turn to face Dreyar even though he sees him. The glow placed on Dreyar by the clown when casting a spell is wobbly.
 		 
 
 
