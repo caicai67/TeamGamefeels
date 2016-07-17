@@ -81,8 +81,8 @@ public class ShoulderCam : PivotBasedCameraRig
         //var x = CrossPlatformInputManager.GetAxis("Mouse X");
         //var y = CrossPlatformInputManager.GetAxis("Mouse Y");
 
-		var x = this.player_controller.camera_horizontal_axis;
-		var y = this.player_controller.camera_vertical_axis;
+		var x = this.player_controller.getHorizontalCameraMovement();
+		var y = this.player_controller.getVerticalCameraMovement();
 
 		if (isCameraInverted) {
 			y = -y;	

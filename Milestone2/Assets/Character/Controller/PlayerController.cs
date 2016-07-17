@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour {
 	private bool fighting = false;
 	private bool player_dead = false;
 	public bool using_character_controller = false;
+	private bool isControllerEnabled = false;
 	//private bool rolling = false;
     
 
@@ -101,6 +102,10 @@ public class PlayerController : MonoBehaviour {
 		this.camera_vertical_axis = activeController.RightStickY.Value;
 
 		/////////////////
+		/// Switch between controller and keyboard using I key on the keyboard
+		if (Input.GetKeyDown (KeyCode.I)) {
+			isControllerEnabled = !isControllerEnabled;
+		}
 
 		if (this.keymap.Exit ()) {
 			Application.Quit ();
@@ -420,5 +425,39 @@ public class PlayerController : MonoBehaviour {
 	//Getter method to be used in CombatSounds.cs
 	public bool isFighting(){
 		return this.fighting;
+	}
+
+	public float getHorizontalMovement(){
+		
+		if(isControllerEnabled){
+			return activeController.LeftStickX.Value;
+		} else {
+			return Input.GetAxis("Horizontal");
+		}
+	}
+	public float getVerticalMovement(){
+
+		if(isControllerEnabled){
+			return activeController.LeftStickY.Value;
+		} else {
+			return Input.GetAxis("Vertical");
+		}
+	}
+
+	public float getHorizontalCameraMovement(){
+
+		if(isControllerEnabled){
+			return activeController.RightStickX.Value;
+		} else {
+			return Input.GetAxis("Cam_Horizontal");
+		}
+	}
+	public float getVerticalCameraMovement(){
+
+		if(isControllerEnabled){
+			return activeController.RightStickY.Value;
+		} else {
+			return Input.GetAxis("Cam_Vertical");
+		}
 	}
 }

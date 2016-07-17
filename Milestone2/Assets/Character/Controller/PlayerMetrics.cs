@@ -25,7 +25,7 @@ public class PlayerMetrics : MonoBehaviour {
 	void Start () {
 		if (this.player_controller == null)
 			this.player_controller = GetComponent<PlayerController> ();
-		this.player_joystick = new Vector2 (this.player_controller.player_horizontal_axis, this.player_controller.player_vertical_axis);
+		this.player_joystick = new Vector2 (this.player_controller.getHorizontalMovement(), this.player_controller.getVerticalMovement());
 
 		float player_y_rotation = (float)transform.eulerAngles.y;
 		this.player_forward = new Vector2 (Mathf.Sin ((player_y_rotation * Mathf.PI) / 180f), Mathf.Cos ((player_y_rotation * Mathf.PI) / 180f));
@@ -45,8 +45,8 @@ public class PlayerMetrics : MonoBehaviour {
 		UpdateInputs ();
 	}
 	void UpdatePlayerJoystick(){
-		this.player_joystick.x = this.player_controller.player_horizontal_axis;
-		this.player_joystick.y = this.player_controller.player_vertical_axis;
+		this.player_joystick.x = this.player_controller.getHorizontalMovement();
+		this.player_joystick.y = this.player_controller.getVerticalMovement();
 	}
 	void UpdateGroundHit(){
 		Physics.Raycast (transform.position, -Vector3.up, out this.ground_raycast, 50.0f);
