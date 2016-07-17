@@ -43,9 +43,9 @@ v. Game Testing Steps
 	3) Observe the purple Waypoint Network on the terrain and the object (same name) in the hierarchy
 	4) Observe the red Waypoint Route Rig on the terrain to the right in the scene view, where the zombie cop is patrolling a loop route
 	5) The Demon, Cop, and WhiteClown are all recieving animator controller instructions from the mechanim motor.   The vampire is receiving animator controller updates from a custom node script, not a motor
-	6) 
-	7) run in large circles and right angles to the Demon to see it home in on a point ahead of Dreyar	
-	8) Observe the crazy clown spin in circles (smaller visual sensor); the demon pursues the player right away (he has a 20 meter 360 visual sensor (telepathy?)); the vampire pursues the character within a similar sight distance, or patrols the 4 navigation points at a sprint.  The Cop patrols the waypoint. 
+	6) The clown has an animator controller with states for his teleportation, spell casting, and turning animations. His behavior tree decides if he sees the player, if he needs to move closer, and when to cast a spell.
+	7) run in large circles and right angles to the Demon to see it hone in on a point ahead of Dreyar. The white clown has a custom AI element attached that allows it to acquire Dreyar’s coordinates and teleport to a point behind him.
+	8) Observe the crazy clown spin in circles (smaller visual sensor), and teleport behind Dreyar when he sees him; the demon pursues the player right away (he has a 20 meter 360 visual sensor (telepathy?)); the vampire pursues the character within a similar sight distance, or patrols the 4 navigation points at a sprint.  The Cop patrols the waypoint. 
                 As the player approaches the clown, he goes into "fight mode."
 	9) The characters are all forming this semi cohesive theme of some sort of zombie/vampire/demon/ghost uprising in some sort of interdimensional time travel vacuum. 
 vi. Main Scene File
