@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+// TeamGameFeels
 public class DemonStateManager : MonoBehaviour {
 	public Animator animator;
 	private bool spell_casted = false;

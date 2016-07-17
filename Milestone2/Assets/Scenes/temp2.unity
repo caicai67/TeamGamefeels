@@ -286,7 +286,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
 --- !u!1 &54682996
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +360,7 @@ GameObject:
   - 4: {fileID: 1551710508}
   - 95: {fileID: 63437719}
   - 114: {fileID: 63437720}
+  - 143: {fileID: 63437721}
   m_Layer: 0
   m_Name: Demon_Model
   m_TagString: Untagged
@@ -399,6 +400,23 @@ MonoBehaviour:
   animator: {fileID: 63437719}
   dreyar: {fileID: 1357311048}
   demon_ai_unity_object: {fileID: 1681449766}
+--- !u!143 &63437721
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63437718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &82168522
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +470,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
 --- !u!1 &85517902
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +541,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &89747482
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +805,7 @@ Transform:
   m_Children:
   - {fileID: 1551710508}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &176469776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1408,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
 --- !u!1 &424760935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1838,23 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b6a038ea226a54948a3b544ee15d1124, type: 3}
   m_PrefabInternal: {fileID: 429564175}
+--- !u!143 &429564179
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429564176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &431272473
 Prefab:
   m_ObjectHideFlags: 0
@@ -2182,6 +2217,23 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b6a038ea226a54948a3b544ee15d1124, type: 3}
   m_PrefabInternal: {fileID: 431272473}
+--- !u!143 &431272477
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431272474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &444304863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,7 +2318,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &455996789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2720,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
 --- !u!1001 &554651204
 Prefab:
   m_ObjectHideFlags: 0
@@ -3391,6 +3443,23 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400132, guid: f84f5352d1c694ae6b7c3baa30f1ae7c, type: 3}
   m_PrefabInternal: {fileID: 2017014960}
+--- !u!143 &741292524
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741292521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &743766115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,7 +3987,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
 --- !u!1 &842742569
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,7 +4389,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
 --- !u!1 &924772729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,6 +5702,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1352768788}
   - 95: {fileID: 1352768787}
+  - 143: {fileID: 1352768789}
   m_Layer: 9
   m_Name: Vampire_A_Lusth (1)
   m_TagString: Untagged
@@ -5674,7 +5744,24 @@ Transform:
   - {fileID: 663645012}
   - {fileID: 1298357663}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
+--- !u!143 &1352768789
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352768786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1357311048 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 163970, guid: baee7f16d3f85844383311082225c066, type: 2}
@@ -7600,7 +7687,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!114 &1853187813
 MonoBehaviour:
   m_ObjectHideFlags: 0
