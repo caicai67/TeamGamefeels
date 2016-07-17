@@ -32,6 +32,7 @@ iii. Resources
 iv. Special Install Instructions
 
 	Developed using both Mac OS X 10.11 and Windows 10.
+	
 	We currently support PS4 and PS3 controllers only.
 	X = Jump, exits sneak mode if pressed
 	O = Roll
