@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: adbdf1afe1b7d47afbb870f1fa40ee3c
+timeCreated: 1468940532
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: cat
+    100006: CharacterBumper
+    100008: COM
+    100010: Eyes_0
+    100012: HEAD
+    100014: head_eyeball_left
+    100016: head_eyeball_right
+    100018: head_nose
+    100020: Jaw
+    100022: LEar
+    100024: LLeg_Front_Ankle
+    100026: LLeg_Front_Collarbone
+    100028: LLeg_Front_Knee
+    100030: LLeg_Front_Thigh
+    100032: LLeg_Front_Toe1
+    100034: LLeg_Rear_Ankle
+    100036: LLeg_Rear_Knee
+    100038: LLeg_Rear_Thigh
+    100040: LLeg_Rear_Toe1
+    100042: Neck1
+    100044: Neck2
+    100046: Pelvis
+    100048: REar
+    100050: Ribcage
+    100052: RLeg_Front_Ankle
+    100054: RLeg_Front_Collarbone
+    100056: RLeg_Front_Knee
+    100058: RLeg_Front_Thigh
+    100060: RLeg_Front_Toe1
+    100062: RLeg_Rear_Ankle
+    100064: RLeg_Rear_Knee
+    100066: RLeg_Rear_Thigh
+    100068: RLeg_Rear_Toe1
+    100070: Root
+    100072: Skeleton_Export
+    100074: SPINE1
+    100076: SPINE2
+    100078: Tail1
+    100080: Tail2
+    100082: Tail3
+    100084: Tail4
+    100086: Tongue
+    400000: Armature
+    400002: //RootNode
+    400004: cat
+    400006: CharacterBumper
+    400008: COM
+    400010: Eyes_0
+    400012: HEAD
+    400014: head_eyeball_left
+    400016: head_eyeball_right
+    400018: head_nose
+    400020: Jaw
+    400022: LEar
+    400024: LLeg_Front_Ankle
+    400026: LLeg_Front_Collarbone
+    400028: LLeg_Front_Knee
+    400030: LLeg_Front_Thigh
+    400032: LLeg_Front_Toe1
+    400034: LLeg_Rear_Ankle
+    400036: LLeg_Rear_Knee
+    400038: LLeg_Rear_Thigh
+    400040: LLeg_Rear_Toe1
+    400042: Neck1
+    400044: Neck2
+    400046: Pelvis
+    400048: REar
+    400050: Ribcage
+    400052: RLeg_Front_Ankle
+    400054: RLeg_Front_Collarbone
+    400056: RLeg_Front_Knee
+    400058: RLeg_Front_Thigh
+    400060: RLeg_Front_Toe1
+    400062: RLeg_Rear_Ankle
+    400064: RLeg_Rear_Knee
+    400066: RLeg_Rear_Thigh
+    400068: RLeg_Rear_Toe1
+    400070: Root
+    400072: Skeleton_Export
+    400074: SPINE1
+    400076: SPINE2
+    400078: Tail1
+    400080: Tail2
+    400082: Tail3
+    400084: Tail4
+    400086: Tongue
+    4300000: Eyes_0
+    4300002: cat
+    9500000: //RootNode
+    13700000: cat
+    13700002: Eyes_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
