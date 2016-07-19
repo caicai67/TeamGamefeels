@@ -25,8 +25,12 @@ MonoBehaviour:
       closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;isWalking&quot;
       name=&quot;mecparam&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;" type="System.String" id="treeData"
-      /><field type="System.Array" id="treeBindings" elementtype="System.String" /></fields><references
-      /></scriptableobject>
+      /&gt;&lt;/parallel&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;constraint&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;&quot; /&gt;&lt;detect sensor=&quot;&quot;
+      repeatuntil=&quot;&quot; name=&quot;detect&quot; matchtype=&quot;best&quot;
+      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
+      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&quot;
+      /&gt;&lt;/behaviortree&gt;" type="System.String" id="treeData" /><field type="System.Array"
+      id="treeBindings" elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
