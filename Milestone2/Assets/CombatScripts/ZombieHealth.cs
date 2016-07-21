@@ -23,7 +23,7 @@ public class ZombieHealth : MonoBehaviour {
 	
 	}
 
-	void onTriggerEnter(){
+	void onTriggerEnter(Collider other){
 		Debug.Log ("Sword Hit!");
 	}
 }

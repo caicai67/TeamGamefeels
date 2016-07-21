@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	//InControl's InputDevice variable
-	private InputDevice activeController;
+	public InputDevice activeController;
 	public float player_horizontal_axis = 0f;
 	public float player_vertical_axis = 0f;
 
