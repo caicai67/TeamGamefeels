@@ -1019,10 +1019,10 @@ MonoBehaviour:
       type="RAIN.Animation.MecanimAnimator+MecanimAnimatorState" refcount="1" id="17"><field
       value="Base Layer.FastPursuitMode" type="System.String" id="mecanimState" /><field
       value="0" type="System.Int32" id="layer" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="18" id="startParameter" /><field type="RAIN.Animation.MecanimParameterValue"
-      reference="20" id="stopParameter" /></reference><reference type="RAIN.Animation.MecanimParameterValue"
-      refcount="1" id="18"><field value="go" type="System.String" id="parameterName"
-      /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
+      reference="18" id="startParameter" childrenvisible="True" /><field type="RAIN.Animation.MecanimParameterValue"
+      reference="20" id="stopParameter" childrenvisible="False" /></reference><reference
+      type="RAIN.Animation.MecanimParameterValue" refcount="1" id="18"><field value="go"
+      type="System.String" id="parameterName" /><field value="Boolean" type="RAIN.Animation.MecanimParameterValue+SupportedMecanimType"
       id="parameterType" /><field type="RAIN.Representation.Expression" reference="19"
       id="parameterValue" /><field value="0" type="System.Single" id="dampTime" /></reference><reference
       type="RAIN.Representation.Expression" refcount="1" id="19" customdata="0" /><reference
@@ -5492,7 +5492,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 510408062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.02, y: 9.29, z: 103.23}
+  m_LocalPosition: {x: 79.02, y: 9.95, z: 103.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -6426,7 +6426,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 629969884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.10772, y: 2.6, z: 87.6}
+  m_LocalPosition: {x: 78.10772, y: 3.778, z: 87.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
