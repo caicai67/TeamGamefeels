@@ -2532,81 +2532,81 @@ MonoBehaviour:
       reference="68" id="element33" /></field></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="1"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-37.42757,-38.6854,-89.68626" type="UnityEngine.Vector3" id="_position"
+      /><field value="-37.42757,-54.9,-89.68626" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="2"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-7.162628,-38.6854,-26.9429" type="UnityEngine.Vector3" id="_position"
+      /><field value="-7.162628,-54.9,-26.9429" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="3"><field value="0" type="System.Int32" id="wpOne" /><field value="1" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="4"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="26.34842,-38.6854,-15.40208" type="UnityEngine.Vector3" id="_position"
+      /><field value="26.34843,-54.9,-15.40208" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="5"><field value="1" type="System.Int32" id="wpOne" /><field value="2" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="6"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="86.63457,-38.6854,-56.40031" type="UnityEngine.Vector3" id="_position"
+      /><field value="86.63458,-54.9,-56.4003" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="7"><field value="2" type="System.Int32" id="wpOne" /><field value="3" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="8"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="107.3077,-38.6854,-76.81557" type="UnityEngine.Vector3" id="_position"
+      /><field value="107.3077,-54.9,-76.81557" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="9"><field value="3" type="System.Int32" id="wpOne" /><field value="4" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="10"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="144.7105,-38.6854,-70.32568" type="UnityEngine.Vector3" id="_position"
+      /><field value="144.7105,-54.9,-70.32568" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="11"><field value="4" type="System.Int32" id="wpOne" /><field value="5" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="12"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="185.9344,-38.6854,-34.74828" type="UnityEngine.Vector3" id="_position"
+      /><field value="185.9344,-54.9,-34.74828" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="13"><field value="5" type="System.Int32" id="wpOne" /><field value="6" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="14"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="233.4433,-38.6854,-18.78377" type="UnityEngine.Vector3" id="_position"
+      /><field value="233.4433,-54.9,-18.78377" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="15"><field value="6" type="System.Int32" id="wpOne" /><field value="7" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="16"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="212.4733,-38.6854,13.23483" type="UnityEngine.Vector3" id="_position"
+      /><field value="212.4733,-54.9,13.23483" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="17"><field value="6" type="System.Int32" id="wpOne" /><field value="8" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="18"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="268.6456,-38.6854,-6.991745" type="UnityEngine.Vector3" id="_position"
+      /><field value="268.6456,-54.9,-6.991742" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="19"><field value="7" type="System.Int32" id="wpOne" /><field value="9" type="System.Int32"
       id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay" /></reference><reference
       type="RAIN.Navigation.Waypoints.Waypoint" refcount="1" id="20"><field type="RAIN.Navigation.Waypoints.WaypointSet"
       reference="0" id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="299.913,-38.6854,-11.815" type="UnityEngine.Vector3" id="_position"
+      /><field value="299.913,-54.9,-11.81499" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="21"><field value="9" type="System.Int32" id="wpOne" /><field value="10"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="22"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="315.9706,-38.6854,-53.26787"
+      /><field value="" type="System.String" id="_waypointName" /><field value="315.9706,-54.9,-53.26786"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="23"><field value="10" type="System.Int32" id="wpOne" /><field
@@ -2614,14 +2614,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="24"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="303.881,-38.6854,-86.6731" type="UnityEngine.Vector3" id="_position"
+      /><field value="303.881,-54.9,-86.6731" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="25"><field value="11" type="System.Int32" id="wpOne" /><field value="12"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="26"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="269.0592,-38.6854,-40.45189"
+      /><field value="" type="System.String" id="_waypointName" /><field value="269.0592,-54.9,-40.45188"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="27"><field value="10" type="System.Int32" id="wpOne" /><field
@@ -2629,14 +2629,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="28"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="210.7239,-38.6854,-93.24277" type="UnityEngine.Vector3" id="_position"
+      /><field value="210.7239,-54.9,-93.24277" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="29"><field value="13" type="System.Int32" id="wpOne" /><field value="14"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="30"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="321.0123,-38.6854,35.00175"
+      /><field value="" type="System.String" id="_waypointName" /><field value="321.0123,-54.9,35.00175"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="31"><field value="10" type="System.Int32" id="wpOne" /><field
@@ -2644,14 +2644,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="32"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="269.9816,-38.68541,81.99362" type="UnityEngine.Vector3" id="_position"
+      /><field value="269.9816,-54.9,81.99364" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="33"><field value="8" type="System.Int32" id="wpOne" /><field value="16"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="34"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="207.1178,-38.6854,118.3033"
+      /><field value="" type="System.String" id="_waypointName" /><field value="207.1178,-54.9,118.3033"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="35"><field value="16" type="System.Int32" id="wpOne" /><field
@@ -2659,14 +2659,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="36"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="167.2481,-38.68541,49.10049" type="UnityEngine.Vector3" id="_position"
+      /><field value="167.2481,-54.9,49.10049" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="37"><field value="17" type="System.Int32" id="wpOne" /><field value="18"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="38"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="150.3236,-38.68541,131.2166"
+      /><field value="" type="System.String" id="_waypointName" /><field value="150.3236,-54.9,131.2166"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="39"><field value="17" type="System.Int32" id="wpOne" /><field
@@ -2674,14 +2674,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="40"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="103.2089,-38.6854,151.1977" type="UnityEngine.Vector3" id="_position"
+      /><field value="103.2089,-54.9,151.1977" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="41"><field value="19" type="System.Int32" id="wpOne" /><field value="20"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="42"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="5.494995,-38.68541,150.5815"
+      /><field value="" type="System.String" id="_waypointName" /><field value="5.494995,-54.9,150.5815"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="43"><field value="20" type="System.Int32" id="wpOne" /><field
@@ -2689,14 +2689,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="44"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="44.68462,-14.30595,280.8707" type="UnityEngine.Vector3" id="_position"
+      /><field value="44.68464,-54.9,280.8707" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="45"><field value="21" type="System.Int32" id="wpOne" /><field value="22"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="46"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="-7.817329,-38.6854,116.2141"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-7.817332,-54.9,116.2141"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="47"><field value="21" type="System.Int32" id="wpOne" /><field
@@ -2704,14 +2704,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="48"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="60.93631,-38.6854,67.64789" type="UnityEngine.Vector3" id="_position"
+      /><field value="60.9363,-54.9,67.64788" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="49"><field value="23" type="System.Int32" id="wpOne" /><field value="24"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="50"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="76.14478,-36.78444,17.66962"
+      /><field value="" type="System.String" id="_waypointName" /><field value="76.1448,-54.9,17.66963"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="51"><field value="24" type="System.Int32" id="wpOne" /><field
@@ -2719,14 +2719,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="52"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-50.90514,-38.6854,65.80766" type="UnityEngine.Vector3" id="_position"
+      /><field value="-50.90513,-54.9,65.80767" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="53"><field value="23" type="System.Int32" id="wpOne" /><field value="26"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="54"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="-81.66364,-38.68541,-29.60649"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-81.66364,-54.9,-29.60649"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="55"><field value="26" type="System.Int32" id="wpOne" /><field
@@ -2734,14 +2734,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="56"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-86.31433,-38.6854,179.0919" type="UnityEngine.Vector3" id="_position"
+      /><field value="-86.31432,-54.9,179.0919" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="57"><field value="26" type="System.Int32" id="wpOne" /><field value="28"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="58"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="-78.78293,-38.6854,237.728"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-78.78293,-54.9,237.728"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="59"><field value="28" type="System.Int32" id="wpOne" /><field
@@ -2749,14 +2749,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="60"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="-30.10886,-38.63086,297.9065" type="UnityEngine.Vector3" id="_position"
+      /><field value="-30.10886,-54.9,297.9065" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="61"><field value="29" type="System.Int32" id="wpOne" /><field value="30"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="62"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="-74.12366,-38.6854,-74.32111"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-74.12366,-54.9,-74.32111"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="63"><field value="27" type="System.Int32" id="wpOne" /><field
@@ -2767,14 +2767,14 @@ MonoBehaviour:
       id="twoWay" /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint"
       refcount="1" id="65"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0"
       id="_waypointSet" /><field value="" type="System.String" id="_waypointName"
-      /><field value="135.6189,-38.6854,84.6124" type="UnityEngine.Vector3" id="_position"
+      /><field value="135.6189,-54.9,84.6124" type="UnityEngine.Vector3" id="_position"
       /><field value="0.5" type="System.Single" id="_range" /></reference><reference
       type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection" refcount="1"
       id="66"><field value="19" type="System.Int32" id="wpOne" /><field value="32"
       type="System.Int32" id="wpTwo" /><field value="True" type="System.Boolean" id="twoWay"
       /></reference><reference type="RAIN.Navigation.Waypoints.Waypoint" refcount="1"
       id="67"><field type="RAIN.Navigation.Waypoints.WaypointSet" reference="0" id="_waypointSet"
-      /><field value="" type="System.String" id="_waypointName" /><field value="-60.40189,-38.6854,-110.3608"
+      /><field value="" type="System.String" id="_waypointName" /><field value="-60.40189,-54.9,-110.3608"
       type="UnityEngine.Vector3" id="_position" /><field value="0.5" type="System.Single"
       id="_range" /></reference><reference type="RAIN.Navigation.Waypoints.WaypointSet+WaypointConnection"
       refcount="1" id="68"><field value="0" type="System.Int32" id="wpOne" /><field
@@ -2790,8 +2790,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475596182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 134.96854, y: 38.6854, z: 162.36731}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 36.5, y: 54.9, z: 41.4}
+  m_LocalScale: {x: 0.3, y: 1, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
