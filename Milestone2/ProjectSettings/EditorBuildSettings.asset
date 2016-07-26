@@ -29,8 +29,6 @@ EditorBuildSettings:
     path: Assets/SampleScenes/Scenes/Particles.unity
   - enabled: 0
     path: Assets/SampleScenes/Scenes/RollerBall.unity
-  - enabled: 1
-    path: Assets/Scenes/temp2.unity
   - enabled: 0
     path: Assets/Scenes/Chris.unity
   - enabled: 0
@@ -47,3 +45,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Charlie.unity
   - enabled: 1
     path: Assets/Scenes/temp3.unity
+  - enabled: 1
+    path: Assets/Scenes/temp2.unity
