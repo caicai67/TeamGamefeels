@@ -26,7 +26,7 @@ MonoBehaviour:
       constraint=&quot;playerInRange&quot;&gt;&lt;mecparam valueexpression=&quot;false&quot;
       repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;moving&quot;
       name=&quot;stop move anim&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;move turnspeed=&quot;0&quot; repeatuntil=&quot;&quot; name=&quot;turn&quot;
+      /&gt;&lt;move turnspeed=&quot;1000&quot; repeatuntil=&quot;&quot; name=&quot;turn&quot;
       movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;detectedPlayer&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;mecparam valueexpression=&quot;true&quot; repeatuntil=&quot;&quot;

@@ -21,7 +21,7 @@ public class clownMove : CustomAIElement {
 			AI.WorkingMemory.SetItem ("targetSpot", character.transform.position - (5 * character.transform.forward));
 
 			//check if clown is close enough to affect player
-			bool inRange = Vector3.Magnitude (AI.Body.transform.position - character.transform.position) < 8f;
+			bool inRange = Vector3.Magnitude (AI.Body.transform.position - character.transform.position) < 15f;
 			AI.WorkingMemory.SetItem ("playerInRange", inRange);
 
 			if (inRange) {
