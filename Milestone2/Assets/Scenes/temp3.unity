@@ -1679,7 +1679,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!1 &202838376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2840,7 @@ HingeJoint:
   m_Motor:
     targetVelocity: 0
     force: 0
-    freeSpin: 0
+    freeSpin: 1
   m_UseLimits: 0
   m_Limits:
     min: 0
@@ -6313,7 +6313,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 36
 --- !u!1 &510469513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7403,7 +7403,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 33
 --- !u!1 &663645011
 GameObject:
   m_ObjectHideFlags: 0
