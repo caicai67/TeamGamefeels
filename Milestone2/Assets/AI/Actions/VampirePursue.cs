@@ -16,8 +16,7 @@ public class VampirePursue : RAINAction
 	private GameObject current_target;
 	private GameObject self;
 	private bool path_calculated_current_loop = false;
-	private float approach_distance = 2f;
-	private float recalc_proportion = 0.1f;
+	private float approach_distance = 0f;
 	private int last_waypoint_index = -1;
 	private int next_waypoint_index = 0;
 	private Vector3 next_waypoint_position;
@@ -110,10 +109,37 @@ public class VampirePursue : RAINAction
 			}
 		}
 
+
+		// Final Approach
+
+		Vector3 target_position = this.current_target.transform.position;
+		Vector3 self_position = this.self.transform.position;
+		float distance = Vector3.Distance (target_position, self_position);
+		if (distance < 5f && distance > 1.5f) {
+
+			// Manual rotation to face target
+			Vector2 target_XZ = new Vector2 (target_position.x, target_position.z);
+			Vector2 self_XZ = new Vector2 (self_position.x, self_position.z);
+
+			float self_theta = self.transform.eulerAngles.y;
+			Vector2 self_unit_vector = new Vector2 (Mathf.Cos (self_theta), Mathf.Sin (self_theta));
+
+			Vector2 self2target_vector = new Vector2 (target_XZ.x - self_XZ.x, target_XZ.y - self_XZ.y);
+			self2target_vector.Normalize ();
+
+			float dot_product = self_unit_vector.x * self2target_vector.x + self_unit_vector.y * self2target_vector.y;
+			float determinant = self_unit_vector.x * self2target_vector.y - self_unit_vector.y * self2target_vector.x;
+
+			float rotation_theta = Mathf.Sign (determinant) * Mathf.Acos (dot_product) * Mathf.Rad2Deg;
+		
+			self.transform.Rotate (new Vector3 (0f, rotation_theta, 0f));
+			// Input magnitude positive to go towards target
+			UpdateFloat (ai, "inputMagnitude", 0.5f);
+		}
 		// End code
 		this.path_calculated_current_loop = false;
 		this.waypoint_updated_current_loop = false;
-        return ActionResult.SUCCESS;
+		return ActionResult.SUCCESS;
     }
 
     public override void Stop(RAIN.Core.AI ai)
