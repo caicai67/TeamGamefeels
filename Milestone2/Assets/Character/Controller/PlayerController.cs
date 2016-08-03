@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 	private bool fighting = false;
 	private bool player_dead = false;
 	public bool using_character_controller = false;
-	private bool isControllerEnabled = false;
+	private bool isControllerEnabled = true;
 	//private bool rolling = false;
     
 
