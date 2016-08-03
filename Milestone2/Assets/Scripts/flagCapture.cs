@@ -18,6 +18,7 @@ public class flagCapture : MonoBehaviour {
 	
 	}
 	void OnCollisionEnter(Collision collision) {
+		Debug.Log ("Collided");
 		if (collision.gameObject.CompareTag("Player")){
 			openTower();
 		}
