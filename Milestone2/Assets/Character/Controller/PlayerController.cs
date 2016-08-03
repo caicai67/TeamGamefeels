@@ -236,13 +236,9 @@ public class PlayerController : MonoBehaviour {
 				if (!this.fighting) {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
-                    this.audio.clip = this.swordDraw;
-                    this.audio.Play();
                 } else {
 					this.fighting = false;
 					this.animator.SetTrigger ("SheathSword");
-                    this.audio.clip = this.swordSheath;
-                    this.audio.Play();
                 }
 			}
 
@@ -263,14 +259,10 @@ public class PlayerController : MonoBehaviour {
 				if (!this.fighting) {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
-                    this.audio.clip = this.swordDraw;
-                    this.audio.Play();
                 } else {
 
 					swingedSword = true;
 					this.animator.SetTrigger ("SlashSword");
-                    this.audio.clip = this.swordSwing;
-                    this.audio.Play();
                 }
 			}
 
@@ -431,6 +423,8 @@ public class PlayerController : MonoBehaviour {
 		katana.localEulerAngles = new Vector3 (3.971051f, 134.7626f, 142f);
 
 
+        this.audio.clip = this.swordDraw;
+        this.audio.Play();
 	}
 
 	void SheathSword(){
@@ -440,7 +434,18 @@ public class PlayerController : MonoBehaviour {
 
 		katana.localPosition = new Vector3 (0.123f, -0.06f, 0.01f);
 		katana.rotation = katana.parent.rotation;
-	}
+
+        this.audio.clip = this.swordSheath;
+        this.audio.Play();
+    }
+
+    void SwordAttack()
+    {
+        this.audio.clip = this.swordSwing;
+        this.audio.Play();
+    }
+
+
 
 	//Getter method to be used in CombatSounds.cs
 	public bool isFighting(){
