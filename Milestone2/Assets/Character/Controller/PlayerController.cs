@@ -25,15 +25,22 @@ public class PlayerController : MonoBehaviour {
 	private CharacterController controller;
 	private CapsuleCollider collider_;
 	private SphereCollider trigger;
-	public AudioSource audio;
-	public AudioClip die;
 	public bool demon_spell_hit = false;
 	private bool demon_spell_impact_animation_playing = false;
 
+    //Audio Clips
+    public AudioSource audio;
+    public AudioClip die;
+    public AudioClip swordDraw;
+    public AudioClip swordSheath;
+    public AudioClip swordSwing;
+    public AudioClip characterRollGrunt;
+    public AudioClip characterJumpGrunt;
+    public AudioClip characterCrouch;
 
 
-	//InControl's InputDevice variable
-	public InputDevice activeController;
+    //InControl's InputDevice variable
+    public InputDevice activeController;
 	public float player_horizontal_axis = 0f;
 	public float player_vertical_axis = 0f;
 
@@ -177,8 +184,9 @@ public class PlayerController : MonoBehaviour {
 			
 			this.sneaking = !(this.sneaking);
 			this.animator.SetBool("sneak",this.sneaking);
-
-		}
+            this.audio.clip = this.characterCrouch;
+            this.audio.Play();
+        }
 
 
 
@@ -189,7 +197,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || activeController.Action2.WasPressed) {
 			this.animator.SetTrigger ("roll");
-		}
+            this.audio.clip = this.characterRollGrunt;
+            this.audio.Play();
+        }
 
 		//Jumping Code
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || activeController.Action1.WasPressed) {
@@ -205,7 +215,9 @@ public class PlayerController : MonoBehaviour {
 				
 				//Set jump trigger to jump
 				this.animator.SetTrigger ("Jump");
-			}
+                this.audio.clip = this.characterJumpGrunt;
+                this.audio.Play();
+            }
 
 		}
 
@@ -224,10 +236,14 @@ public class PlayerController : MonoBehaviour {
 				if (!this.fighting) {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
-				} else {
+                    this.audio.clip = this.swordDraw;
+                    this.audio.Play();
+                } else {
 					this.fighting = false;
 					this.animator.SetTrigger ("SheathSword");
-				}
+                    this.audio.clip = this.swordSheath;
+                    this.audio.Play();
+                }
 			}
 
 		}
@@ -247,11 +263,15 @@ public class PlayerController : MonoBehaviour {
 				if (!this.fighting) {
 					this.fighting = true;
 					this.animator.SetTrigger ("DrawSword");
-				} else {
+                    this.audio.clip = this.swordDraw;
+                    this.audio.Play();
+                } else {
 
 					swingedSword = true;
 					this.animator.SetTrigger ("SlashSword");
-				}
+                    this.audio.clip = this.swordSwing;
+                    this.audio.Play();
+                }
 			}
 
 		}
