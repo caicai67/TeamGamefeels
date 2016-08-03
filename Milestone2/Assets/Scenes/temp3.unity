@@ -961,11 +961,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="9" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="9" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
       type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
       id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
@@ -1075,7 +1075,7 @@ MonoBehaviour:
       /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-      /><field value="15" type="System.Single" id="_range" /><field value="False"
+      /><field value="10" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
       id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
       /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -1087,7 +1087,7 @@ MonoBehaviour:
       type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,2,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="10"
+      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
       type="System.Single" id="_range" /><field value="False" type="System.Boolean"
       id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
       /></reference></references></component>
@@ -1314,11 +1314,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -1431,7 +1431,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -1443,7 +1443,7 @@ Prefab:
         type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,0,0"
         type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
         id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
         /></reference></references></component>
@@ -5813,11 +5813,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -5930,7 +5930,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -5943,7 +5943,7 @@ Prefab:
         value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
         type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="20" type="System.Single" id="_range" /><field value="False"
+        /><field value="15" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="0" type="System.Single"
         id="_volumeThreshold" /></reference></references></component>
       objectReference: {fileID: 0}
@@ -7323,11 +7323,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="9" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="9" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
       type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
       id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
@@ -7412,7 +7412,7 @@ MonoBehaviour:
       type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,0,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
       type="System.Single" id="_range" /><field value="False" type="System.Boolean"
       id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
       /></reference><reference type="RAIN.Animation.MecanimParameterValue" refcount="1"
@@ -7443,7 +7443,7 @@ MonoBehaviour:
       /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-      /><field value="15" type="System.Single" id="_range" /><field value="False"
+      /><field value="10" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
       id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
       /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -9075,11 +9075,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -9142,11 +9142,11 @@ MonoBehaviour:
       value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
       type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
       id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-      /><field value="10" type="System.Single" id="_range" /><field value="False"
-      type="System.Boolean" id="_canDetectSelf" /><field value="60" type="System.Single"
-      id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
-      /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
-      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference></references></component>
+      /><field value="7" type="System.Single" id="_range" /><field value="False" type="System.Boolean"
+      id="_canDetectSelf" /><field value="60" type="System.Single" id="_horizontalAngle"
+      /><field value="75" type="System.Single" id="_verticalAngle" /><field value="True"
+      type="System.Boolean" id="_lineOfSight" /><field value="60417" type="UnityEngine.LayerMask"
+      id="_lineOfSightMask" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 1172194024}
     - {fileID: 11400000, guid: 0de8db019c0c1d5459bfcabc6a9c36f0, type: 2}
@@ -11521,11 +11521,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -11638,7 +11638,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -11650,7 +11650,7 @@ Prefab:
         type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,2,0"
         type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
         id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
         /></reference></references></component>
@@ -12745,11 +12745,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -12831,7 +12831,7 @@ MonoBehaviour:
       type="UnityEngine.Transform" id="_mountPoint" gameobject="2" /><field value="0,2,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="10"
+      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="7"
       type="System.Single" id="_range" /><field value="False" type="System.Boolean"
       id="_canDetectSelf" /><field value="60" type="System.Single" id="_horizontalAngle"
       /><field value="75" type="System.Single" id="_verticalAngle" /><field value="True"
@@ -15565,11 +15565,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -15682,7 +15682,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -15694,7 +15694,7 @@ Prefab:
         type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,2,0"
         type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
         id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
         /></reference></references></component>
@@ -20175,11 +20175,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -20292,7 +20292,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -20305,7 +20305,7 @@ Prefab:
         value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
         type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="20" type="System.Single" id="_range" /><field value="False"
+        /><field value="15" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="0" type="System.Single"
         id="_volumeThreshold" /></reference></references></component>
       objectReference: {fileID: 0}
@@ -20669,11 +20669,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -20755,7 +20755,7 @@ MonoBehaviour:
       type="UnityEngine.Transform" id="_mountPoint" gameobject="2" /><field value="0,2,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="10"
+      elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="7"
       type="System.Single" id="_range" /><field value="False" type="System.Boolean"
       id="_canDetectSelf" /><field value="60" type="System.Single" id="_horizontalAngle"
       /><field value="75" type="System.Single" id="_verticalAngle" /><field value="True"
@@ -21224,11 +21224,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -21341,7 +21341,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -21353,7 +21353,7 @@ Prefab:
         type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,2,0"
         type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
         id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
         /></reference></references></component>
@@ -22700,11 +22700,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="9"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="10"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="10" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
         reference="11" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="22" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="23" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="23" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
         type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
         id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -22817,7 +22817,7 @@ Prefab:
         /><field value="0,2,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
         value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
         id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
-        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        /><field value="10" type="System.Single" id="_range" /><field value="False"
         type="System.Boolean" id="_canDetectSelf" /><field value="100" type="System.Single"
         id="_horizontalAngle" /><field value="75" type="System.Single" id="_verticalAngle"
         /><field value="True" type="System.Boolean" id="_lineOfSight" /><field value="60417"
@@ -22829,7 +22829,7 @@ Prefab:
         type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,2,0"
         type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
         id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
-        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="20"
+        elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="15"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0" type="System.Single" id="_volumeThreshold"
         /></reference></references></component>
