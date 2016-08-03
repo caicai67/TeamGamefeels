@@ -9,6 +9,7 @@ public class PlayerFootsteps : MonoBehaviour {
 	public AudioClip metal_step;
 	public AudioClip concrete_step;
 	public AudioClip dirt_step;
+    public AudioClip wood_step;
 	public Rigidbody player;
 	public AudioSource audio;
 	public float time_offset = 0.1f;
@@ -49,7 +50,12 @@ public class PlayerFootsteps : MonoBehaviour {
 				audio.Play ();
 				this.offset_timer = 0f;
 				this.step_triggered = true;
-			}
-		}
+			} else if (floor.gameObject.layer == 15 && !this.step_triggered) {
+                audio.clip = this.wood_step;
+                audio.Play();
+                this.offset_timer = 0f;
+                this.step_triggered = true;
+            }
+    }
 	}
 }
