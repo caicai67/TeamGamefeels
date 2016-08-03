@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 111: {fileID: 11100000}
   m_Layer: 0
   m_Name: Outhouse Prefab
   m_TagString: Untagged
@@ -76,21 +75,6 @@ MeshFilter:
 --- !u!1002 &3300001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d41d80f707806694c9a4e6fc7c7c926c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d41d80f707806694c9a4e6fc7c7c926c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1002 &11100001
 EditorExtensionImpl:
   serializedVersion: 6
