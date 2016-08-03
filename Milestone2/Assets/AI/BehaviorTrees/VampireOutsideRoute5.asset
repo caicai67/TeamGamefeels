@@ -23,7 +23,10 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;VisualDetector&quot; matchtype=&quot;best&quot;
       entityobjectvariable=&quot;playerCharacter&quot; debugbreak=&quot;False&quot;
       consistent=&quot;False&quot; aspectvariable=&quot;player&quot; aspectobjectvariable=&quot;playerTransform&quot;
-      aspect=&quot;&amp;quot;Player&amp;quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      aspect=&quot;&amp;quot;Player&amp;quot;&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;AAA=&quot; parameters=&quot;V2FuZGVyRGlzdGFuY2UAU3RheU9uR3JhcGgAV2FuZGVyVGFyZ2V0VmFyaWFibGU=&quot;
+      namespace=&quot;&quot; name=&quot;action&quot; debugbreak=&quot;False&quot;
+      classname=&quot;ChooseWanderPosition&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;VisualSelector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerHeard&quot;
       debugbreak=&quot;False&quot; constraint=&quot;playerSound != null&quot;&gt;&lt;parallel
@@ -58,7 +61,9 @@ MonoBehaviour:
       closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;mecparam valueexpression=&quot;true&quot;
       repeatuntil=&quot;&quot; parametertype=&quot;boolean&quot; parametername=&quot;IsRunning&quot;
       name=&quot;mecparam&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;playerInRange&quot; /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
