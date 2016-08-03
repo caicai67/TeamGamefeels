@@ -27,9 +27,9 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam
       valueexpression=&quot;inputMagnitude&quot; repeatuntil=&quot;running&quot; parametertype=&quot;float&quot;
       parametername=&quot;InputMagnitude&quot; name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot;
-      damptime=&quot;0&quot; /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot;
+      damptime=&quot;0.2&quot; /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot;
       repeatuntil=&quot;running&quot; parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot;
-      name=&quot;AngularInput&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      name=&quot;AngularInput&quot; debugbreak=&quot;False&quot; damptime=&quot;0.25&quot;
       /&gt;&lt;action repeatuntil=&quot;running&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;custom_patrol&quot;
       debugbreak=&quot;False&quot; classname=&quot;VampireMove&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
@@ -38,10 +38,10 @@ MonoBehaviour:
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
       debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;inputMagnitude&quot;
       repeatuntil=&quot;running&quot; parametertype=&quot;float&quot; parametername=&quot;InputMagnitude&quot;
-      name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      name=&quot;InputMagnitude&quot; debugbreak=&quot;False&quot; damptime=&quot;0.2&quot;
       /&gt;&lt;mecparam valueexpression=&quot;angularInput&quot; repeatuntil=&quot;running&quot;
       parametertype=&quot;float&quot; parametername=&quot;AngularInput&quot; name=&quot;AngularInput&quot;
-      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0.25&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
       name=&quot;custom_pursue&quot; debugbreak=&quot;False&quot; classname=&quot;VampirePursue&quot;
       /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"

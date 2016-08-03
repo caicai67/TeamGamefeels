@@ -9559,13 +9559,14 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="9" id="_mind"
-      /><field type="RAIN.Motion.MecanimMotor" reference="10" id="_motor" /><field
-      type="RAIN.Animation.MecanimAnimator" reference="11" id="_animator" /><field
-      type="RAIN.Navigation.BasicNavigator" reference="22" id="_navigator" /><field
-      type="RAIN.Perception.BasicSenses" reference="23" id="_senses" /><field type="System.Collections.Generic.List"
-      id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
-      type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
-      id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      childrenvisible="False" /><field type="RAIN.Motion.MecanimMotor" reference="10"
+      id="_motor" childrenvisible="True" /><field type="RAIN.Animation.MecanimAnimator"
+      reference="11" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="22" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="23"
+      id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
+      elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
+      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
+      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="2" id="element0" /><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="3" id="element1" /><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="4" id="element2" /><field type="RAIN.Memory.BasicMemory+MemoryItem"
@@ -9604,7 +9605,7 @@ MonoBehaviour:
       value="1" type="System.Single" id="_maxHeightOffset" /><field value="False"
       type="System.Boolean" id="_allow3DMovement" /><field value="False" type="System.Boolean"
       id="_allow3DRotation" /><field value="True" type="System.Boolean" id="_allowOffGraphMovement"
-      /><field value="True" type="System.Boolean" id="_useRootMotion" /><field value="False"
+      /><field value="True" type="System.Boolean" id="_useRootMotion" /><field value="True"
       type="System.Boolean" id="_overrideRootRotation" /><field type="System.Collections.Generic.List"
       id="_forwardedParameters" elementtype="RAIN.Motion.MecanimMotor+MotorParameter"
       /></reference><reference type="RAIN.Animation.MecanimAnimator" refcount="1"
