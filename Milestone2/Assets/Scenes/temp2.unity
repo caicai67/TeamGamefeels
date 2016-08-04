@@ -4931,7 +4931,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &349979614
 GameObject:
   m_ObjectHideFlags: 0
@@ -14997,6 +14997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closedTower: {fileID: 1413730854}
   openedTower: {fileID: 1481019301}
+  cutscene2: {fileID: 15200000, guid: 0ac518a976c2240bb89cea8620ad68ab, type: 3}
 --- !u!135 &944501962
 SphereCollider:
   m_ObjectHideFlags: 0
