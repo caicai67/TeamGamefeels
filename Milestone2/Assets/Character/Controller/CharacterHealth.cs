@@ -6,8 +6,12 @@ public class CharacterHealth : MonoBehaviour {
 	private Animator animator;
 	private Rigidbody rigid_body;
 	private CharacterController controller;
+	public AudioClip death_gurgle = null;
+	private AudioSource audio;
+	private bool died = false;
 	public int health = 100;
 	void Awake(){
+		this.audio = GetComponent<AudioSource> ();
 		this.animator = GetComponent<Animator> ();
 		this.rigid_body = GetComponent<Rigidbody> ();
 		this.controller = GetComponent<CharacterController> ();
@@ -19,12 +23,17 @@ public class CharacterHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.health <= 0) {
+		if (this.health <= 0 && !this.died) {
 			Die ();
+			this.died = true;
 		}
 
 	}
 	public void Die(){
+		if (this.death_gurgle != null) {
+			this.audio.clip = this.death_gurgle;
+			this.audio.Play ();
+		}
 		this.rigid_body.isKinematic = true;
 		makeRagdollSolid ();
 		this.animator.enabled = false;

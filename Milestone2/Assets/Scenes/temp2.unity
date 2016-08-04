@@ -19606,6 +19606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b044a7d71f2e6c43bc4766b54dded5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death_gurgle: {fileID: 8300000, guid: 6e947eb70317a1241a3164241a4716f3, type: 3}
   health: 100
 --- !u!54 &1352768795
 Rigidbody:
