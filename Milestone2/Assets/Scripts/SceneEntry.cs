@@ -17,7 +17,9 @@ public class SceneEntry : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (cutscene.isPlaying && Input.GetKeyUp (KeyCode.Escape)) {
+			cutscene.Stop ();
+		}
 	}
 	void OnGUI() {
 		if (cutscene != null && cutscene.isPlaying)
