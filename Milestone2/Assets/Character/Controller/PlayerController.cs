@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour {
 	Vector3 collider_center;
 	private Vector3 player_origin;
 
+	public GameObject titleScreen;
+
 	// In game variables
 	private bool sneaking = false;
 	private bool fighting = false;
@@ -232,6 +234,9 @@ public class PlayerController : MonoBehaviour {
 		//Jumping Code
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || activeController.Action1.WasPressed) {
 			
+			//Hide title screen if it was present
+			titleScreen.SetActive(false);
+
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
 				this.sneaking = false;
