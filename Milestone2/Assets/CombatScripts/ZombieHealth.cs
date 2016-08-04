@@ -12,7 +12,10 @@ public class ZombieHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		//if health <= 0, then die()
+		//else if collision with sword is detected
+		//then takeDamage()
+
 	}
 
 	void takeDamage(){
@@ -21,9 +24,5 @@ public class ZombieHealth : MonoBehaviour {
 
 	void die(){
 	
-	}
-
-	void onTriggerEnter(Collider other){
-		Debug.Log ("Sword Hit!");
 	}
 }
