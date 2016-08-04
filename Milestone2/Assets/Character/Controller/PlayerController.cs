@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour {
 
 	public GameObject titleScreen;
 
+
 	// In game variables
 	private bool sneaking = false;
 	private bool fighting = false;
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour {
 		this.controller_center = this.controller.center;
 		this.collider_center = this.collider_.center;
 		this.rigid_body = GetComponent<Rigidbody> ();
+//		titleScreen = GetComponent<GameObject> ();
 		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
 		//interact with Character Model's layer(aka Character) in the Physics settings
 
@@ -236,7 +238,9 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(this.keymap.jump.keyboard) || activeController.Action1.WasPressed) {
 			
 			//Hide title screen if it was present
-			titleScreen.SetActive(false);
+			if(titleScreen){
+				titleScreen.SetActive (false);
+			}
 
 			//Disable sneaking if it was active.
 			if (this.sneaking == true) {
