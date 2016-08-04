@@ -7062,6 +7062,14 @@ Prefab:
       propertyPath: characterFlinchGrunt
       value: 
       objectReference: {fileID: 8300000, guid: 1ca16c077b3b1124aa491b8bd6982545, type: 3}
+    - target: {fileID: 11478254, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: health_slider
+      value: 
+      objectReference: {fileID: 823746094}
+    - target: {fileID: 11478254, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: damage_indicator
+      value: 
+      objectReference: {fileID: 617464408}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
   m_IsPrefabParent: 0
@@ -7339,6 +7347,12 @@ CapsuleCollider:
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &617464408 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11435000, guid: 0281fdabb970ddf479f47f75ac714ec4,
+    type: 2}
+  m_PrefabInternal: {fileID: 557963809}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &628388861
 GameObject:
   m_ObjectHideFlags: 0
@@ -9875,6 +9889,12 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.37718207, y: 0.072972365, z: -0.017428711}
     m_Extent: {x: 0.1859169, y: 0.16612792, z: 0.15267624}
   m_DirtyAABB: 0
+--- !u!114 &823746094 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11471444, guid: 0281fdabb970ddf479f47f75ac714ec4,
+    type: 2}
+  m_PrefabInternal: {fileID: 557963809}
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &830031956
 GameObject:
   m_ObjectHideFlags: 0
