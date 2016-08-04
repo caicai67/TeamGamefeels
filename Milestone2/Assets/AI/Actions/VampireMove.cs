@@ -89,7 +89,7 @@ public class VampireMove : RAINAction
 			// check if at destination
 			Vector2 distance;
 			XZ_Distance (this.current_position, this.target_waypoint,out distance);
-			if (distance.magnitude < 1f) {
+			if (distance.magnitude < 5f) {
 				// If at destination, choose next target and calculate path
 				UpdateFloat (ai, "inputMagnitude", 0f);
 				bool path_found = GetNextPath (ai);
