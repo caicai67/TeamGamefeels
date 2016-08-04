@@ -26,6 +26,7 @@ public class PlayerFootsteps : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.audio.volume = 0.2f;
+        this.animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
