@@ -4891,6 +4891,47 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f63e675fe3b6b9646beb49d9dd3e30ba, type: 2}
   m_PrefabInternal: {fileID: 336508726}
+--- !u!1 &349173864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 349173866}
+  - 114: {fileID: 349173865}
+  m_Layer: 0
+  m_Name: SceneEntryScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &349173865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 349173864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542456c2c8fdc4d92b308ba54d73b3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutscene: {fileID: 15200000, guid: 7e5c3f934bf2349bb8f1813755b7c6fa, type: 3}
+--- !u!4 &349173866
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 349173864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.834187, y: 11.553503, z: 105.737686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
 --- !u!1 &349979614
 GameObject:
   m_ObjectHideFlags: 0
