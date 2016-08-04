@@ -86,7 +86,7 @@ AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: VampireWalking
+  m_Name: Vampire
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 6cbbc248c1ef06f4f996b9e12368a62d
   m_Children: []
@@ -220,8 +220,8 @@ AudioMixerSnapshotController:
   m_SnapshotID: 7e9e3cc1696b31f419c1e846d1438461
   m_FloatValues:
     487990f0c83750a4ead20771b9f3f9dc: 0.04171297
-    5bc006939afa2414baf1d8b2abbd781a: -80
-    7e39f07837ee2614fb8f81620a9767e2: -10.867776
+    5bc006939afa2414baf1d8b2abbd781a: -11.535833
+    7e39f07837ee2614fb8f81620a9767e2: -9.833286
     efaf708cf4db0ac45b745291149d48d8: -0.8840537
     e430cffe0f03dbf4abf3b05ba1713386: -13.0627575
   m_TransitionOverrides: {}
