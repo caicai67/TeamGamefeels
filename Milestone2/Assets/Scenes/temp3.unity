@@ -6976,6 +6976,10 @@ Prefab:
       propertyPath: turnSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11478254, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: characterFlinchGrunt
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ca16c077b3b1124aa491b8bd6982545, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
   m_IsPrefabParent: 0

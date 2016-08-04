@@ -27666,7 +27666,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!1 &1779104222
 GameObject:
   m_ObjectHideFlags: 0
@@ -30238,6 +30238,14 @@ Prefab:
       objectReference: {fileID: 438976470}
     - target: {fileID: 5494788, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
       propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478254, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: characterFlinchGrunt
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ca16c077b3b1124aa491b8bd6982545, type: 3}
+    - target: {fileID: 11443016, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
