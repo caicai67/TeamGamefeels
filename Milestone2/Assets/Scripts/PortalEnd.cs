@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PortalEnd : MonoBehaviour {
 
-	public Canvas canvas;
 	public GameObject endScreen;
 
 	// Use this for initialization
@@ -18,8 +17,8 @@ public class PortalEnd : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Player")){
-			Animation anim = canvas.GetComponent<Animation> ();
-			anim.Play ();
+			
+			Debug.Log ("End Screen Reached!");
 
 			//Show end title card
 			endScreen.SetActive(true);
