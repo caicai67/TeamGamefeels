@@ -7059,6 +7059,12 @@ CharacterController:
 GameObject:
   m_PrefabParentObject: {fileID: 108082, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
   m_PrefabInternal: {fileID: 1973863523}
+--- !u!114 &438976464 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11478254, guid: 9b5ecc9e23599804ba024dc07958e3d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1973863523}
+  m_Script: {fileID: 11500000, guid: 456ed7bddf9609548908bc8781dbc491, type: 3}
 --- !u!95 &438976470 stripped
 Animator:
   m_PrefabParentObject: {fileID: 9583584, guid: 9b5ecc9e23599804ba024dc07958e3d0,
@@ -20989,6 +20995,7 @@ GameObject:
   - 82: {fileID: 1352768790}
   - 114: {fileID: 1352768791}
   - 82: {fileID: 1352768792}
+  - 136: {fileID: 1352768793}
   m_Layer: 9
   m_Name: Vampire_A_Lusth (1)
   m_TagString: Untagged
@@ -21135,6 +21142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_character: {fileID: 438976462}
+  dreyar_controller: {fileID: 438976464}
   audio: {fileID: 0}
   die: {fileID: 8300000, guid: 3ace3c41d743b42438d068972e450349, type: 3}
   kickGrunt: {fileID: 8300000, guid: c3b9b5e6dec62ea4c8e42d2b17271362, type: 3}
@@ -21213,6 +21221,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!136 &1352768793
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352768786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.3
+  m_Height: 2.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1356514491
 GameObject:
   m_ObjectHideFlags: 0
@@ -30108,6 +30129,10 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 438976470}
+    - target: {fileID: 5494788, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
   m_IsPrefabParent: 0

@@ -49,7 +49,8 @@ public class PlayerController : MonoBehaviour {
 
 	//Sword Combat related variables
 	public bool swingedSword = false;
-
+	public int playerHealth = 100;
+	private bool died = false;
 	// Collider/Controller Defaults
 	float controller_height;
 	float collider_height;
@@ -93,7 +94,16 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (this.playerHealth <= 0) {
+			this.player_dead = true;
+		}
 
+		if (this.player_dead && !this.died) {
+			this.audio.clip = this.die;
+			this.died = true;
+			this.audio.Play ();
+			this.animator.enabled = false;
+		}
 		//Get the connected controller through InControl's InputManager
 		activeController = InputManager.ActiveDevice;
 
@@ -456,6 +466,12 @@ public class PlayerController : MonoBehaviour {
 
 
 	//Getter method to be used in CombatSounds.cs
+	public void takeVampireKickDamage(){
+		this.playerHealth -= 25;
+		if (!this.demon_spell_hit) {
+			this.demon_spell_hit = true;
+		}
+	}
 	public bool isFighting(){
 		return this.fighting;
 	}
