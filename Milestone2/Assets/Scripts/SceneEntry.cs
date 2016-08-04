@@ -6,7 +6,6 @@ public class SceneEntry : MonoBehaviour {
 
 	void Awake() {
 		if (cutscene != null) {
-			Debug.Log ("cutscene playing");
 			cutscene.Play ();
 		}
 	}
