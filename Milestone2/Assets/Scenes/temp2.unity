@@ -24549,7 +24549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   host_character: {fileID: 438976462}
-  lightning_sound: {fileID: 8300000, guid: 4ec7c6020f181d64b9f7ec8cd0d6fb99, type: 3}
+  lightning: {fileID: 8300000, guid: 4ec7c6020f181d64b9f7ec8cd0d6fb99, type: 3}
 --- !u!136 &1590898878
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30600,6 +30600,18 @@ Prefab:
       propertyPath: demon
       value: 
       objectReference: {fileID: 63437718}
+    - target: {fileID: 8215530, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215530, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215530, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
   m_IsPrefabParent: 0

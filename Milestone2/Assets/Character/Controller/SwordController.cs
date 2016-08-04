@@ -5,6 +5,8 @@ public class SwordController : MonoBehaviour {
 	public GameObject host_character;
 	private Animator animator;
 	private AudioSource audio;
+	public AudioClip lightning = null;
+	private AudioClip current_clip = null;
 	private Light light_saber;
 	private bool slashed = false;
 	private bool light_flash = false;
@@ -14,6 +16,7 @@ public class SwordController : MonoBehaviour {
 		this.audio = GetComponent<AudioSource> ();
 		this.light_saber = GetComponent<Light> ();
 		this.animator = host_character.GetComponent<Animator> ();
+		this.current_clip = this.audio.clip;
 	}
 	void Start () {
 	
@@ -37,6 +40,9 @@ public class SwordController : MonoBehaviour {
 			this.light_saber.bounceIntensity = 1f;
 			this.light_flash_timer = 0f;
 		}
+		if (!this.audio.isPlaying) {
+			this.audio.clip = current_clip;
+		}
 	
 	}
 	void OnTriggerEnter(Collider other){
@@ -45,6 +51,11 @@ public class SwordController : MonoBehaviour {
 			CharacterHealth damage_script = other_object.GetComponent<CharacterHealth>();
 			if (!slashed) {
 				this.light_flash = true;
+				if (this.lightning != null) {
+					this.current_clip = this.audio.clip;
+					this.audio.clip = this.lightning;
+					this.audio.Play ();
+				}
 				damage_script.SlashDamage ();
 				this.slashed = true;
 			}
