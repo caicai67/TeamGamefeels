@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		this.health_slider.value = this.playerHealth;
 		if (this.playerHealth <= 0) {
 			this.player_dead = true;
 		}

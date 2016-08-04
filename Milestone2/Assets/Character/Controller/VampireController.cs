@@ -32,7 +32,11 @@ public class VampireController : MonoBehaviour {
 			this.roundhouse_timer = 0f;
 			this.damage_triggered = false;
 		}
-		if (this.start_attack && !(this.anim.IsInTransition(0)) && !(this.anim.GetCurrentAnimatorStateInfo(0).IsName("roundhouse_kick"))) {
+
+		bool in_transition = this.anim.IsInTransition(0);
+		bool is_roundhouse = this.anim.GetCurrentAnimatorStateInfo (0).IsName ("roundhouse_kick");
+
+		if (this.start_attack && !(in_transition) && !(is_roundhouse)) {
 			this.anim.SetTrigger ("Attack");
         }
 		if (this.anim.GetCurrentAnimatorStateInfo (0).IsName ("roundhouse_kick")) {
@@ -41,6 +45,7 @@ public class VampireController : MonoBehaviour {
 		if (this.roundhouse_timer > 0.9f && !this.damage_triggered) {
 			this.dreyar_controller.takeVampireKickDamage ();
 			this.damage_triggered = true;
+			this.start_attack = false;
 		}
 	}
 
@@ -48,12 +53,6 @@ public class VampireController : MonoBehaviour {
 		GameObject game_object = other.gameObject;
 		if (game_object.name == "Dreyar") {
 			this.start_attack = true;
-		}
-	}
-	void OnTriggerExit(Collider other){
-		GameObject game_object = other.gameObject;
-		if (game_object.name == "Dreyar") {
-			this.start_attack = false;
 		}
 	}
     void VampireKickGrunt()
