@@ -4,12 +4,14 @@ using System.Collections;
 public class SwordController : MonoBehaviour {
 	public GameObject host_character;
 	private Animator animator;
+	private AudioSource audio;
 	private Light light_saber;
 	private bool slashed = false;
 	private bool light_flash = false;
 	private float light_flash_timer = 0f;
 	// Use this for initialization
 	void Awake(){
+		this.audio = GetComponent<AudioSource> ();
 		this.light_saber = GetComponent<Light> ();
 		this.animator = host_character.GetComponent<Animator> ();
 	}
