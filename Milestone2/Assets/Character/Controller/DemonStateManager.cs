@@ -13,6 +13,8 @@ public class DemonStateManager : MonoBehaviour {
 	public GameObject demon_ai_unity_object;
 	private RAIN.Core.AI demon_ai;
 	private RAIN.Core.AIRig demon_ai_rig;
+
+	private float player_distance = Mathf.Infinity;
 	// Use this forinitialization
 	void Start () {
 
@@ -22,6 +24,16 @@ public class DemonStateManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+		// Hack to prevent the demon from smacking the player from across the map. 
+		// realistically, demon needs to be refactored.
+		Vector3 player_position = this.player_controller.transform.position;
+		Vector3 demon_position = this.transform.position;
+		this.player_distance = Vector3.Distance (player_position, demon_position);
+
+
+
 		bool state = animator.GetCurrentAnimatorStateInfo (0).IsName ("Spell");
 		if (state && this.cooldown_timer < 10f) {
 			if (this.animator.GetBool ("CanCast")) {
@@ -55,7 +67,9 @@ public class DemonStateManager : MonoBehaviour {
 
 		// Hit "calculation" (can be replaced later I guess)
 		if (spell_isCasting && this.spell_casting_timer >= 1.45f && this.spell_casting_timer < 2f) {
-			this.player_controller.demon_spell_hit = true;
+			if (this.player_distance < 30f) {
+				this.player_controller.demon_spell_hit = true;
+			}
 			this.spell_casting_timer += 5f;
 		}
 
