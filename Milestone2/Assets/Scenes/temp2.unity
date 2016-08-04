@@ -24697,6 +24697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   host_character: {fileID: 438976462}
+  lightning_sound: {fileID: 8300000, guid: 4ec7c6020f181d64b9f7ec8cd0d6fb99, type: 3}
 --- !u!136 &1590898878
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24707,9 +24708,42 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.2
-  m_Height: 1.8
+  m_Height: 2.2
   m_Direction: 2
   m_Center: {x: 0.00000001855177, y: -0.01961846, z: -0.53}
+--- !u!108 &1590898879
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1590898875}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1001 &1599139261
 Prefab:
   m_ObjectHideFlags: 0
