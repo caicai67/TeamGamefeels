@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 		this.collider_height = this.collider_.height;
 		this.controller_center = this.controller.center;
 		this.collider_center = this.collider_.center;
-		this.rigid_body = GetComponent<Rigidbody> ();
+
 		//No longer needed as I have set rig's layer(i.e. Ragdoll) to not 
 		//interact with Character Model's layer(aka Character) in the Physics settings
 
@@ -99,8 +99,7 @@ public class PlayerController : MonoBehaviour {
 			this.player_dead = true;
 		}
 
-		if (this.player_dead && !this.died && this.rigid_body.isKinematic) {
-
+		if (this.player_dead && !this.died) {
 			this.audio.clip = this.die;
 			this.died = true;
 			this.audio.Play ();
@@ -335,9 +334,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		if (this.player_dead && !this.died) {
-			this.rigid_body.isKinematic = true;
-		}
+
 
 	}
 
