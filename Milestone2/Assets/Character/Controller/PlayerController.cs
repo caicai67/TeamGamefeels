@@ -197,8 +197,6 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (this.keymap.roll_action.keyboard) || activeController.Action2.WasPressed) {
 			this.animator.SetTrigger ("roll");
-            this.audio.clip = this.characterRollGrunt;
-            this.audio.Play();
         }
 
 		//Jumping Code
@@ -215,8 +213,6 @@ public class PlayerController : MonoBehaviour {
 				
 				//Set jump trigger to jump
 				this.animator.SetTrigger ("Jump");
-                this.audio.clip = this.characterJumpGrunt;
-                this.audio.Play();
             }
 
 		}
@@ -442,6 +438,18 @@ public class PlayerController : MonoBehaviour {
     void SwordAttack()
     {
         this.audio.clip = this.swordSwing;
+        this.audio.Play();
+    }
+
+    void JumpGruntSoundEffect()
+    {
+        this.audio.clip = this.characterJumpGrunt;
+        this.audio.Play();
+    }
+
+    void RollGruntSoundEffect()
+    {
+        this.audio.clip = this.characterRollGrunt;
         this.audio.Play();
     }
 

@@ -6511,7 +6511,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 1ec56a52d1ecbb744b130c0a9f801d65, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.76
+  m_Volume: 0.597
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20516,6 +20516,7 @@ GameObject:
   - 143: {fileID: 1352768789}
   - 82: {fileID: 1352768790}
   - 114: {fileID: 1352768791}
+  - 82: {fileID: 1352768792}
   m_Layer: 9
   m_Name: Vampire_A_Lusth (1)
   m_TagString: Untagged
@@ -20583,13 +20584,13 @@ AudioSource:
   m_GameObject: {fileID: 1352768786}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24326174, guid: 00c48956fd9d5dc408d9465b68d87dad,
+  OutputAudioMixerGroup: {fileID: 24358814, guid: 00c48956fd9d5dc408d9465b68d87dad,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: e395abfc3f380924c9d61e3ac7723d28, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.752
+  m_Volume: 0.659
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -20662,6 +20663,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_character: {fileID: 438976462}
+  audio: {fileID: 0}
+  die: {fileID: 8300000, guid: 3ace3c41d743b42438d068972e450349, type: 3}
+  kickGrunt: {fileID: 8300000, guid: c3b9b5e6dec62ea4c8e42d2b17271362, type: 3}
+--- !u!82 &1352768792
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352768786}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24326174, guid: 00c48956fd9d5dc408d9465b68d87dad,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: e395abfc3f380924c9d61e3ac7723d28, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.775
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 5
+  MaxDistance: 40
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1356514491
 GameObject:
   m_ObjectHideFlags: 0
@@ -29236,11 +29315,11 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 804ccf0daf6961c44be50e798ad6aec4, type: 3}
     - target: {fileID: 444978, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.87622
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 444978, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.959175
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 444978, guid: 9b5ecc9e23599804ba024dc07958e3d0, type: 2}
       propertyPath: m_LocalRotation.y
