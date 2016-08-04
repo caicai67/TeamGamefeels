@@ -700,6 +700,7 @@ GameObject:
   - 82: {fileID: 8215530}
   - 136: {fileID: 13679210}
   - 114: {fileID: 11459204}
+  - 54: {fileID: 5430304}
   m_Layer: 16
   m_Name: Katana
   m_TagString: Sword
@@ -2363,6 +2364,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &5430304
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163022}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &5432092
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2982,7 +2998,8 @@ MonoBehaviour:
       /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
       elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.AudioAspect"
+      reference="2" id="element1" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
       /><field value="Player" type="System.String" id="_aspectName" /><field value="True"
       type="System.Boolean" id="_isActive" /><field value="0,0.6,0.6,1" type="UnityEngine.Color"
@@ -2991,10 +3008,21 @@ MonoBehaviour:
       value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /></reference></references></component>
+      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="1"
+      id="2"><field value="True" type="System.Boolean" id="_showVisual" /><field value="Sound"
+      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
+      id="_isActive" /><field value="0,0.6,0.6,1" type="UnityEngine.Color" id="_aspectColor"
+      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
+      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="0.1"
+      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="2" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="3" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 108082}
     - {fileID: 436310}
+    - {fileID: 436310}
+    - {fileID: 8285790}
     _serializedCustomData: []
 --- !u!114 &11443016
 MonoBehaviour:
@@ -3008,9 +3036,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   metal_step: {fileID: 8300000, guid: 22fd99ad9764748459c360765644b57e, type: 3}
+  sneak_metal_step: {fileID: 0}
   concrete_step: {fileID: 8300000, guid: f3e564ab55b5ba24d824b7ca71950c73, type: 3}
+  sneak_concrete_step: {fileID: 0}
   dirt_step: {fileID: 8300000, guid: 8d93736d3c6baf341bc47a2953f63663, type: 3}
+  sneak_dirt_step: {fileID: 0}
+  wood_step: {fileID: 0}
+  sneak_wood_step: {fileID: 0}
   player: {fileID: 5494788}
+  animator: {fileID: 0}
   audio: {fileID: 8285790}
   time_offset: 0.1
   other_foot: {fileID: 11450594}
@@ -3028,9 +3062,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   metal_step: {fileID: 8300000, guid: 22fd99ad9764748459c360765644b57e, type: 3}
+  sneak_metal_step: {fileID: 0}
   concrete_step: {fileID: 8300000, guid: f3e564ab55b5ba24d824b7ca71950c73, type: 3}
+  sneak_concrete_step: {fileID: 0}
   dirt_step: {fileID: 8300000, guid: 8d93736d3c6baf341bc47a2953f63663, type: 3}
+  sneak_dirt_step: {fileID: 0}
+  wood_step: {fileID: 0}
+  sneak_wood_step: {fileID: 0}
   player: {fileID: 5494788}
+  animator: {fileID: 0}
   audio: {fileID: 8275958}
   time_offset: 0.1
   other_foot: {fileID: 11443016}
@@ -3063,7 +3103,7 @@ MonoBehaviour:
   autoTargetPlayer: 1
   updateType: 1
   moveSpeed: 8
-  turnSpeed: 3
+  turnSpeed: 6
   turnSmoothing: 0
   tiltMax: 75
   tiltMin: 45
@@ -3082,6 +3122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456ed7bddf9609548908bc8781dbc491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health_slider: {fileID: 0}
+  damage_indicator: {fileID: 0}
   cam: {fileID: 2005792}
   demon_spell_hit: 0
   audio: {fileID: 8254612}
@@ -3092,12 +3134,17 @@ MonoBehaviour:
   characterRollGrunt: {fileID: 8300000, guid: 5099901fc4df63244a5b937118adb78b, type: 3}
   characterJumpGrunt: {fileID: 8300000, guid: 7da402a2ecaf3bb4cab330bc7a1bc05a, type: 3}
   characterCrouch: {fileID: 8300000, guid: 96e738f5b87133744957160ce7a885a0, type: 3}
+  characterFlinchGrunt: {fileID: 8300000, guid: 1ca16c077b3b1124aa491b8bd6982545,
+    type: 3}
   player_horizontal_axis: 0
   player_vertical_axis: 0
   camera_horizontal_axis: 0
   camera_vertical_axis: 0
   swingedSword: 0
+  playerHealth: 100
+  titleScreen: {fileID: 0}
   using_character_controller: 1
+  isControllerEnabled: 1
 --- !u!114 &11480284
 MonoBehaviour:
   m_ObjectHideFlags: 1
