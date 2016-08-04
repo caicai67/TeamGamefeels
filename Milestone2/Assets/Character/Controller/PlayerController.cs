@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour {
     public AudioClip characterRollGrunt;
     public AudioClip characterJumpGrunt;
     public AudioClip characterCrouch;
+    public AudioClip characterFlinchGrunt;
 
 
     //InControl's InputDevice variable
@@ -460,6 +461,12 @@ public class PlayerController : MonoBehaviour {
     void RollGruntSoundEffect()
     {
         this.audio.clip = this.characterRollGrunt;
+        this.audio.Play();
+    }
+
+    void CharacterFlinch()
+    {
+        this.audio.clip = this.characterFlinchGrunt;
         this.audio.Play();
     }
 
