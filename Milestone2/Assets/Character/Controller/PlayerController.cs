@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour {
     public static Vector3 interactionPosition = new Vector3(0, 0, 0);
     public static Vector3 interactionDirection = new Vector3(0, 0, 0);
     public static bool canInteract = false;
-
+	public UnityEngine.UI.Slider health_slider;
+	public UnityEngine.UI.Image health_damage_indicator;
     public Camera cam;
 	private Keymapping keymap = new Keymapping();
 	private Rigidbody rigid_body;
@@ -27,7 +28,8 @@ public class PlayerController : MonoBehaviour {
 	private SphereCollider trigger;
 	public bool demon_spell_hit = false;
 	private bool demon_spell_impact_animation_playing = false;
-
+	private bool take_damage = false;
+	private float take_damage_timer = 0f;
     //Audio Clips
     public AudioSource audio;
     public AudioClip die;
@@ -67,6 +69,9 @@ public class PlayerController : MonoBehaviour {
 	public bool isControllerEnabled = true;
 	//private bool rolling = false;
     
+	// damage flash colors
+	private Color clear = new Color(0f,0f,0f,0f);
+	private Color damage = new Color (1f, 0f, 0f, 0.1f);
 
 	void Awake(){
 		//this.rigid_body = GetComponent<Rigidbody> ();
@@ -98,6 +103,15 @@ public class PlayerController : MonoBehaviour {
 		if (this.playerHealth <= 0) {
 			this.player_dead = true;
 		}
+		if (this.take_damage && this.take_damage_timer < 0.1f) {
+			this.health_damage_indicator.color = this.damage;
+			this.take_damage_timer += Time.deltaTime;
+		} else {
+			this.health_damage_indicator.color = this.clear;
+			this.take_damage = false;
+			this.take_damage_timer = 0f;
+		}
+		this.health_slider.value = this.playerHealth;
 
 		if (this.player_dead && !this.died) {
 			this.audio.clip = this.die;
@@ -475,6 +489,7 @@ public class PlayerController : MonoBehaviour {
 	//Getter method to be used in CombatSounds.cs
 	public void takeVampireKickDamage(){
 		this.playerHealth -= 25;
+		this.take_damage = true;
 		if (!this.demon_spell_hit) {
 			this.demon_spell_hit = true;
 		}
